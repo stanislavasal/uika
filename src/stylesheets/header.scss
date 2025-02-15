@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 97.5vw;
+    height: 5.8vw;
+    background-color: #F5F5F5;
+    border: 1.5px solid black;
+    border-radius: 100px;
+}
+
+.header_text_wrapper {
+    display: flex;
+    gap: 1vw;
+}
+
+.header_logo {
+    width: 8vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 23vw;
+    height: 3vw;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 100px;
+    padding: 0 1vw; 
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    height: 80%;
+    font-family: 'SuisseIntlRegular';
+    font-size: 20px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}

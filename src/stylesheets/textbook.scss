@@ -1,0 +1,27 @@
+.filters{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid black;
+    border-radius: 100px;
+    width: 13.5vw;
+    height: 3.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.feed{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 12.5px 0px;
+}

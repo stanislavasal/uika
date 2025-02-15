@@ -1,0 +1,46 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 71.5vw;
+}
+
+.articlepart {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.articleimages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.article-image-l {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.article-image-s {
+    width: 49%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+}
+
+.checklist{
+    display: flex;
+    width: 100%;
+    padding: 2vw;
+    border: 1.5px solid black;
+    border-radius: 10px;
+}

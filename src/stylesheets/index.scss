@@ -1,11 +1,8 @@
-body.index {
+body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  & > div,
-  & > a {
-    margin: 10px 0;
-  }
+  margin-top: 1.15vw;
+  margin-bottom: 1.15vw;
+  background-color: #F5F5F5;
 }

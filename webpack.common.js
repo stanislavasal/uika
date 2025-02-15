@@ -93,6 +93,16 @@ module.exports = {
       chunks: ['page']
     }),
 
+    // Internal pages
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/textbook/index.html',
+      filename: './textbook/index.html',
+      chunks: ['textbook']
+    }),
+
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {

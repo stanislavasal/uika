@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 8.7vw;
+    border-top: 1.5px solid black;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-top: 120px;
+}
+
+.footer_logo{
+    width: 7.4vw;
+    height: 7.4vw;
+}
+
+.footer_text_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
