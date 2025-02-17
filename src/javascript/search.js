@@ -228,7 +228,9 @@ searchInput.addEventListener('input', function (event) {
     if (searchQuery.length > 0) {
         mainContent.style.display = 'none';
         searchResults.style.display = 'flex';
-        cover.style.display = 'none';
+        if (cover) {
+            cover.style.display = 'none';
+        }
 
         const filteredElements = elements.filter(element =>
             element.title.toLowerCase().includes(searchQuery)
@@ -263,6 +265,8 @@ searchInput.addEventListener('input', function (event) {
     } else {
         mainContent.style.display = 'flex';
         searchResults.style.display = 'none';
-        cover.style.display = 'block';
+        if (cover) {
+            cover.style.display = 'block';
+        }
     }
 });

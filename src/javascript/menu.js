@@ -63,6 +63,21 @@ for (const category in menuStructure) {
 
     const categoryText = document.createElement('p');
     categoryText.textContent = category;
+    
+    if (category === 'Маленькие элементы') {
+        categoryText.addEventListener('click', function() {
+            window.location.href = 'elements/index-small.html'; 
+        });
+    } else if (category === 'Средние элементы') {
+        categoryText.addEventListener('click', function() {
+            window.location.href = 'elements/index-medium.html'; 
+        });
+    } else if (category === 'Большие элементы') {
+        categoryText.addEventListener('click', function() {
+            window.location.href = 'elements/index-large.html'; 
+        });
+    }
+    
     submenuItem.appendChild(categoryText);
 
     const arrow = document.createElement('p');

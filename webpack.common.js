@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     textbook: './src/textbook/textbook.js',
+    elements: './src/elements/elements.js',
     additions: './src/additions/additions.js'
   },
   output: {
@@ -90,7 +91,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/textbook/index.html',
       filename: './textbook/index.html',
-      chunks: ['textbook'] 
+      chunks: ['textbook']
     }),
 
     // Info pages
@@ -100,7 +101,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/additions/index.html',
       filename: './additions/index.html',
-      chunks: ['additions'] 
+      chunks: ['additions']
     }),
 
     new HtmlWebpackPlugin({
@@ -108,7 +109,33 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/additions/index1.html',
       filename: './additions/index1.html',
-      chunks: ['additions'] 
+      chunks: ['additions']
+    }),
+
+    // Elements pages
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/elements/index-small.html',
+      filename: './elements/index-small.html',
+      chunks: ['elements']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/elements/index-medium.html',
+      filename: './elements/index-medium.html',
+      chunks: ['elements']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/elements/index-large.html',
+      filename: './elements/index-large.html',
+      chunks: ['elements']
     }),
 
     // Partials

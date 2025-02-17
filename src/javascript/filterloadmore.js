@@ -129,14 +129,14 @@ const articles = [
         title: "Хлебные крошки",
         imageUrl: "",
         link: "",
-        complexity: 3,
+        complexity: 2,
         popularity: 70
     },
     {
         title: "Рейтинг",
         imageUrl: "",
         link: "",
-        complexity: 3,
+        complexity: 2,
         popularity: 70
     },
     {
@@ -304,6 +304,20 @@ const articles = [
 
 let currentSortType = null;
 let isAscending = true;
+let filteredArticles = [];
+
+function filterArticlesByFeedType() {
+    const feedElement = document.getElementById('articlesContainer');
+    
+    if (feedElement.classList.contains('smallfeed')) {
+        return articles.filter(article => article.complexity <= 2);
+    } else if (feedElement.classList.contains('mediumfeed')) {
+        return articles.filter(article => article.complexity >= 3 && article.complexity <= 4);
+    } else if (feedElement.classList.contains('largefeed')) {
+        return articles.filter(article => article.complexity >= 5);
+    }
+    return articles; 
+}
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -314,6 +328,7 @@ function shuffleArray(array) {
 
 function sortArticles(type) {
     const container = document.getElementById('articlesContainer');
+    const currentDisplayCount = container.children.length;
     container.innerHTML = '';
     currentIndex = 0;
 
@@ -326,13 +341,16 @@ function sortArticles(type) {
 
     updateSortingIcons();
 
-    articles.sort((a, b) => {
+    filteredArticles.sort((a, b) => {
         const valueA = a[type];
         const valueB = b[type];
         return isAscending ? valueA - valueB : valueB - valueA;
     });
 
-    loadArticles();
+    const batchesToLoad = Math.ceil(currentDisplayCount / articlesPerPage);
+    for (let i = 0; i < batchesToLoad; i++) {
+        loadArticles();
+    }
 }
 
 function updateSortingIcons() {
@@ -359,11 +377,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let currentIndex = 0;
-const articlesPerPage = 6;
+let articlesPerPage = 6;
 
 function loadArticles() {
     const articlesContainer = document.getElementById('articlesContainer');
-    const articlesToLoad = articles.slice(currentIndex, currentIndex + articlesPerPage);
+    const articlesToLoad = filteredArticles.slice(currentIndex, currentIndex + articlesPerPage);
 
     articlesToLoad.forEach(article => {
         const cardLink = document.createElement('a');
@@ -387,11 +405,14 @@ function loadArticles() {
 
     currentIndex += articlesPerPage;
 
-    if (currentIndex >= articles.length) {
+    if (currentIndex >= filteredArticles.length) {
         document.getElementById('loadMoreButton').style.display = 'none';
+    } else {
+        document.getElementById('loadMoreButton').style.display = 'block';
     }
 }
 
-shuffleArray(articles);
+filteredArticles = filterArticlesByFeedType();
+shuffleArray(filteredArticles);
 document.getElementById('loadMoreButton').addEventListener('click', loadArticles);
 loadArticles();
