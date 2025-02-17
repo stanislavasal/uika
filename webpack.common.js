@@ -9,7 +9,8 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    textbook: './src/textbook/textbook.js'
+    textbook: './src/textbook/textbook.js',
+    additions: './src/additions/additions.js'
   },
   output: {
     filename: '[name].js',
@@ -83,12 +84,31 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // Textbook
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/textbook/index.html',
       filename: './textbook/index.html',
       chunks: ['textbook'] 
+    }),
+
+    // Info pages
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/additions/index.html',
+      filename: './additions/index.html',
+      chunks: ['additions'] 
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/additions/index1.html',
+      filename: './additions/index1.html',
+      chunks: ['additions'] 
     }),
 
     // Partials
