@@ -4,33 +4,43 @@
     justify-content: space-between;
     padding-left: 2vw;
     padding-right: 2vw;
-    width: 97.5vw;
+    width: calc(97.5vw - 4vw);
     height: 5.8vw;
     background-color: #F5F5F5;
     border: 1.5px solid black;
     border-radius: 100px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
 }
 
 .header_text_wrapper {
     display: flex;
     gap: 1vw;
+    width: 40%;  
 }
 
 .header_logo {
     width: 8vw;
     height: auto;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
 }
 
 .search {
     display: flex;
     align-items: center;
-    width: 23vw;
+    width: 25%; 
     height: 3vw;
     background-color: white;
     border: 1.5px solid black;
     border-radius: 100px;
-    padding: 0 1vw; 
+    padding: 0 1vw;
 }
 
 .search-input {

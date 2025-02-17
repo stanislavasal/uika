@@ -221,6 +221,7 @@ const mainContent = document.getElementById('mainContent');
 const searchResults = document.getElementById('searchResults');
 const searchCardsContainer = document.getElementById('searchCardsContainer');
 const cover = document.querySelector('.cover');
+const loadMoreButton = document.getElementById('loadMoreButton');
 
 searchInput.addEventListener('input', function (event) {
     const searchQuery = event.target.value.toLowerCase();
@@ -231,12 +232,16 @@ searchInput.addEventListener('input', function (event) {
         if (cover) {
             cover.style.display = 'none';
         }
+        if (loadMoreButton) { 
+            loadMoreButton.style.display = 'none';
+        }
 
         const filteredElements = elements.filter(element =>
             element.title.toLowerCase().includes(searchQuery)
         );
 
-        searchCardsContainer.innerHTML = '';
+        searchCardsContainer.innerHTML = ''; 
+
         filteredElements.forEach(element => {
             const cardLink = document.createElement('a');
             cardLink.href = element.link;
@@ -262,11 +267,26 @@ searchInput.addEventListener('input', function (event) {
             cardLink.appendChild(cardTitle);
             searchCardsContainer.appendChild(cardLink);
         });
+
+        const totalCards = searchCardsContainer.children.length;
+        const remainder = totalCards % 3;
+        const invisibleCardsCount = remainder === 0 ? 0 : 3 - remainder;
+
+        for (let i = 0; i < invisibleCardsCount; i++) {
+            const invisibleCard = document.createElement('div');
+            invisibleCard.className = 'card invisible'; 
+            invisibleCard.style.visibility = 'hidden';
+            invisibleCard.style.height = '100px'; 
+            searchCardsContainer.appendChild(invisibleCard);
+        }
     } else {
         mainContent.style.display = 'flex';
         searchResults.style.display = 'none';
         if (cover) {
             cover.style.display = 'block';
+        }
+        if (loadMoreButton) { 
+            loadMoreButton.style.display = 'block';
         }
     }
 });
