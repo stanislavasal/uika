@@ -9,12 +9,11 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    page: './src/page.jsx'
+    textbook: './src/textbook/textbook.js'
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'docs')
-    // clean: true
   },
   module: {
     rules: [
@@ -84,24 +83,13 @@ module.exports = {
       chunks: ['index']
     }),
 
-    // Internal pages
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
-    }),
-
-    // Internal pages
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/textbook/index.html',
       filename: './textbook/index.html',
-      chunks: ['textbook']
+      chunks: ['textbook'] 
     }),
-
 
     // Partials
     new HtmlWebpackPartialsPlugin([

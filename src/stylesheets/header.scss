@@ -49,3 +49,14 @@
     background-repeat: no-repeat;
     margin-left: 10px;
 }
+
+#headerlink {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+#headerlink:hover {
+    color: #FF4702;
+}

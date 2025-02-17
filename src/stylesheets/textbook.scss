@@ -1,10 +1,10 @@
-.filters{
+.filters {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.filter{
+.filter {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,9 +15,15 @@
     height: 3.2vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
 }
 
-.feed{
+.filter:hover {
+    background-color: #C8FF03;
+}
+
+.feed {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
