@@ -11,6 +11,7 @@ module.exports = {
     index: './src/index.js',
     textbook: './src/textbook/textbook.js',
     elements: './src/elements/elements.js',
+    articles: './src/articles/articles.js',
     additions: './src/additions/additions.js'
   },
   output: {
@@ -136,6 +137,16 @@ module.exports = {
       template: './src/elements/index-large.html',
       filename: './elements/index-large.html',
       chunks: ['elements']
+    }),
+
+    // Articles pages
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/articles/button.html',
+      filename: './articles/button.html',
+      chunks: ['articles']
     }),
 
     // Partials
