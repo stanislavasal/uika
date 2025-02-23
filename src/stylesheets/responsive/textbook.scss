@@ -1,0 +1,47 @@
+@media screen and (min-width: 744px) and (max-width: 1024px) {
+    .filters {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5vw;
+    }
+    
+    .filter {
+        border: 1px solid black;
+        border-radius: 100px;
+        width: 27.1vw;
+        height: 5.37vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    
+}
+
+
+@media screen and (max-width: 743px) {
+    .filters {
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+    }
+    
+    .filter {
+        border: 1px solid black;
+        border-radius: 100px;
+        width: 42.5vw;
+        height: 10.2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    
+    .filter:hover {
+        background-color: #C8FF03;
+    }
+    
+    .feed {
+        gap: 5vw 0px;
+    }
+
+    .filtergap{
+        gap: 8vw;
+    }
+}

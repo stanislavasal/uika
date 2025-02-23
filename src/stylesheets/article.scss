@@ -1,14 +1,14 @@
 .article {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 3.47vw;
     width: 71.5vw;
 }
 
 .articlepart {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.73vw;
 }
 
 .articleimages {
@@ -34,13 +34,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
+    gap: 6.96vw;
 }
 
-.checklist{
+.checklist {
     display: flex;
+    background-color: white;
     width: 100%;
     padding: 2vw;
     border: 1.5px solid black;
     border-radius: 10px;
+}
+
+.breadcrumbs {
+    display: flex;
+    width: 100%;
+    margin-bottom: -4vw;
 }

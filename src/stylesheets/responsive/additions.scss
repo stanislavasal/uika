@@ -1,0 +1,132 @@
+@media screen and (min-width: 744px) and (max-width: 1024px) {
+    .line {
+        height: 1px;
+    }
+
+    .circle {
+        width: 1.12vw;
+        height: 1.12vw;
+        border: 1px solid black;
+    }
+
+    .additioncontent {
+        display: flex;
+        flex-direction: column;
+        gap: 8vw;
+        margin-top: 12.7vw;
+        width: 83.8vw;
+    }
+
+    .additioncontentpart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .tag {
+        padding: 1vw;
+        border: 1px solid black;
+    }
+
+    .additionbuttonwrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .additionbutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 83.8vw;
+        height: 33.6vw;
+        border: 1px solid black;
+        border-radius: 4px;
+        gap: 4vw;
+    }
+
+    .mainContentmobile {
+        display: none !important;
+        gap: 0 !important;
+    }
+
+    .mainContentdesktop {
+        display: flex !important;
+    }
+}
+
+
+@media screen and (max-width: 743px) {
+
+    .mainContentmobile {
+        display: flex !important;
+        gap: 7.6vw !important;
+    }
+
+    .mainContentdesktop {
+        display: none !important;
+    }
+
+    .line {
+        height: 1px;
+    }
+
+    .circle {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: 1px solid black;
+    }
+
+    .additioncontent {
+        display: flex;
+        flex-direction: column;
+        gap: 7.6vw;
+        margin-top: 29.5vw;
+        width: 89.8vw;
+    }
+
+    .additioncontentpart {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 7.6vw;
+        width: 100%;
+    }
+
+    .onethird {
+        width: 100%;
+    }
+
+    .onesecondleft {
+        width: 100%;
+    }
+
+    .onesecondright {
+        width: 100%;
+    }
+
+    .tag {
+        display: flex;
+        width: fit-content;
+        padding: 2vw;
+        border: 1.5px solid black;
+        border-radius: 100px;
+        background-color: white;
+    }
+
+    .additionbutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 89.8vw;
+        height: 76.3vw;
+        border: 1px solid black;
+        border-radius: 4px;
+        gap: 30px;
+    }
+}

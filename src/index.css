@@ -11,4 +11,15 @@
 @import 'stylesheets/typography.scss';
 @import 'stylesheets/additions.scss';
 @import 'stylesheets/colors.scss';
+
+/* адаптивы */
+@import 'stylesheets/responsive/header.scss';
+@import 'stylesheets/responsive/typography.scss';
+@import 'stylesheets/responsive/footer.scss';
+@import 'stylesheets/responsive/mainpage.scss';
+@import 'stylesheets/responsive/textbook.scss';
+@import 'stylesheets/responsive/additions.scss';
+@import 'stylesheets/responsive/article.scss';
+/* адаптивы */
+
 @import 'stylesheets/index.scss';

@@ -1,0 +1,67 @@
+@media screen and (min-width: 744px) and (max-width: 1024px) {
+    .header {
+        border: 1px solid black;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        width: calc(100vw - 4vw);
+        height: 6.75vw;
+        top: 15px;
+    }
+
+    .header_text_wrapper {
+        gap: 1.25vw;
+    }
+
+
+    .header_logo {
+        width: 9.6vw;
+    }
+
+
+    .search {
+        border: 1px solid black;
+        width: 35%;
+        height: 4.5vw;
+        padding: 0 1.5vw;
+    }
+
+    .search-input {
+        font-size: 1.88vw;
+    }
+
+    .search-icon {
+        width: 2.18vw;
+        height: 2.18vw;
+    }
+}
+
+@media screen and (max-width: 743px) {
+    .header {
+        display: none;
+    }
+
+    .header_text_wrapper {
+        display: none;
+    }
+
+    .header_logo {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    #headerlink {
+        display: none;
+    }
+
+}
