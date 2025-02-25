@@ -302,23 +302,25 @@ const articles = [
     }
 ];
 
-let currentSortType = null;
-let isAscending = true;
-let filteredArticles = [];
+let currentSortType = null; // current sort type (complexity or popularity)
+let isAscending = true; // ascending order flag
+let filteredArticles = []; // filtered articles array
 
+// filters articles based on feed type
 function filterArticlesByFeedType() {
     const feedElement = document.getElementById('articlesContainer');
     
     if (feedElement.classList.contains('smallfeed')) {
-        return articles.filter(article => article.complexity <= 2);
+        return articles.filter(article => article.complexity <= 2); // small feed filter
     } else if (feedElement.classList.contains('mediumfeed')) {
-        return articles.filter(article => article.complexity >= 3 && article.complexity <= 4);
+        return articles.filter(article => article.complexity >= 3 && article.complexity <= 4); // medium feed filter
     } else if (feedElement.classList.contains('largefeed')) {
-        return articles.filter(article => article.complexity >= 5);
+        return articles.filter(article => article.complexity >= 5); // large feed filter
     }
-    return articles; 
+    return articles; // return all articles by default
 }
 
+// shuffles array randomly
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -326,33 +328,37 @@ function shuffleArray(array) {
     }
 }
 
+// sorts articles by type (complexity or popularity)
 function sortArticles(type) {
     const container = document.getElementById('articlesContainer');
     const currentDisplayCount = container.children.length;
-    container.innerHTML = '';
+    container.innerHTML = ''; // clear container
     currentIndex = 0;
 
     if (currentSortType === type) {
-        isAscending = !isAscending;
+        isAscending = !isAscending; // toggle sort direction
     } else {
         currentSortType = type;
         isAscending = true;
     }
 
-    updateSortingIcons();
+    updateSortingIcons(); // update sort direction arrows
 
+    // sort articles based on type
     filteredArticles.sort((a, b) => {
         const valueA = a[type];
         const valueB = b[type];
         return isAscending ? valueA - valueB : valueB - valueA;
     });
 
+    // load articles in batches
     const batchesToLoad = Math.ceil(currentDisplayCount / articlesPerPage);
     for (let i = 0; i < batchesToLoad; i++) {
         loadArticles();
     }
 }
 
+// updates sorting icons based on current sort type
 function updateSortingIcons() {
     const complexityArrow = document.querySelector('.filter:nth-child(1) .heading-xxs:last-child');
     const popularityArrow = document.querySelector('.filter:nth-child(2) .heading-xxs:last-child');
@@ -365,6 +371,7 @@ function updateSortingIcons() {
         : '↓';
 }
 
+// add event listeners for sorting
 document.addEventListener('DOMContentLoaded', function () {
     const complexityFilter = document.querySelector('.filter:nth-child(1)');
     const popularityFilter = document.querySelector('.filter:nth-child(2)');
@@ -379,6 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let currentIndex = 0;
 let articlesPerPage = 6;
 
+// loads articles in batches
 function loadArticles() {
     const articlesContainer = document.getElementById('articlesContainer');
     const articlesToLoad = filteredArticles.slice(currentIndex, currentIndex + articlesPerPage);
@@ -405,6 +413,7 @@ function loadArticles() {
 
     currentIndex += articlesPerPage;
 
+    // show or hide 'load more' button
     if (currentIndex >= filteredArticles.length) {
         document.getElementById('loadMoreButton').style.display = 'none';
     } else {
@@ -412,7 +421,12 @@ function loadArticles() {
     }
 }
 
+// initialize filtered articles and shuffle
 filteredArticles = filterArticlesByFeedType();
 shuffleArray(filteredArticles);
+
+// set up 'load more' button
 document.getElementById('loadMoreButton').addEventListener('click', loadArticles);
+
+// load the first batch of articles
 loadArticles();
