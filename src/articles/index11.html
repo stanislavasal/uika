@@ -1,2 +1,134 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Поле поиска</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/137.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Поле поиска</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Поле поиска — это специализированный элемент интерфейса, предназначенный для ввода поисковых
+                    запросов. Основная цель данного элемента — дать возможность пользователю ввести текст для поиска
+                    необходимой информации. Само поле поиска обычно состоит из нескольких элементов.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/320.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Основой поля является область ввода с характерной для данного компонента иконкой лупы. Границы
+                        поля необходимо сделать четкими, а внутренние отступы достаточно большими, чтобы запросы было
+                        удобно вводить. Иконка лупы служит визуальным якорем, который поможет человеку быстро понять
+                        значение поля и найти его в интерфейсе.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/321.png" />
+                    <p>Анатомия с выпадающим списком</p>
+                    <p>Когда пользователь начинает вводить текст, поле ввода может дополниться выпадающим списком
+                        с результатами или подсказками. Список следует связать с полем ввода, но не перекрывать важный
+                        контент страницы. Вне поля, но чаще всего справа, могут располагаться дополнительные элементы:
+                        кнопка очистки, фильтры и другие настройки поиска.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Поле поиска должно активно взаимодействовать с пользователем, привлекая к себе внимание и помогая
+                    в процессе.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/322.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/323.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>В базовом состоянии поле должно содержать подсказку (placeholder) с примером запроса или кратким
+                        описанием функции данного элемента. Для иконки обычно выбирают нейтральный цвет, чтобы она была
+                        заметна, но не привлекала слишком много внимания.</p>
+                    <p>Hover</p>
+                    <p>При наведении курсора поле должно реагировать также, как и обычное текстовое поле.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/324.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/325.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>В процессе ввода, пользователю обязательно нужно видеть введенные им символы, а также,
+                        в зависимости от задачи, подсказки, автодополнение или историю поиска.</p>
+                    <p>Disabled</p>
+                    <p>Неактивное состояние явно показывает недоступность поиска, сохраняя при этом узнаваемость
+                        элемента. Все интерактивные функции блокируются.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Иконка поиска визуально заметна и понятна □ Поле достаточно широкое для
+                типичных поисковых запросов □ Подсказка (placeholder) информативна, но лаконична □ Выпадающий список
+                результатов не перекрывает важный контент □ Кнопка очистки поля появляется только при наличии текста □
+                История поиска (если есть) легко доступна □ Анимации плавные и не мешают вводу □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

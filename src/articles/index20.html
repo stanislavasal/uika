@@ -1,2 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Рейтинг</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/146.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Рейтинг</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Рейтинг — это интерактивный элемент интерфейса, позволяющий пользователям оценивать контент или
+                    услуги по определенной шкале. Чаще всего используется пятизвездочная система, хотя возможны и другие
+                    варианты. Этот компонент важен для сбора обратной связи и формирования доверия к продукту или
+                    сервису.
+                </p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/375.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Рейтинг состоит из набора визуальных элементов, традиционно представленных в виде звезд, хотя
+                        могут использоваться и другие символы, например, сердечки, точки или кастомные иконки. В основе
+                        компонента лежит шкала оценивания, обычно от 1 до 5 или от 1 до 10, где каждый элемент
+                        представляет собой определенный балл.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/376.png" />
+                    <p>Компоненты рейтинга</p>
+                    <p>Каждый символ рейтинга может быть представлен как активным (выбранным), так и неактивным
+                        (невыбранным). Возможны промежуточные состояния, например, частичное заполнение, позволяющее
+                        пользователю оставить дробную оценку (например, 4.5 из 5). Такое визуальное разделение поможет
+                        лучше интерпретировать результаты, что очень важно при проектировании любого элемента
+                        интерфейса.
+                    </p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <p>Любой навигационный элемент критически важен для правильного интерфейса, именно поэтому стоит уделить
+                    особое внимание изучению их состояний.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/377.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/378.png" />
+                    </div>
+                    <p>Базовые состояния</p>
+                    <p>В изначальном состоянии рейтинг отображается пустым, без выделения символов. При ховере символы
+                        подсвечиваются, показывая предполагаемую оценку, а после выбора итоговая оценка фиксируется
+                        и может сопровождаться анимацией или уведомлением о принятии голоса.
+                    </p>
+                    <p>Процесс оценивания</p>
+                    <p>Важно помнить, что при взаимодействии с рейтингом пользователь должен видеть предварительный
+                        результат своего выбора еще до клика через подсветку символов. После выбора оценки должно
+                        появиться подтверждение действия.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-m" src="../images/articles/images/desktop/379.png" />
+                    <p>Дополнительные взаимодействия</p>
+                    <p>Продвинутые реализации рейтинга могут включать возможность отмены голоса, просмотр детальной
+                        статистики и взаимодействие с гистограммой распределения голосов. При этом важно сохранять
+                        баланс между функциональностью и простотой использования.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Символы рейтинга легко различимы и понятны □ Интерактивная область
+                достаточно велика для удобного взаимодействия □ Анимации плавные и информативные □ Цветовой контраст
+                соответствует стандартам доступности □ Элементы корректно масштабируются на всех устройствах □ Дробные
+                значения отображаются корректно □ Система рейтинга понятна пользователю без дополнительных пояснений □
+                Статистика и дополнительная информация не перегружают интерфейс □ Ошибки обработки голоса сопровождаются
+                понятными сообщениями □
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

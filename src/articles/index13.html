@@ -1,2 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Оповещения</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/139.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Оповещения</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Оповещение — элемент интерфейса, предназначенный для передачи важного сообщения, которое требует
+                    внимания пользователя. Оповещения не должны быть навязчивыми и могут оставаться на экране, пока
+                    человек не совершит определенное действие, или информация не потеряет актуальность (например, потому
+                    что ее уже точно успели прочитать). Оповещения используются для таких сообщений, как успешные
+                    операции, предупреждения, ошибки и т. д.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/332.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Основой оповещения является контейнер с чётко выраженными границами или фоном. Обычно внутренняя
+                        структура состоит из иконки, обозначающей тип сообщения, заголовка и текста сообщения. Цветное
+                        кодирование поможет пользователю быстро определить характер информации: успех, предупреждение,
+                        ошибку или информационное сообщение.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/333.png" />
+                    <p>Анатомия с действиями</p>
+                    <p>При необходимости оповещение может быть дополнено кнопками для выполнения действий или ссылками,
+                        ведущими к решению проблемы. Также можно добавить кнопку закрытия, таймер для автоматического
+                        скрытия или индикатор прогресса. Важно соблюдать иерархию информации: от главного сообщения
+                        к второстепенным действиям.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Оповещение должно очень активно взаимодействовать с пользователем, временно перетягивая на себе
+                    внимание, ведь оно содержит в себе важную информацию.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/334.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/335.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>Стандартное состояние оповещения делают заметным, но не слишком навязчивым. Цвет, иконку и текст
+                        логично проектируют, чтобы чётко передать суть сообщения и не запутать пользователя.</p>
+                    <p>Hover</p>
+                    <p>При наведении на интерактивные элементы внутри оповещения (кнопки, ссылки) происходит стандартная
+                        реакция, а сам контейнер может слегка поменять свой внешний вид, указывая на возможность
+                        взаимодействия.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/336.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/337.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>В процессе взаимодействия с кнопками или ссылками внутри оповещения должна быть обеспечена чёткая
+                        обратная связь. Кроме того, анимацию закрытия этого элемента стоит сделать плавной
+                        и ненавязчивой.</p>
+                    <p>Disabled</p>
+                    <p>Неактивное состояние оповещения встречается реже, но может быть полезным, когда оповещение нельзя
+                        закрыть до выполнения определённых условий.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Тип оповещения легко определяется визуально □ Текст сообщения чёткий
+                и конкретный □ Иконки понятны и соответствуют контексту □ Цветовое кодирование соответствует типу
+                сообщения □ Кнопка закрытия (если есть) легко доступна □ Анимации появления и исчезновения плавные □
+                Оповещение не перекрывает важный контент □ Множественные оповещения корректно группируются □
+                Автоматическое скрытие (если предусмотрено) происходит с достаточной задержкой □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

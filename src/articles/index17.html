@@ -1,2 +1,141 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Тогл</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/143.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Тогл</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Тогл — это элемент интерфейса, позволяющий пользователю выбирать один вариант из группы
+                    взаимоисключающих опций. В отличие от переключателя, который управляет одним параметром, тогл
+                    работает с группой связанных состояний и часто используется для переключения между режимами
+                    просмотра, фильтрами или настройками. Тогл объединяет несколько опций в единый визуальный блок, где
+                    активное следует явно выделять на фоне остальных. Каждый элемент группы должен быть удобным для
+                    выбора, а общая композиция наглядно отражает то, что опции связаны между собой.
+                </p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/356.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Контейнер тогла должен объединять все опции в один интерактивный элемент. Каждая опция имеет свою
+                        активную область, а индикатор текущего выбора визуально выделяет активный элемент. Важно
+                        соблюдать равные отступы и пропорции для всех состояний, чтобы элемент выглядел гармонично.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/357.png" />
+                    <p>Анатомия с иконками</p>
+                    <p>Подписи у опций стоит делать лаконичными и понятными. При необходимости их можно дополнить
+                        иконками, но нужно следить, чтобы они не перегружали интерфейс. Активный элемент может быть
+                        дополнительно выделен цветом фона или текста.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Тогл должен четко реагировать на каждое действие, чтобы у пользователя не возникало вопросов и
+                    сомнений, какая опция была выбрана.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/358.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/359.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>Необходимо, чтобы в дефолтном состоянии все опции были читаемыми, а текущий выбор явно выделялся.
+                        Неактивные опции должны быть заметными, но не отвлекать внимание от активной.</p>
+                    <p>Hover</p>
+                    <p>При наведении на неактивную опцию появляется небольшой отклик, который создаст эффект
+                        интерактивности, например, изменение цвета или небольшое изменение фона, говорящее о возможности
+                        выбора.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/360.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/361.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>В момент выбора должна произойти плавная анимация перемещения индикатора активности. Изменения
+                        должны быть заметными, но не отвлекать от остального контента.</p>
+                    <p>Disabled</p>
+                    <p>В неактивном состоянии тогл сохраняет своё визуальное единство, но становится менее контрастным.
+                        Текущий выбор, если он был, должен остаться различимым за счет небольшого контраста с остальными
+                        опциями.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Все опции имеют достаточную область касания □ Подписи опций краткие
+                и однозначные □ Активное состояние чётко выделяется визуально □ Анимация переключения плавная
+                и не слишком долгая □ Группировка опций визуально понятна □ Все состояния имеют достаточный контраст □
+                Неактивные опции остаются читаемыми □ Hover-эффекты заметны, но ненавязчивы □ При взаимодействии есть
+                понятная обратная связь □
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,2 +1,142 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Списки</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/135.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Списки</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Список — это элемент интерфейса, который позволяет структурированно отображать связанные данные. Его
+                    основная задача — помочь пользователю быстро воспринимать информацию и легко в ней ориентироваться.
+                    Списки используются везде: от простых перечислений до сложных древовидных структур с множеством
+                    уровней вложенности.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/307.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Основу списка составляет контейнер, внутри которого располагаются элементы. Каждый элемент может
+                        включать маркер (для маркированных списков), номер (для нумерованных списков) или просто отступ.
+                        Важно обеспечить достаточное расстояние между элементами для комфортного восприятия.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/308.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/309.png" />
+                    </div>
+                    <p>Анатомия с дополнительными элементами</p>
+                    <p>Элементы списка могут содержать не только текст, но и другие компоненты: изображения, иконки,
+                        чекбоксы или кнопки действий. При добавлении таких элементов необходимо следить за выравниванием
+                        и сохранением визуальной целостности списка.</p>
+                    <p>Вложенные списки</p>
+                    <p>При проектировании многоуровневых списков каждый уровень вложенности получает дополнительный
+                        отступ. Визуальные маркеры могут меняться в зависимости от уровня, помогая пользователю лучше
+                        ориентироваться в структуре.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Списки должны реагировать на действия пользователя особенно, если они являются частью навигации или
+                    интерфейса управления.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/310.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/311.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>В обычном состоянии все элементы списка должны быть хорошо читаемы, а их иерархия — очевидна.
+                        Если список интерактивный, элементы должны визуально отличаться от обычного текста.</p>
+                    <p>Hover</p>
+                    <p>При наведении на интерактивный элемент списка он должен менять свой внешний вид, например, через
+                        изменение цвета фона или добавление подсветки. Изменения должны быть заметными,
+                        но не отвлекающими.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/312.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/313.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>В момент взаимодействия с элементом (клик или тап) важно обеспечить мгновенную обратную связь.
+                        При выборе нескольких элементов их состояние должно быть хорошо различимо.</p>
+                    <p>Disabled</p>
+                    <p>Неактивные элементы списка должны визуально отличаться пониженной контрастностью, сохраняя при
+                        этом читаемость.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Элементы списка визуально связаны между собой □ Отступы между элементами
+                оптимальны для восприятия □ Маркеры или нумерация четко видны и выровнены □ Вложенные уровни имеют
+                понятную иерархию □ Интерактивные элементы имеют достаточную область касания □ Состояния элементов четко
+                различимы □ Групповые операции (если есть) работают интуитивно □ Анимации плавные и не мешают
+                использованию □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

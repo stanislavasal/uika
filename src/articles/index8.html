@@ -1,2 +1,137 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Текстовое поле</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/134.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Текстовое поле</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Текстовое поле — это компонент, позволяющий пользователю вводить и редактировать текст. Данный
+                    элемент является одним из наиболее часто используемых в интерфейсе, ведь он применяется при
+                    проектировании как простых компонентов, например поля поиска, так и очень сложных, таких, как
+                    многоступенчатая форма.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/301.png" />
+                    <p>Базовая анатомия </p>
+                    <p> Данный элемент представляет собой контейнер с четкими визуальными границами, которые достигаются
+                        с помощью обводки или отличающегося фона. Метка всегда остается видимой, даже когда пользователь
+                        вводит текст. Внутринние отступы должны обеспечивать комфортное чтение и редактирование.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/302.png" />
+                    <p>Анатомия с дополнительными элементами</p>
+                    <p>При необходимости поле можно дополнить вспомогательными элементами, например: счетчиком символов,
+                        кнопкой очистки или индикатором валидации. Чаще всего данные элементы размещаются справа или
+                        снизу от основной области, чтобы не мешать процессу ввода. Подсказка (placeholder) может
+                        временно занимать пустое поле, но в момент начала ввода текста скрыться. Кроме того, плейсхолдер
+                        не должен заменять метку, это является грубой ошибкой.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Текстовое поле должно менять свой внешний вид, в зависимости от взаимодействия с пользователем, чтобы
+                    помочь ему понять текущее состояние.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/303.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/304.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>В исходном состоянии поле готово к вводу. Границы и метка имеют нейтральный цвет, не создающий
+                        сильный контраст с другими элементами.</p>
+                    <p>Hover</p>
+                    <p>При наведении курсора поле может немного изменить внешний вид, подсказывая о возможности
+                        взаимодействия. Можно добавить небольшое изменение цвета фона, обводки или добавление мягкой
+                        тени.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/305.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/306.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>При нажатии на поле ввода границы области стоит сделать более заметными, например, с помощью
+                        более акцентного цвета. Курсор ввода должен быть четко виден на фоне поля.</p>
+                    <p>Disabled</p>
+                    <p>Неактивное поле визуально отличается пониженным контрастом и отсутствием интерактивных эффектов,
+                        однако, важно сохранить читаемость уже введенного текста.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Метка поля всегда видима и однозначно описывает его назначение □ Размер
+                поля соответствует ожидаемой длине вводимого текста □ Внутренние отступы обеспечивают комфортное чтение
+                и редактирование □ Состояние валидации четко отображается и сопровождается понятным сообщением □
+                Подсказка (placeholder) дополняет, но не заменяет метку □ Все состояния поля имеют достаточный контраст
+                с фоном □ Вспомогательный текст и счетчики не мешают основному процессу ввода □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

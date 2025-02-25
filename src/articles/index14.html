@@ -1,2 +1,137 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Теги</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/140.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Теги</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Теги — это компактные элементы интерфейса, предназначенные для маркировки, категоризации или
+                    фильтрации контента. Они помогают пользователям быстро определить, к какой категории относится
+                    элемент, какой у него статус или какие ключевые характеристики он имеет, а также улучшают навигацию.
+                </p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/326.png" />
+                    <p>Базовая анатомия </p>
+                    <p>В большинстве случаев основой тега является контейнер с закруглёнными углами, в котором размещён
+                        короткий текст. Если теги можно объединить в несколько групп, то стоит окрасить их в разные
+                        цвета, чтобы усилить обозначение категорий или статусов. Отступы внутри тега должны быть
+                        пропорциональными для обеспечения читаемости текста.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/327.png" />
+                    <p>Анатомия с дополнительными элементами</p>
+                    <p>В целом, теги не предполагают наличие чего-то, кроме текста, однако, если это необходимо, они
+                        могут быть дополнены простыми иконками, усиливающими визуальную идентификацию, или кнопками
+                        удаления. Кроме того, в интерактивных тегах может присутствовать счётчик или индикатор
+                        дополнительной информации. Группа тегов должна иметь достаточные отступы.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Теги могут быть как статичными элементами, отображающими информацию, так и интерактивными элементами
+                    управления.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/328.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/329.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>В обычном состоянии тег должен чётко выделяться на фоне основного контента, но не привлекать
+                        слишком много внимания. Стоит внимательно подойти к выбору цветов, чтобы они имели хорошую
+                        читаемость.</p>
+                    <p>Hover</p>
+                    <p>При наведении на интерактивный тег появляется лёгкий эффект, указывающий на возможность
+                        взаимодействия. Если он содержит кнопку удаления, то она должна стать более заметной.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/330.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/331.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>При взаимодействии (например, при нажатии) тег способен слегка менять свой вид, например, стать
+                        темнее. Анимация делается минимальной, но заметной.</p>
+                    <p>Disabled</p>
+                    <p>Неактивный тег сохраняет свою форму, но использует приглушённые цвета, показывая, что
+                        взаимодействие с ним невозможно.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Текст тега краткий и информативный □ Цветовая схема обеспечивает
+                достаточный контраст для читаемости □ Иконки (если они есть) понятны и не перегружают вид □ Кнопка
+                удаления имеет достаточную область касания □ Отступы между тегами в группе оптимальны □ Анимации плавные
+                и ненавязчивые □ Состояние тега чётко различимо □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

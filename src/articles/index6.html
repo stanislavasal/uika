@@ -1,2 +1,133 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Индикатор загрузки</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/132.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Индикатор загрузки</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Индикатор загрузки — это динамический элемент интерфейса, который информирует пользователя о том, что
+                    система обрабатывает запрос или выполняет определенную операцию. Индикатор загрузки используется,
+                    когда точное время выполнения операции неизвестно. Данный элемент создан для того, чтобы удержать
+                    внимание пользователя в моменты ожидания и дать ему понять, что его запрос обрабатывается.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/289.png" />
+                    <p>Базовая анатомия </p>
+                    <p> В основе индикатора лежит повторяющийся анимированный элемент — это может быть вращающееся
+                        кольцо, пульсирующие точки или другие геометрические фигуры. Размер индикатора соответствует
+                        контексту использования: от маленького (для встраивания в кнопки) до крупного (для полноэкранной
+                        загрузки).</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/290.png" />
+                    <p>Анатомия с сопроводительным текстом</p>
+                    <p>Индикатор может дополняться текстом, который объяснит процесс.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Данный элемент должен постоянно находиться в движении, пока процесс не будет завершен. Он может
+                    изменять свое поведение в зависимости от контекста или действия пользователя.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/291.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/292.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>Стандартное состояние характеризуется равномерным, непрерывным движением. Анимация делается
+                        плавной, с постоянной скоростью, для создания ощущения непрерывного процесса.</p>
+                    <p>Hover</p>
+                    <p>При наведении может появляться дополнительная информация: подсказка о процессе или примерное
+                        время ожидания, если его можно предположить.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/293.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/294.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>Когда наступает активная фаза загрузки, анимация может стать более заметной. При длительном
+                        ожидании возможно добавление успокаивающего сообщения или обозначение того, что процесс всё ещё
+                        идёт.</p>
+                    <p>Disabled</p>
+                    <p>Неактивное состояние используется редко, но может встречаться в сложных интерфейсах, где загрузка
+                        временно приостановлена.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m">Анимация плавная и не вызывает дискомфорта □ Скорость вращения/движения
+                оптимальна □ Размер соответствует контексту использования □ Сопроводительный текст информативен
+                и успокаивает □ Анимация не создает большой нагрузки на процессор □ При длительной загрузке добавляется
+                дополнительная информация □</div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
