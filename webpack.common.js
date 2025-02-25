@@ -12,6 +12,7 @@ module.exports = {
     textbook: './src/textbook/textbook.js',
     elements: './src/elements/elements.js',
     articles: './src/articles/articles.js',
+    search: './src/search/search.js',
     additions: './src/additions/additions.js'
   },
   output: {
@@ -84,6 +85,15 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
+    }),
+
+    // Search page
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/search/index.html',
+      filename: './search/index.html',
+      chunks: ['search']
     }),
 
     // Textbook
