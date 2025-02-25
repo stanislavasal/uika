@@ -37,18 +37,31 @@
     gap: 6.96vw;
 }
 
-.checklist {
-    display: flex;
-    background-color: white;
-    width: 100%;
-    padding: 2vw;
-    border: 1.5px solid black;
-    border-radius: 10px;
-}
-
 .breadcrumbs {
     display: flex;
     gap: 0.5vw;
     width: 100%;
     margin-bottom: -4vw;
+}
+
+.checklist {
+    display: inline;
+    background-color: white;
+    width: 100%;
+    padding: 2vw;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    white-space: normal;
+}
+
+.checklist-item, .checkbox {
+    display: inline;
+}
+
+.checkbox {
+    cursor: pointer;
+    transition: color 0.1s ease;
+}
+.checklist-item.checked, .checkbox.checked {
+    color: #FF4702;
 }
