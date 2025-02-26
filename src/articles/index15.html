@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Ползунок диапазона</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/141.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Ползунок диапазона</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Ползунок диапазона — это интерактивный элемент управления, который позволяет выбирать числовое
+                    значение или диапазон значений путём перемещения указателя вдоль шкалы. Этот инструмент особенно
+                    удобен для регулировки параметров в заданных пределах, таких как ценовой диапазон или количество
+                    единиц товара.
+                </p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/344.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Основу ползунка составляет трек, определяющий диапазон возможных значений. По этому треку
+                        перемещается бегунок, который можно захватить и перетащить. Активная часть трека, расположенная
+                        между начальной точкой и текущей позицией, обычно выделяется цветом. На шкале, если она есть,
+                        должны находиться метки основных значений.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/345.png" />
+                    <p>Анатомия с метками</p>
+                    <p>Для достижения точной настройки следует добавить числовые метки, показывающие пользователю
+                        ключевые значения шкалы, дополнительно можно включить поле с текущим значением, которое
+                        обновляется при перемещении бегунка. В случае выбора диапазона используются два бегунка,
+                        ограничивающие выбранный интервал.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния</div>
+                <p>Ползунок диапазона должен активно откликаться на взаимодействие, предоставляя максимально точный
+                    контроль и полноценную обратную связь.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/346.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/347.png" />
+                    </div>
+                    <p>Default</p>
+                    <p>В обычном состоянии ползунок отображает текущее значение через положение бегунка. Трек и метки
+                        имеют нейтральные цвета, чтобы не отвлекать внимание от выбранного значения.</p>
+                    <p>Hover</p>
+                    <p>При наведении курсора бегунок слегка увеличивается или изменяет свой вид, сигнализируя
+                        о возможности взаимодействия. Может появляться всплывающая подсказка с точным значением.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/348.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/349.png" />
+                    </div>
+                    <p>Active</p>
+                    <p>Во время перетаскивания бегунок визуально фиксирует захват, а активная часть трека динамически
+                        обновляется. Текущее значение может отображаться над бегунком для точной настройки.</p>
+                    <p>Disabled</p>
+                    <p>В неактивном состоянии ползунок сохраняет своё положение, но его визуальное восприятие
+                        изменяется: элементы становятся менее контрастными, что указывает на недоступность элемента.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Бегунок имеет достаточную область захвата для удобного управления</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Шаг изменения значений соответствует точности управления</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Метки шкалы хорошо читаемы и не перегружают интерфейс</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Активная часть трека чётко выделяется цветом</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Значения обновляются плавно, без рывков</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Для диапазона оба бегунка легко различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Неактивное состояние визуально понятно</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

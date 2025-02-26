@@ -1,221 +1,3 @@
-const elements = [
-    {
-        title: "Кнопка",
-        imageUrl: "https://gazetazamoskvoreche.moscow/wp-content/uploads/sites/4/2022/08/abk7845-scaled-e1660546966872-768x581.jpg",
-        link: "https://github.com/stanislavasal/diploma"
-    },
-    {
-        title: "Ссылка",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Иконки",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Курсор",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Тултипы",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Индикатор загрузки",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Поле выбора файла",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Текстовое поле",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Список",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Выпадающий список",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Поле поиска",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Индикатор прогресса",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Оповещение",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Теги",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Ползунок диапазона",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Переключатель",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Тогл",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Фильтр",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Хлебные крошки",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Рейтинг",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Форма входа",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Меню-бар",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Гамбургер-меню",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Сайдбар",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Степпер",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Аккордеон",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Слайдер",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Табы",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Модальные окна",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Карточка",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Таймлайн",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Форма",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Система рекомендаций",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Хедер",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Футер",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Многошаговая форма",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Корзина покупок",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Система подписки",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Галерея изображений",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Лента контента",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Комментарии",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Система аутентификации",
-        imageUrl: "",
-        link: ""
-    },
-    {
-        title: "Панель управления",
-        imageUrl: "",
-        link: ""
-    }
-];
-
 const searchInput = document.querySelector('.search-input');
 const mainContent = document.getElementById('mainContent');
 const searchResults = document.getElementById('searchResults');
@@ -223,61 +5,104 @@ const searchCardsContainer = document.getElementById('searchCardsContainer');
 const cover = document.querySelector('.cover');
 const loadMoreButton = document.getElementById('loadMoreButton');
 
-searchInput.addEventListener('input', function (event) {
+const hiddenContainer = document.createElement('div');
+hiddenContainer.style.display = 'none';
+document.body.appendChild(hiddenContainer);
+
+let cardsLoaded = false;
+
+async function loadCards() {
+    if (cardsLoaded) return;
+
+    try {
+        const response = await fetch('/search/index.html');
+        const html = await response.text();
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+
+        const cards = tempDiv.querySelectorAll('#articlesContainer .card');
+
+        cards.forEach(card => {
+            const cardClone = card.cloneNode(true);
+            hiddenContainer.appendChild(cardClone);
+        });
+
+        cardsLoaded = true;
+    } catch (error) {
+        console.error('Ошибка загрузки карточек:', error);
+    }
+}
+
+searchInput.addEventListener('focus', loadCards, { once: true });
+
+searchInput.addEventListener('input', async function (event) {
     const searchQuery = event.target.value.toLowerCase();
 
     if (searchQuery.length > 0) {
+        if (!cardsLoaded) {
+            await loadCards();
+        }
+
         mainContent.style.display = 'none';
         searchResults.style.display = 'flex';
         if (cover) {
             cover.style.display = 'none';
         }
-        if (loadMoreButton) { 
+        if (loadMoreButton) {
             loadMoreButton.style.display = 'none';
         }
 
-        const filteredElements = elements.filter(element =>
-            element.title.toLowerCase().includes(searchQuery)
-        );
-
-        searchCardsContainer.innerHTML = ''; 
-
-        filteredElements.forEach(element => {
-            const cardLink = document.createElement('a');
-            cardLink.href = element.link;
-            cardLink.className = 'card';
-            cardLink.style.textDecoration = 'none';
-
-            cardLink.addEventListener('click', function(event) {
-                if (!element.link) {
-                    event.preventDefault();
-                }
-            });
-
-            const cardImage = document.createElement('img');
-            cardImage.className = 'cardimage';
-            cardImage.src = element.imageUrl;
-
-            const cardTitle = document.createElement('div');
-            cardTitle.className = 'heading-xs';
-            cardTitle.textContent = element.title;
-            cardTitle.style.color = 'black';
-
-            cardLink.appendChild(cardImage);
-            cardLink.appendChild(cardTitle);
-            searchCardsContainer.appendChild(cardLink);
+        const cards = hiddenContainer.querySelectorAll('.card');
+        const filteredCards = Array.from(cards).filter(card => {
+            const title = card.querySelector('.heading-xs').textContent.toLowerCase();
+            return title.includes(searchQuery);
         });
 
-        const totalCards = searchCardsContainer.children.length;
-        const remainder = totalCards % 3;
-        const invisibleCardsCount = remainder === 0 ? 0 : 3 - remainder;
+        searchCardsContainer.innerHTML = '';
+        searchCardsContainer.style.display = 'grid';
+        searchCardsContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        searchCardsContainer.style.gap = '20px';
 
-        for (let i = 0; i < invisibleCardsCount; i++) {
-            const invisibleCard = document.createElement('div');
-            invisibleCard.className = 'card invisible'; 
-            invisibleCard.style.visibility = 'hidden';
-            invisibleCard.style.height = '100px'; 
-            searchCardsContainer.appendChild(invisibleCard);
+        searchCardsContainer.style.minWidth = '100%';
+
+        if (filteredCards.length === 0) {
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results-message';
+            noResultsMessage.textContent = 'По вашему запросу ничего не найдено';
+            noResultsMessage.style.gridColumn = '1 / span 3';
+            noResultsMessage.style.textAlign = 'center';
+            noResultsMessage.style.padding = '50px 0';
+            noResultsMessage.style.width = '100%';
+            searchCardsContainer.appendChild(noResultsMessage);
+        } else {
+            filteredCards.forEach(card => {
+                const cardClone = card.cloneNode(true);
+                cardClone.style.width = '100%';
+                cardClone.style.margin = '0';
+                searchCardsContainer.appendChild(cardClone);
+            });
+
+            const totalCards = searchCardsContainer.children.length;
+            const remainder = totalCards % 3;
+
+            if (remainder === 2) {
+                const invisibleCard = document.createElement('div');
+                invisibleCard.className = 'card invisible';
+                invisibleCard.style.visibility = 'hidden';
+                invisibleCard.style.height = '0';
+                invisibleCard.style.margin = '0';
+                searchCardsContainer.appendChild(invisibleCard);
+            } else if (remainder === 1) {
+                for (let i = 0; i < 2; i++) {
+                    const invisibleCard = document.createElement('div');
+                    invisibleCard.className = 'card invisible';
+                    invisibleCard.style.visibility = 'hidden';
+                    invisibleCard.style.height = '0';
+                    invisibleCard.style.margin = '0';
+                    searchCardsContainer.appendChild(invisibleCard);
+                }
+            }
         }
     } else {
         mainContent.style.display = 'flex';
@@ -285,7 +110,7 @@ searchInput.addEventListener('input', function (event) {
         if (cover) {
             cover.style.display = 'block';
         }
-        if (loadMoreButton) { 
+        if (loadMoreButton) {
             loadMoreButton.style.display = 'block';
         }
     }

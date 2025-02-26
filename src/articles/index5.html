@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Тултипы</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <img class="cover" src="../images/articles/covers/desktop/131.png" />
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-small.html">Маленькие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Тултипы</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Тултипы (всплывающие подсказки) — это небольшие информационные элементы, которые появляются рядом
+                    с интерфейсными объектами при наведении курсора или фокусе. Они раскрывают дополнительную информацию
+                    об элементе, объясняют его назначение или подсказывают возможные действия. <br><br>
+
+                    Они особенно полезны для элементов с не совсем очевидным значением, например, сокращений,
+                    технических терминов, иконок или более сложных функций. Важным правилом является использование
+                    тултипов только там, где они действительно помогают пользователю. Избегайте избыточных подсказок для
+                    очевидных элементов.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/283.png" />
+                    <p>Базовая анатомия </p>
+                    <p> Основа тултипа — текстовый блок со скругленными углами и иногда стрелкой, указывающей
+                        на элемент. Контейнер должен иметь четкие отступы и полупрозрачный или не выделяющийся фон.
+                        Стрелка может располагаться с любой стороны, всегда указывая на центр элемента.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/284.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/285.png" />
+                    </div>
+                    <p>Варианты наполнения</p>
+                    <p>Простой тултип содержит только текст. Более сложные могут включать заголовок, изображения,
+                        форматированный текст или даже интерактивные элементы. При большом объеме контента добавляется
+                        прокрутка.</p>
+                    <p>Система позиционирования</p>
+                    <p>Следует отдать приоритет позициям сверху и снизу.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <p>При наведении курсора тултип должен плавно проявляться с небольшой задержкой, начиная с точки
+                    появления стрелки. При уходе курсора тултип исчезает мгновенно, чтобы не мешать дальнейшему
+                    взаимодействию с интерфейсом.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/286.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/287.png" />
+                    </div>
+                    <p>Поведение при прокрутке</p>
+                    <p>Тултип следует за элементом при прокрутке страницы. Если элемент выходит за пределы экрана,
+                        тултип скрывается. При возвращении элемента в поле зрения тултип появляется снова, если курсор
+                        все еще над ним.</p>
+                    <p>Множественные тултипы</p>
+                    <p>Если кратко, то тултипы не должны появляться одновременно, это может произойти только в случае,
+                        если они относятся к одному элементу и их действительно нужно было разделить.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Текст тултипа краткий и полезный</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Задержка появления комфортна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Позиционирование корректно на всех экранах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и ненавязчивые</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контраст текста достаточный</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Стрелка точно указывает на элемент</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тултип не перекрывает важный контент</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Размер шрифта удобен для чтения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы сбалансированы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поведение при прокрутке корректно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Скрытие происходит мгновенно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интерактивные элементы доступны</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

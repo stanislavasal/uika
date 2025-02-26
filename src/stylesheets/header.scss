@@ -70,3 +70,8 @@
 #headerlink:hover {
     color: #FF4702;
 }
+
+#headerlink.clicked {
+    color: #FF4702;
+    text-decoration: underline;
+}
