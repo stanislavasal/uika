@@ -49,12 +49,16 @@
         <div class="content-center">
             <div class="article">
                 <div class="heading-m">Анатомия</div>
-                <p>Список — это элемент интерфейса, который позволяет структурированно отображать связанные данные. Его
-                    основная задача — помочь пользователю быстро воспринимать информацию и легко в ней ориентироваться.
-                    Списки используются везде: от простых перечислений до сложных древовидных структур с множеством
+                <p>Список — это элемент интерфейса, который позволяет структурированно отображать связанные данные. Его
+                    основная задача — помочь пользователю быстро воспринимать информацию и легко в ней ориентироваться.
+                    Списки используются везде: от простых перечислений до сложных древовидных структур с множеством
                     уровней вложенности.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/307.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/624.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/941.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/307.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p>Основу списка составляет контейнер, внутри которого располагаются элементы. Каждый элемент может
                         включать маркер (для маркированных списков), номер (для нумерованных списков) или просто отступ.
@@ -62,44 +66,68 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/308.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/309.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/625.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/942.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/308.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/626.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/943.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/309.png" />
+                        </picture>
                     </div>
-                    <p>Анатомия с дополнительными элементами</p>
-                    <p>Элементы списка могут содержать не только текст, но и другие компоненты: изображения, иконки,
-                        чекбоксы или кнопки действий. При добавлении таких элементов необходимо следить за выравниванием
-                        и сохранением визуальной целостности списка.</p>
+                    <p>Анатомия с дополнительными элементами</p>
+                    <p>Элементы списка могут содержать не только текст, но и другие компоненты: изображения, иконки,
+                        чекбоксы или кнопки действий. При добавлении таких элементов необходимо следить за выравниванием
+                        и сохранением визуальной целостности списка.</p>
                     <p>Вложенные списки</p>
                     <p>При проектировании многоуровневых списков каждый уровень вложенности получает дополнительный
-                        отступ. Визуальные маркеры могут меняться в зависимости от уровня, помогая пользователю лучше
-                        ориентироваться в структуре.</p>
+                        отступ. Визуальные маркеры могут меняться в зависимости от уровня, помогая пользователю лучше
+                        ориентироваться в структуре.</p>
                 </div>
             </div>
             <div class="article">
                 <div class="heading-m">Состояния</div>
-                <p>Списки должны реагировать на действия пользователя особенно, если они являются частью навигации или
+                <p>Списки должны реагировать на действия пользователя особенно, если они являются частью навигации или
                     интерфейса управления.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/310.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/311.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/627.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/944.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/310.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/628.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/945.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/311.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
-                    <p>В обычном состоянии все элементы списка должны быть хорошо читаемы, а их иерархия — очевидна.
-                        Если список интерактивный, элементы должны визуально отличаться от обычного текста.</p>
+                    <p>В обычном состоянии все элементы списка должны быть хорошо читаемы, а их иерархия — очевидна.
+                        Если список интерактивный, элементы должны визуально отличаться от обычного текста.</p>
                     <p>Hover</p>
-                    <p>При наведении на интерактивный элемент списка он должен менять свой внешний вид, например, через
+                    <p>При наведении на интерактивный элемент списка он должен менять свой внешний вид, например, через
                         изменение цвета фона или добавление подсветки. Изменения должны быть заметными,
-                        но не отвлекающими.</p>
+                        но не отвлекающими.</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/312.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/313.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/629.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/946.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/312.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/630.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/947.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/313.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
-                    <p>В момент взаимодействия с элементом (клик или тап) важно обеспечить мгновенную обратную связь.
-                        При выборе нескольких элементов их состояние должно быть хорошо различимо.</p>
+                    <p>В момент взаимодействия с элементом (клик или тап) важно обеспечить мгновенную обратную связь.
+                        При выборе нескольких элементов их состояние должно быть хорошо различимо.</p>
                     <p>Disabled</p>
                     <p>Неактивные элементы списка должны визуально отличаться пониженной контрастностью, сохраняя при
                         этом читаемость.</p>

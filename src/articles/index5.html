@@ -49,51 +49,71 @@
         <div class="content-center">
             <div class="article">
                 <div class="heading-m">Анатомия</div>
-                <p>Тултипы (всплывающие подсказки) — это небольшие информационные элементы, которые появляются рядом
-                    с интерфейсными объектами при наведении курсора или фокусе. Они раскрывают дополнительную информацию
-                    об элементе, объясняют его назначение или подсказывают возможные действия. <br><br>
+                <p>Тултипы (всплывающие подсказки) — это небольшие информационные элементы, которые появляются рядом
+                    с интерфейсными объектами при наведении курсора или фокусе. Они раскрывают дополнительную информацию
+                    об элементе, объясняют его назначение или подсказывают возможные действия. <br><br>
 
-                    Они особенно полезны для элементов с не совсем очевидным значением, например, сокращений,
+                    Они особенно полезны для элементов с не совсем очевидным значением, например, сокращений,
                     технических терминов, иконок или более сложных функций. Важным правилом является использование
                     тултипов только там, где они действительно помогают пользователю. Избегайте избыточных подсказок для
                     очевидных элементов.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/283.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/600.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/917.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/283.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
-                    <p> Основа тултипа — текстовый блок со скругленными углами и иногда стрелкой, указывающей
-                        на элемент. Контейнер должен иметь четкие отступы и полупрозрачный или не выделяющийся фон.
-                        Стрелка может располагаться с любой стороны, всегда указывая на центр элемента.</p>
+                    <p> Основа тултипа — текстовый блок со скругленными углами и иногда стрелкой, указывающей
+                        на элемент. Контейнер должен иметь четкие отступы и полупрозрачный или не выделяющийся фон.
+                        Стрелка может располагаться с любой стороны, всегда указывая на центр элемента.</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/284.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/285.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/601.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/918.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/284.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/602.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/919.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/285.png" />
+                        </picture>
                     </div>
                     <p>Варианты наполнения</p>
                     <p>Простой тултип содержит только текст. Более сложные могут включать заголовок, изображения,
                         форматированный текст или даже интерактивные элементы. При большом объеме контента добавляется
                         прокрутка.</p>
                     <p>Система позиционирования</p>
-                    <p>Следует отдать приоритет позициям сверху и снизу.</p>
+                    <p>Следует отдать приоритет позициям сверху и снизу.</p>
                 </div>
             </div>
             <div class="article">
-                <div class="heading-m">Состояния и поведение</div>
-                <p>При наведении курсора тултип должен плавно проявляться с небольшой задержкой, начиная с точки
-                    появления стрелки. При уходе курсора тултип исчезает мгновенно, чтобы не мешать дальнейшему
-                    взаимодействию с интерфейсом.</p>
+                <div class="heading-m">Состояния и поведение</div>
+                <p>При наведении курсора тултип должен плавно проявляться с небольшой задержкой, начиная с точки
+                    появления стрелки. При уходе курсора тултип исчезает мгновенно, чтобы не мешать дальнейшему
+                    взаимодействию с интерфейсом.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/286.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/287.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/603.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/920.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/286.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/604.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/921.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/287.png" />
+                        </picture>
                     </div>
                     <p>Поведение при прокрутке</p>
-                    <p>Тултип следует за элементом при прокрутке страницы. Если элемент выходит за пределы экрана,
-                        тултип скрывается. При возвращении элемента в поле зрения тултип появляется снова, если курсор
+                    <p>Тултип следует за элементом при прокрутке страницы. Если элемент выходит за пределы экрана,
+                        тултип скрывается. При возвращении элемента в поле зрения тултип появляется снова, если курсор
                         все еще над ним.</p>
                     <p>Множественные тултипы</p>
-                    <p>Если кратко, то тултипы не должны появляться одновременно, это может произойти только в случае,
-                        если они относятся к одному элементу и их действительно нужно было разделить.</p>
+                    <p>Если кратко, то тултипы не должны появляться одновременно, это может произойти только в случае,
+                        если они относятся к одному элементу и их действительно нужно было разделить.</p>
                 </div>
             </div>
         </div>
