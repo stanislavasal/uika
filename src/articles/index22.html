@@ -1,2 +1,259 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Меню-бар</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/191.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/234.png">
+            <img class="cover" src="../images/articles/covers/desktop/148.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Меню-бар</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Меню-бар — это горизонтальная панель навигации, обычно расположенная в верхней части интерфейса.
+                    Он служит центральным элементом управления и должен предоставлять быстрый доступ к основным функциям
+                    приложения через систему простых, выпадающих или вложенных меню.
+                    <br><br>
+                    Изначально меню-бар был характерен для десктопных приложений, но сегодня он успешно адаптирован
+                    и для веб-интерфейсов.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/706.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1023.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/389.png" />
+                    </picture>
+                    <p>Основная структура</p>
+                    <p>Обычно меню-бар состоит из контейнера с ссылками первого уровня, при наведении или нажатии
+                        на которые появляется выпадающий список, содержащий ссылки второго и иногда третьего уровня.
+                        Однако, если структура сайта совсем простая, можно обойтись только ссылками первого уровня. Как
+                        и обычные ссылки, активные элементы выделяются для создания визуального единства с раскрытой
+                        частью меню.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/707.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1024.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/390.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/708.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1025.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/391.png" />
+                        </picture>
+                    </div>
+                    <p>Компоненты меню</p>
+                    <p>Выпадающее меню может включать заголовок, список действий и разделители. Элементы могут содержать
+                        иконки и метки состояния, а вложенные пункты иногда обозначаются стрелками или другими
+                        маркерами.
+                    </p>
+                    <p>Варианты организации</p>
+                    <p>Так как меню варьируется по сложности, в случаях, когда структура сайта очень запутанная, важные
+                        функции могут быть вынесены в отдельную панель инструментов для быстрого доступа.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/709.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1026.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/392.png" />
+                    </picture>
+                    <p>Раскрытие меню</p>
+                    <p>При наведении на пункт меню-бара появляется легкая подсветка. Клик или длительное наведение
+                        раскрывает меню с плавной анимацией. Переход между пунктами верхнего уровня автоматически
+                        переключает открытые меню: то есть новый выпадающий список появляется, а старый скрывается.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/710.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1027.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/393.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/711.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1028.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/394.png" />
+                        </picture>
+                    </div>
+                    <p>Навигация по меню</p>
+                    <p>Когда мы выбираем или наводим курсор на другой элемент, изменения должны происходить моментально,
+                        без задержек. Закрытие меню реализуется при клике вне его области или нажатии клавиши Escape.
+                    </p>
+                    <p>Взаимодействие с пунктами</p>
+                    <p>Неактивные пункты меню следует сделать менее заметными и более приглушенными. После выбора
+                        «действия» оно должно начать выполняться, а выпадающий список автоматически стать невидимым.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/712.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1029.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/395.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/713.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1030.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/396.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На малых экранах меню-бар сворачивается в кнопку «бургер», о которой мы подробно расскажем вам
+                        позже. Выпадающее меню занимает всю ширину экрана, а пункты увеличиваются для удобства касания.
+                        Подменю можно реализовать с помощью отдельных экранов и дополнить их кнопкой «назад».</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах возможно сочетание горизонтального меню-бара для основных разделов и «бургера» для
+                        дополнительных функций, но можно оставить что-то одно. Выпадающие меню, как и на мобильных
+                        устройствах, стоит адаптировать под сенсорное управление, немного увеличив зоны взаимодействия.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/714.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1031.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/397.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>Полноразмерное меню должно быть доступно на больших экранах, а бургерное меню используется крайне
+                        редко, только если это обусловлено очень сложной системой вложенности.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Структура меню логична и понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Группировка пунктов осмысленна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Указаны горячие клавиши</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Плавные и быстрые анимации</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Оптимальные задержки при раскрытии</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Различимость неактивных пунктов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Консистентность иконок</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Доступность подменю</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Удобство для тач-интерфейсов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Корректная адаптация для всех экранов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Достаточный контраст</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Четкое отображение состояний</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интуитивное закрытие меню</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Сбалансированные отступы</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index31.html" class="card" data-complexity="4" data-popularity="30">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/67.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/114.png">
+                        <img class="cardimage" src="../images/feed/desktop/35.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Таймлайн</div>
+                </a>
+                <a href="../articles/index32.html" class="card" data-complexity="4" data-popularity="40">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/68.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/115.png">
+                        <img class="cardimage" src="../images/feed/desktop/36.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Форма</div>
+                </a>
+                <a href="../articles/index33.html" class="card" data-complexity="4" data-popularity="20">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/69.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/116.png">
+                        <img class="cardimage" src="../images/feed/desktop/37.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Система рекомендаций</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

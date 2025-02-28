@@ -1,2 +1,235 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Табы</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/197.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/240.png">
+            <img class="cover" src="../images/articles/covers/desktop/154.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Табы</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>**Табы** — компонент интерфейса для переключения между связанными, но различными блоками контента
+                    в одной области просмотра. Они помогают организовать информацию в компактные, доступные секции,
+                    сохраняя контекст и уменьшая визуальный шум.
+                    <br><br>
+                    В основном табы используют для организации разных объектов одной группы, например, для переключения
+                    между смысловыми частями большой информационной статьи (как эта). Данный элемент нужно использовать
+                    осмысленно, когда содержимое действительно можно разделить на логические группы, а его объем слишком
+                    большой, поэтому нужно дать пользователю возможность быстро переключаться между его частями.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/757.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1074.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/440.png" />
+                    </picture>
+                    <p>Основные элементы</p>
+                    <p>Компонент состоит из панели вкладок и области контента. Панель может включать в себя табы,
+                        индикатор активной вкладки и, возможно, дополнительные элементы управления, например, стрелочки.
+                        Активный таб следует делать визуально связанным с контентной областью.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/758.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1075.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/441.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/759.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1076.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/442.png" />
+                        </picture>
+                    </div>
+                    <p>Структура таба</p>
+                    <p>Каждый таб состоит из текстовой метки и может быть дополнен иконкой. Длина меток должна быть
+                        сбалансированной, при необходимости они могут сокращаться с многоточием, но лучше этого
+                        избегать. Расстояние между ними стоит сделать удобным для касания.</p>
+                    <p>Варианты компоновки</p>
+                    <p>Табы могут располагаться горизонтально (чаще всего сверху) или вертикально (слева). Возможны
+                        различные стили оформления: с подчеркиванием, в виде кнопок, с фоном.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/760.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1077.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/443.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/761.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1078.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/444.png" />
+                        </picture>
+                    </div>
+                    <p>Интерактивные состояния</p>
+                    <p>Табам необходимо реагировать на наведение, например, подсветкой, а активный таб должен выделяться
+                        еще более заметно. Неактивные табы могут быть приглушены, а заблокированные — явно показывать
+                        невозможность выбора.</p>
+                    <p>Переключение вкладок</p>
+                    <p>При выборе таба происходит плавная, но достаточно быстрая смена контента, индикатор активной
+                        вкладки перемещается или происходит затухание старого и выделение выбранного таба. Возможно
+                        добавление ненавязчивой анимации для появления нового контента.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/762.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1079.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/445.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/763.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1080.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/446.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На узких экранах табы становятся прокручиваемыми по горизонтали. Активный таб автоматически
+                        попадает в область видимости. Метки могут быть сокращены до иконок, но в некоторых случаях лучше
+                        все-таки сохранить текст.</p>
+                    <p>Планшетная версия</p>
+                    <p>На средних экранах табы могут превращаться в выпадающий список при нехватке места. Появляются
+                        дополнительные возможности управления, например, кнопки прокрутки табов.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/764.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1081.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/447.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На десктопах система элементов управления может стать еще более расширенной. Соседние элементы
+                        следует сделать хоть немного видимыми, как и на планшетах. Если вы захотите реализовать
+                        автоматическую прокрутку, будет полезно добавить в интерфейс настройку скорости.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Группировка контента логична</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Метки табов понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Порядок табов осмысленный</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Состояния различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Прокрутка табов удобна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Иконки и метки сочетаются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Адаптивность корректна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тач-области достаточны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Индикация активности четкая</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index31.html" class="card" data-complexity="4" data-popularity="30">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/67.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/114.png">
+                        <img class="cardimage" src="../images/feed/desktop/35.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Таймлайн</div>
+                </a>
+                <a href="../articles/index32.html" class="card" data-complexity="4" data-popularity="40">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/68.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/115.png">
+                        <img class="cardimage" src="../images/feed/desktop/36.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Форма</div>
+                </a>
+                <a href="../articles/index33.html" class="card" data-complexity="4" data-popularity="20">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/69.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/116.png">
+                        <img class="cardimage" src="../images/feed/desktop/37.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Система рекомендаций</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

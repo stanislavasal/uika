@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/141.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/184.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/227.png">
+            <img class="cover" src="../images/articles/covers/desktop/141.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -50,7 +55,12 @@
                     единиц товара.
                 </p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/344.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/661.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/978.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/344.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p>Основу ползунка составляет трек, определяющий диапазон возможных значений. По этому треку
                         перемещается бегунок, который можно захватить и перетащить. Активная часть трека, расположенная
@@ -59,7 +69,12 @@
                     </p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/345.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/662.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/979.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/345.png" />
+                    </picture>
                     <p>Анатомия с метками</p>
                     <p>Для достижения точной настройки следует добавить числовые метки, показывающие пользователю
                         ключевые значения шкалы, дополнительно можно включить поле с текущим значением, которое
@@ -73,8 +88,18 @@
                     контроль и полноценную обратную связь.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/346.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/347.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/663.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/980.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/346.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/664.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/981.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/347.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>В обычном состоянии ползунок отображает текущее значение через положение бегунка. Трек и метки
@@ -85,8 +110,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/348.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/349.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/665.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/982.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/348.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/666.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/983.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/349.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>Во время перетаскивания бегунок визуально фиксирует захват, а активная часть трека динамически
@@ -104,7 +139,7 @@
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Шаг изменения значений соответствует точности управления</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Метки шкалы хорошо читаемы и не перегружают интерфейс</span>
+                <span class="checklist-item">Метки шкалы хорошо читаемы и не перегружают интерфейс</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Активная часть трека чётко выделяется цветом</span>
                 <span class="checkbox">□</span>
@@ -119,18 +154,33 @@
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index10.html" class="card" data-complexity="2" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/47.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/94.png">
+                        <img class="cardimage" src="../images/feed/desktop/15.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Выпадающий список</div>
+                </a>
+                <a href="../articles/index11.html" class="card" data-complexity="2" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/48.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/95.png">
+                        <img class="cardimage" src="../images/feed/desktop/16.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Поле поиска</div>
+                </a>
+                <a href="../articles/index14.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/49.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/96.png">
+                        <img class="cardimage" src="../images/feed/desktop/17.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Теги</div>
+                </a>
             </div>
         </div>
     </div>
@@ -141,12 +191,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

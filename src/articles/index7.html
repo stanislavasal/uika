@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/133.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/176.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/219.png">
+            <img class="cover" src="../images/articles/covers/desktop/133.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -48,14 +53,24 @@
                     нашего учебника — на сайт. Это немного более сложный компонент, ведь он сочетает в себе стандартный
                     механизм выбора файлов и возможность перетаскивания файлов в область загрузки.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/295.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/612.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/929.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/295.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p> Поле выбора файла включает в себя кнопку выбора файла, текстовое описание поддерживаемых
                         форматов и область для отображения загруженных файлов. В расширенном варианте добавляется
                         область перетаскивания с визуальной подсказкой.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/296.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/613.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/930.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/296.png" />
+                    </picture>
                     <p>Области взаимодействия</p>
                     <p>Область перетаскивания делается достаточно большой для удобства использования, не меньше
                         100×100 пикселей. Кнопка выбора файла должна соответствовать вышеизложенным стандартам для
@@ -69,8 +84,18 @@
                     процесс загрузки, и считывать доступные действия.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/297.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/298.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/614.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/931.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/297.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/615.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/932.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/298.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>В обычном состоянии компонент показывает кнопку выбора и описание допустимых типов файлов.
@@ -81,8 +106,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/299.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/300.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/616.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/933.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/299.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/617.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/934.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/300.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>Во время перетаскивания файла область загрузки должна активно реагировать, показывая готовность
@@ -120,18 +155,33 @@
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index2.html" class="card" data-complexity="1" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/39.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/86.png">
+                        <img class="cardimage" src="../images/feed/desktop/7.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Ссылка</div>
+                </a>
+                <a href="../articles/index3.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/40.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/87.png">
+                        <img class="cardimage" src="../images/feed/desktop/8.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Иконки</div>
+                </a>
+                <a href="../articles/index4.html" class="card" data-complexity="1" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/41.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/88.png">
+                        <img class="cardimage" src="../images/feed/desktop/9.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Курсор</div>
+                </a>
             </div>
         </div>
     </div>
@@ -142,12 +192,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

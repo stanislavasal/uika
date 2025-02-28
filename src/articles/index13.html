@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/139.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/182.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/225.png">
+            <img class="cover" src="../images/articles/covers/desktop/139.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -50,7 +55,12 @@
                     что ее уже точно успели прочитать). Оповещения используются для таких сообщений, как успешные
                     операции, предупреждения, ошибки и т. д.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/332.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/649.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/966.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/332.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p>Основой оповещения является контейнер с чётко выраженными границами или фоном. Обычно внутренняя
                         структура состоит из иконки, обозначающей тип сообщения, заголовка и текста сообщения. Цветное
@@ -59,7 +69,12 @@
                     </p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/333.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/650.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/967.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/333.png" />
+                    </picture>
                     <p>Анатомия с действиями</p>
                     <p>При необходимости оповещение может быть дополнено кнопками для выполнения действий или ссылками,
                         ведущими к решению проблемы. Также можно добавить кнопку закрытия, таймер для автоматического
@@ -73,8 +88,18 @@
                     внимание, ведь оно содержит в себе важную информацию.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/334.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/335.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/651.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/968.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/334.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/652.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/969.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/335.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>Стандартное состояние оповещения делают заметным, но не слишком навязчивым. Цвет, иконку и текст
@@ -86,8 +111,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/336.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/337.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/653.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/970.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/336.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/654.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/971.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/337.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>В процессе взаимодействия с кнопками или ссылками внутри оповещения должна быть обеспечена чёткая
@@ -104,39 +139,55 @@
             <div class="checklist heading-m" id="checklist">
                 <span class="checklist-item">Тип оповещения легко определяется визуально</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Текст сообщения чёткий и конкретный</span>
+                <span class="checklist-item">Текст сообщения чёткий и конкретный</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Иконки понятны и соответствуют контексту</span>
+                <span class="checklist-item">Иконки понятны и соответствуют контексту</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Цветовое кодирование соответствует типу сообщения</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Кнопка закрытия (если есть) легко доступна</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Анимации появления и исчезновения плавные</span>
+                <span class="checklist-item">Анимации появления и исчезновения плавные</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Оповещение не перекрывает важный контент</span>
+                <span class="checklist-item">Оповещение не перекрывает важный контент</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Множественные оповещения корректно группируются</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Автоматическое скрытие (если предусмотрено) происходит с достаточной задержкой</span>
+                <span class="checklist-item">Автоматическое скрытие (если предусмотрено) происходит с достаточной
+                    задержкой</span>
                 <span class="checkbox">□</span>
             </div>
         </div>
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index2.html" class="card" data-complexity="1" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/39.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/86.png">
+                        <img class="cardimage" src="../images/feed/desktop/7.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Ссылка</div>
+                </a>
+                <a href="../articles/index3.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/40.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/87.png">
+                        <img class="cardimage" src="../images/feed/desktop/8.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Иконки</div>
+                </a>
+                <a href="../articles/index4.html" class="card" data-complexity="1" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/41.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/88.png">
+                        <img class="cardimage" src="../images/feed/desktop/9.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Курсор</div>
+                </a>
             </div>
         </div>
     </div>
@@ -147,12 +198,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

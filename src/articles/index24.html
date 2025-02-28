@@ -1,2 +1,259 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Сайдбар</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/193.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/236.png">
+            <img class="cover" src="../images/articles/covers/desktop/150.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Сайдбар</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Сайдбар (боковая панель) — это вертикальная область, предназначенная для навигации или отображения
+                    дополнительной информации, располагающаяся сбоку от основного контента. Этот элемент интерфейса
+                    обеспечивает быстрый доступ к ключевым разделам и функциям, всегда оставаясь видимым и легко
+                    доступным.
+                    <br><br>
+                    В современных сайтах сайдбар очень популярен и часто используется в качестве одного из основных
+                    инструментов навигации, особенно в случаях, когда система навигации сайта сложная или имеет большое
+                    количество разделов.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/724.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1041.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/407.png" />
+                    </picture>
+                    <p>Базовая структура</p>
+                    <p>Сайдбар может содержать в себе несколько функциональных зон: логотип, основную навигацию,
+                        дополнительные инструменты и футер, о котором мы подробно расскажем позже. Каждая из зон должна
+                        иметь
+                        четкие границы и способность сворачиваться для экономии пространства.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/725.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1042.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/408.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/726.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1043.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/409.png" />
+                        </picture>
+                    </div>
+                    <p>Варианты наполнения</p>
+                    <p>Элементы навигации обычно представлены текстом, иконками или их комбинацией. Кроме того, не стоит
+                        забывать, что в случае вложенной навигации он должен иметь возможность раскрываться
+                        и сворачиваться.</p>
+                    <p>Режимы отображения</p>
+                    <p>Несмотря на то, что сайдбар лучше всегда оставлять видимым, он может иметь дополнительные режимы:
+                        свернутый (только иконки) и скрытый. Переключение между режимами можно реализовать с помощью
+                        кнопки или сделать его автоматическим.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/727.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1044.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/410.png" />
+                    </picture>
+                    <p>Взаимодействие с пунктами</p>
+                    <p>При наведении на пункт меню он, как и во всех остальных типах меню, должен подсветиться. Если
+                        сайдбар можно свернуть, стоит применить всплывающую подсказку. Для улучшения пользовательского
+                        опыта можно добавить хлебные крошки.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/728.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1045.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/411.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/729.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1046.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/412.png" />
+                        </picture>
+                    </div>
+                    <p>Трансформация режимов</p>
+                    <p>Переход между режимами сопровождается плавной анимацией. Если меню свернуто, то оно должно
+                        разворачиваться и при наведении, и по клику, при этом по клику оно должно закрепляться. Стоит
+                        продумать архитектуру так, чтобы контент страницы мог автоматически подстроиться под ширину
+                        сайдбара.</p>
+                    <p>Фиксация и прокрутка</p>
+                    <p>Лучше всего фиксировать положение сайдбара и делать отдельный скролл для элементов внутри него,
+                        и отдельный — для элементов внутри основной страницы. Однако, в некоторых случаях они могут
+                        прокручиваться совместно, но это большая редкость. Главное помнить, что даже если сайдбар
+                        скроллится вместе с основной страницей, на нем должны всегда быть видны важные элементы.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/730.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1047.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/413.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/731.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1048.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/414.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На смартфонах сайдбар превращается в выдвижное меню, доступное через гамбургер-кнопку, зоны для
+                        касания увеличиваются. Если нет хлебных крошек, важно продумать кнопку «Назад», которая будет
+                        позволять вернуться к предыдущему уровню.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах сайдбар автоматически сворачивается при недостатке места и раскрывается при касании.
+                        Поддерживаются жесты для быстрого доступа к скрытой панели.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/732.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1049.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/415.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На широких экранах сайдбар лучше всего оставлять всегда развернутым для удобства навигации. Кроме
+                        того, можно дать возможность пользователю настраивать режим отображения и закреплять важные
+                        разделы.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Логичная структура навигации</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Яркое выделение активного раздела</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Плавные переходы между режимами</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Информативные подсказки</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Корректная работа прокрутки</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Доступность вложенных уровней</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Понятные иконки</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Видимые индикаторы состояния</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Удобное тач-управление</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Достаточный контраст элементов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Корректная адаптация под экраны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Эффективное использование пространства</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интуитивные настройки режимов</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index27.html" class="card" data-complexity="4" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/63.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/110.png">
+                        <img class="cardimage" src="../images/feed/desktop/31.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Слайдер</div>
+                </a>
+                <a href="../articles/index28.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/64.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/111.png">
+                        <img class="cardimage" src="../images/feed/desktop/32.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Табы</div>
+                </a>
+                <a href="../articles/index29.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/65.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/112.png">
+                        <img class="cardimage" src="../images/feed/desktop/33.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Модальные окна</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

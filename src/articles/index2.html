@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/128.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/171.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/214.png">
+            <img class="cover" src="../images/articles/covers/desktop/128.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -49,7 +54,12 @@
                     кликнуть, и понять, к чему это приведет. Грамотно созданные ссылки обеспечат понятную навигацию
                     и облегчат перемещение по сайту и дополнительным материалам.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/263.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/580.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/897.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/263.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p> Обычно, ссылки выделают с помощью цвета или подчеркивания, которое располагается чуть ниже
                         нижней границы текста (на 1-2 пикселя). Межстрочный интервал увеличивают где-то на 2-4 пикселя,
@@ -57,13 +67,23 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/264.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/265.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/581.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/898.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/264.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/582.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/899.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/265.png" />
+                        </picture>
                     </div>
                     <p>Ссылка в навигации</p>
-                    <p>В навигационных блоках ссылки обходятся без подчеркивания, «полагаясь» на расположение. Отступы
-                        между соседними ссылками должны их визуально разделять, но не быть слишком большими. Это
-                        относится как к горизонтальному, так и к вертикальному расположению, однако, для горизонтальных
+                    <p>В навигационных блоках ссылки обходятся без подчеркивания, «полагаясь» на расположение. Отступы
+                        между соседними ссылками должны их визуально разделять, но не быть слишком большими. Это
+                        относится как к горизонтальному, так и к вертикальному расположению, однако, для горизонтальных
                         ссылок отступы делаются больше.</p>
                     <p>Области
                         взаимодействия</p>
@@ -78,20 +98,40 @@
                     но разницу в яркости сделать минимум 30% для надёжного распознавания.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/266.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/267.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/583.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/900.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/266.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/584.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/901.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/267.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
-                    <p>В обычном состоянии ссылки контрастируют с основным текстом. Традиционный синий цвет можно
-                        заменить, но разницу в яркости сделать минимум 30% для надёжного распознавания.</p>
+                    <p>В обычном состоянии ссылки контрастируют с основным текстом. Традиционный синий цвет можно
+                        заменить, но разницу в яркости сделать минимум 30% для надёжного распознавания.</p>
                     <p>Hover</p>
                     <p>При наведении ссылка должна поменять свой внешний вид: может усилиться подчёркивание, слегка
                         измениться цвет (на 10-15% темнее) или добавиться цвет фона (с прозрачностью 10-15%).</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/268.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/269.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/585.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/902.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/268.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/586.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/903.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/269.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>В момент клика цвет ссылки стоит затемнить на 20-30%. Помните, что данное изменение делается
@@ -105,39 +145,54 @@
         <div class="contentpart">
             <div class="heading-m">Чек-лист</div>
             <div class="checklist heading-m" id="checklist">
-                <span class="checklist-item">Цвет отличается от основного текста минимум на 30% по яркости</span>
+                <span class="checklist-item">Цвет отличается от основного текста минимум на 30% по яркости</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Подчёркивание не пересекается с нижними элементами букв</span>
+                <span class="checklist-item">Подчёркивание не пересекается с нижними элементами букв</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Отступы между ссылками в навигации соответствуют масштабу сайта</span>
+                <span class="checklist-item">Отступы между ссылками в навигации соответствуют масштабу сайта</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Учтены все состояния</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Состояния образуют гармоничную цветовую последовательность</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Кликабельная область увеличена по сравнению с текстом</span>
+                <span class="checklist-item">Кликабельная область увеличена по сравнению с текстом</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Единообразное оформление на всём сайте</span>
+                <span class="checklist-item">Единообразное оформление на всём сайте</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">В мобильной версии учтены особенности тач-интерфейсов</span>
+                <span class="checklist-item">В мобильной версии учтены особенности тач-интерфейсов</span>
                 <span class="checkbox">□</span>
             </div>
         </div>
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index6.html" class="card" data-complexity="2" data-popularity="20">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/43.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/90.png">
+                        <img class="cardimage" src="../images/feed/desktop/11.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Индикатор загрузки</div>
+                </a>
+                <a href="../articles/index7.html" class="card" data-complexity="2" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/44.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/91.png">
+                        <img class="cardimage" src="../images/feed/desktop/12.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Поле выбора файла</div>
+                </a>
+                <a href="../articles/index8.html" class="card" data-complexity="1" data-popularity="90">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/45.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/92.png">
+                        <img class="cardimage" src="../images/feed/desktop/13.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Текстовое поле</div>
+                </a>
             </div>
         </div>
     </div>
@@ -148,12 +203,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

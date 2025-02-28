@@ -1,2 +1,230 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Аккордеон</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/195.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/238.png">
+            <img class="cover" src="../images/articles/covers/desktop/152.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Аккордеон</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Аккордеон — интерактивный компонент интерфейса, который помогает организовать большое количество
+                    контента в сворачиваемые секции. Когда раскрывается одна секция, остальные секции скрываются. Это
+                    экономит пространство экрана и помогает пользователю воспринимать большие объемы информации.
+                    <br><br>
+                    Аккордеон очень полезно использовать, когда пользователю не нужно видеть весь контент сразу.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/742.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1059.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/425.png" />
+                    </picture>
+                    <p>Структура компонента</p>
+                    <p>Данный элемент состоит из панели с заголовком и сворачиваемых областей контента. Заголовок каждой
+                        секции должен быть всегда видим, чтобы облегчить навигацию по компоненту.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/743.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1060.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/426.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/744.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1061.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/427.png" />
+                        </picture>
+                    </div>
+                    <p>Элементы панели</p>
+                    <p>Заголовки секций содержат иконку, текст и дополнительные элементы. Индикатор раскрытия может быть
+                        представлен стрелкой или символом плюс/минус, однако, это совсем не обязательно. Контентная
+                        часть должна поддерживать любое наполнение.</p>
+                    <p>Варианты компоновки</p>
+                    <p>Обычно используется режим работы с одной активной панелью (остальные автоматически
+                        сворачиваются), но иногда интерфейс позволяет использовать аккордеон с множественным раскрытием.
+                        Панели могут быть сгруппированы по смыслу или быть обособленными друг от друга.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/745.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1062.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/428.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/746.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1063.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/429.png" />
+                        </picture>
+                    </div>
+                    <p>Анимация раскрытия</p>
+                    <p>При активации заголовка контент плавно раскрывается, а индикатор, если он есть, поворачивается.
+                        Следите за тем, чтобы в анимации учитывался объем контента, чтобы движение выглядело
+                        естественно.</p>
+                    <p>Взаимодействие с панелями</p>
+                    <p>Заголовки могут выделяться при наведении, однако, это не обязательно, так как обычно аккордеон
+                        и так интуитивно понятен пользователю. Клик по заголовку разворачивает или сворачивает секцию.
+                        В режиме одной активной панели предыдущая панель автоматически сворачивается.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/747.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1064.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/430.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/748.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1065.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/431.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На узких экранах высота заголовков увеличивается для удобства касания, индикаторы становятся
+                        крупнее, а анимации оптимизируются для производительности. Аккордеон принимает вертикальное
+                        положение.</p>
+                    <p>Планшетная версия и Десктопная версия</p>
+                    <p>На средних экранах возможно комбинирование раскрытых и свернутых секций. Заголовки могут
+                        содержать больше информации, отзывчивость на касания улучшена, добавляются дополнительные
+                        визуальные подсказки.
+
+                        На средних экранах аккордеон можно сделать горизонтальным. Содержательную часть заголовков можно
+                        увеличить, а сам элемент дополнить разными визуальными подсказками.
+
+                        На широких экранах аккордеон может быть и горизонтальным, и вертикальным, в зависимости
+                        от задачи. Заголовки и области касания могут стать меньше из-за отсутствия возможности
+                        сенсорного взаимодействия.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Заголовки информативны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Индикаторы состояния заметны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и быстрые</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Области касания достаточны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Вложенные уровни различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контент не обрезается</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Высота рассчитывается корректно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тач-управление удобно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы сбалансированы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Группировка панелей логична</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index24.html" class="card" data-complexity="3" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/60.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/107.png">
+                        <img class="cardimage" src="../images/feed/desktop/28.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Сайдбар</div>
+                </a>
+                <a href="../articles/index25.html" class="card" data-complexity="3" data-popularity="40">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/61.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/108.png">
+                        <img class="cardimage" src="../images/feed/desktop/29.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Степпер</div>
+                </a>
+                <a href="../articles/index31.html" class="card" data-complexity="4" data-popularity="30">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/67.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/114.png">
+                        <img class="cardimage" src="../images/feed/desktop/35.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Таймлайн</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

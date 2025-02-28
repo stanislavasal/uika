@@ -1,2 +1,244 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Слайдер</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/196.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/239.png">
+            <img class="cover" src="../images/articles/covers/desktop/153.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Слайдер</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Слайдер — компонент для последовательного просмотра связанного контента с возможностью прокрутки или
+                    переключения. Он позволяет эффективно использовать ограниченное пространство экрана, демонстрируя
+                    элементы поочередно.
+                    <br><br>
+                    Слайдер часто используется для отображения изображений, карточек товаров, отзывов и других типов
+                    контента, где важна последовательность. Важно помнить, что слайдер должен улучшать, а не усложнять
+                    взаимодействие с информацией.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/749.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1066.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/432.png" />
+                    </picture>
+                    <p>Основные элементы</p>
+                    <p>Слайдер состоит из области просмотра, ленты контента, элементов управления (стрелки, точки)
+                        и дополнительных компонентов. Видимая область отображает один или несколько элементов,
+                        но большая часть должна быть скрыта.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/750.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1067.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/433.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/751.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1068.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/434.png" />
+                        </picture>
+                    </div>
+                    <p>Структура навигации</p>
+                    <p>Навигационные элементы могут быть реализованы разными способами: стрелками, точками, полосой
+                        прокрутки или миниатюрами.</p>
+                    <p>Типы компоновки</p>
+                    <p>Слайдеры могут быть организованы по-разному: один слайд на экране, несколько видимых слайдов,
+                        бесконечная прокрутка. Лучше всего делать горизонтальную ориентацию, так как вертикальная почти
+                        никогда не используется и не является интуитивной, кроме того, она будет занимать лишком много
+                        пространства.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/752.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1069.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/435.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/753.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1070.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/436.png" />
+                        </picture>
+                    </div>
+                    <p>Анимации переходов</p>
+                    <p>Переход между слайдами осуществляется с помощью анимации. Возможные эффекты: скольжение,
+                        затухание, масштабирование. Важно отметить, что переход может осуществляться как автоматически,
+                        так и по клику или свайпу. Сочетание этих вариантов тоже возможно.</p>
+                    <p>Интерактивное управление</p>
+                    <p>Из особенностей слайдера можно выделить, пожалуй, то, что при быстрой прокрутке должна иметься
+                        возможность пропуска нескольких слайдов. Автопрокрутка останавливается при взаимодействии
+                        (клике, касании, ховере).</p>
+                    <p>Обработка особых случаев</p>
+                    <p>По достижении края слайдера возможно возвращение к началу (бесконечный цикл) или остановка
+                        с последующей визуальной и реальной деактивацией всех действий, направленных на переход
+                        к следующему элементу. При ошибке загрузки стоит отображать плейсхолдер.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/754.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1071.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/437.png" />
+                    </picture>
+                    <p>Мобильная версия</p>
+                    <p>Для смартфонов слайдер оптимизируется под жесты смахивания. Элементы управления увеличиваются для
+                        удобства касания, а автопрокрутка может быть отключена для экономии ресурсов, но лучше
+                        ее оставить.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/755.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1072.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/438.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/756.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1073.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/439.png" />
+                        </picture>
+                    </div>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах возможно отображение нескольких слайдов одновременно. Из-за значительного увеличения
+                        пространства, добавляется больше миниатюр для быстрой навигации. Интерфейс должен поддерживать
+                        как тач-управление, так и управление мышкой.</p>
+                    <p>Десктопная версия</p>
+                    <p>На десктопах система элементов управления может стать еще более расширенной. Соседние элементы
+                        следует сделать хоть немного видимыми, как и на планшетах. Если вы захотите реализовать
+                        автоматическую прокрутку, будет полезно добавить в интерфейс настройку скорости.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Навигация интуитивно понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Автопрокрутка не мешает</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Точки навигации различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Стрелки заметны, но не мешают</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Адаптация под экраны корректна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Активный слайд выделен при необходимости</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Элементы управления доступны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Производительность оптимальна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контент загружается корректно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тач-области достаточного размера</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index30.html" class="card" data-complexity="4" data-popularity="90">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/66.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/113.png">
+                        <img class="cardimage" src="../images/feed/desktop/34.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Карточка</div>
+                </a>
+                <a href="../articles/index28.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/64.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/111.png">
+                        <img class="cardimage" src="../images/feed/desktop/32.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Табы</div>
+                </a>
+                <a href="../articles/index29.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/65.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/112.png">
+                        <img class="cardimage" src="../images/feed/desktop/33.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Модальные окна</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

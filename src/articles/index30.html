@@ -1,2 +1,248 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Карточка</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/199.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/242.png">
+            <img class="cover" src="../images/articles/covers/desktop/156.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Карточка</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Модальное окно — интерфейсный элемент, появляющийся поверх основного контента. Он содержит в себе
+                    информацию, которая требует внимания пользователя, поэтому временно блокирует взаимодействие
+                    с остальной частью интерфейса, фокус для выполнения задачи или принятие решения.<br><br>
+
+                    Модальные окна применяются для действий, требующих подтверждения, детального просмотра контента или
+                    заполнения форм без перехода на новую страницу. Этот паттерн эффективен для концентрации внимания
+                    пользователя, однако, его необходимо применять с осторожностью, чтобы не нарушить интуитивное
+                    взаимодействие.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/774.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1091.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/457.png" />
+                    </picture>
+                    <p>Базовые элементы карточки</p>
+                    <p>Типичная структура карточки включает: изображение (40-50% высоты), заголовок (10-15%), основной
+                        текст (25-30%) и кнопки действий (10-15%). Эти пропорции могут изменяться в зависимости
+                        от контекста.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/775.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1092.png">
+                        <img class="article-image-s" src="../images/articles/images/desktop/458.png" />
+                    </picture>
+                    <p>Типы карточек</p>
+                    <p>Карточки бывают разных типов: информационные, товарные, медиа-карточки, карточки с действиями.
+                        Каждый тип имеет свои особенности в компоновке и пропорциях.</p>
+                    <p>Система отступов</p>
+                    <p>Отступы внутри карточки (примерно в 16-24px) помогают создать пространство между элементами,
+                        а внешние отступы (8-16px) обеспечивают эстетически приятное визуальное разделение карточек
+                        в сетке.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/776.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1093.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/459.png" />
+                    </picture>
+                    <p>Интерактивные состояния</p>
+                    <p>Чаще всего, карточки реагируют на действия пользователя через подсветку или изменение масштаба,
+                        а плавные анимации делают взаимодействие естественным и не раздражающим. Это особенно важно, так
+                        как карточек может быть много, поэтому дерганные анимации будут раздражать пользователей
+                        и испортят впечатление от всего сайта.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/777.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1094.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/460.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/778.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1095.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/461.png" />
+                        </picture>
+                    </div>
+                    <p>Переходные состояния</p>
+                    <p>Важно следить за тем, чтобы загрузка изображений происходила прогрессивно, обеспечивая комфортное
+                        восприятие.</p>
+                    <p>Действия внутри карточки</p>
+                    <p>Кнопки и ссылки могут быть встроены или наложены на карточку. Важно, чтобы их состояния
+                        (наведение и нажатие) не конфликтовали с общими взаимодействиями карточки.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <p>Модальные окна должны адаптироваться под различные размеры экрана, сохраняя функциональность
+                    и удобство использования.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/779.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1096.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/462.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/780.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1097.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/463.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных экранах карточки должны занимать почти всю ширину экрана, а их высота адаптироваться
+                        под контент, при этом сохраняя удобство чтения и касания.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах карточки размещаются в две-три колонки. Их пропорции стоит скорректировать, чтобы
+                        сбалансировать информативность и компактность.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/781.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1098.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/464.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На больших экранах используется более сложная сетка с карточками разных размеров, карточки могут
+                        стоять как ровно, так и в шахматном порядке. Сетку можно сделать интерактивной, добавив
+                        пользователю возможность отредактировать количество колонок, масштаб, отступы и т. д.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Визуальная иерархия элементов считывается</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Акцентные и неактивные цвета гармонично сочетаются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Типографика создает четкую структуру контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Пропорции элементов сбалансированы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интерактивные зоны интуитивно понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации поддерживают взаимодействие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контраст обеспечивает легкость чтения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Свободное пространство распределено равномерно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Состояния элементов визуально различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Навигация очевидна и предсказуема</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Модульная сетка поддерживает порядок</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы формируют четкий ритм</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ховер-эффекты заметны, но не навязчивы</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index27.html" class="card" data-complexity="4" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/63.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/110.png">
+                        <img class="cardimage" src="../images/feed/desktop/31.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Слайдер</div>
+                </a>
+                <a href="../articles/index28.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/64.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/111.png">
+                        <img class="cardimage" src="../images/feed/desktop/32.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Табы</div>
+                </a>
+                <a href="../articles/index29.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/65.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/112.png">
+                        <img class="cardimage" src="../images/feed/desktop/33.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Модальные окна</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

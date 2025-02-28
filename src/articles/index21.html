@@ -1,2 +1,269 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Форма входа</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/190.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/233.png">
+            <img class="cover" src="../images/articles/covers/desktop/147.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Форма входа</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Форма входа — это набор полей, которые предназначены для аутентификации пользователя на веб-сайте
+                    (и не только!). Важно уделить должное внимание созданию удобной формы, так как часто это один
+                    из первых элементов, который пользователь видит, заходя на сайт.
+                    <br><br>
+                    Формы входа нужны для того, чтобы защитить персональные данные, их используют для доступа к личным
+                    кабинетам, почте и другим системам с ограниченным доступом. Стоит применять форму входа только там,
+                    где она действительно необходима.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/697.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1014.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/380.png" />
+                    </picture>
+                    <p>Базовая анатомия </p>
+                    <p>Основными элементами такой формы являются поля для ввода логина и пароля, метки полей и кнопка
+                        входа. Все они должны быть объединены в один контейнер. Обычно, чтобы форму было удобно
+                        заполнять, поля для ввода размещают вертикально и оставляют между ними достаточное место, чтобы
+                        можно было вывести сообщение об ошибке.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/698.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1015.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/381.png" />
+                    </picture>
+                    <p>Разновидности прогресс-баров</p>
+                    <p>Существуют различные типы прогресс-баров: линейные (горизонтальные или вертикальные), круговые
+                        (для компактного отображения), сегментированные (разделенные на этапы) и неопределенные
+                        (анимированные, без указания конкретного прогресса). Выбор типа зависит от контекста
+                        использования и доступного пространства в интерфейсе.
+                    </p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <p>Прогресс-бар должен наглядно отражать текущее состояние процесса и предоставлять пользователю
+                    актуальную информацию о ходе выполнения задачи.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/699.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1016.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/382.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/700.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1017.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/383.png" />
+                        </picture>
+                    </div>
+                    <p>Начальное и промежуточное состояния</p>
+                    <p>В начальном состоянии прогресс-бар может быть пустым или показывать минимальное значение.
+                        По мере выполнения задачи индикатор плавно заполняется, отражая текущий прогресс. Анимация
+                        должна быть плавной, но не отвлекающей.
+                    </p>
+                    <p>Состояние загрузки</p>
+                    <p>Для процессов с неизвестной продолжительностью используются анимированные индикаторы
+                        неопределенного прогресса, которые сигнализируют о том, что процесс идет, даже если точный
+                        процент выполнения неизвестен.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/701.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1018.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/384.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/702.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1019.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/385.png" />
+                        </picture>
+                    </div>
+                    <p>Завершение</p>
+                    <p>При достижении 100% прогресс-бар должен визуально сигнализировать о завершении процесса,
+                        например, изменением цвета или появлением галочки. Это дает пользователю четкое понимание, что
+                        задача выполнена.</p>
+                    <p>Ошибка</p>
+                    <p>В случае возникновения проблем прогресс-бар может перейти в состояние ошибки, обычно
+                        обозначаемое красным цветом или специальным значком. Важно сопровождать это информативным
+                        сообщением о причине ошибки и возможных действиях.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <p>Форма входа должна работать на любых устройствах, при этом изменяется не только размер элементов,
+                    но и характер взаимодействия с ними.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/703.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1020.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/386.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/704.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1021.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/387.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных устройствах форма обычно занимает практически всю ширину экрана, за минусом
+                        небольших отступов по бокам. Поля стоит сделать немного больше по высоте, ведь область нажатия
+                        пальца гораздо больше, чем у курсора. Вход через соцсети перемещается под основную форму.</p>
+                    <p>Планшетная версия</p>
+                    <p>В случае планшета лучше всего будет центрировать форму и добавить ей фиксированную высоту,
+                        а элементы можно сделать немного меньше, чем на мобильной версии. Социальные сети размещают
+                        в два ряда, чтобы сэкономить место.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/705.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1022.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/388.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На десктопах форма становится компактнее, а если экран достаточно широкий, блок с соцсетями можно
+                        разместить справа. Именно на десктопной версии необходимы эффекты при наведении, всплывающие
+                        подсказки и т. д.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Все поля формы объединены в единый блок</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопка входа выделена, как основное действие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Дополнительные действия менее заметны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Сообщения об ошибках видны, но не агрессивны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Состояния элементов понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Подсказки в полях читаемы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Иконки соцсетей имеют единый стиль</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Разделители и текст не отвлекают внимание</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форма хорошо работает на всех устройствах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы сбалансированы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тексты выровнены и понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Области касания достаточно большие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цветовые акценты расставлены правильно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и полезные</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Важные элементы выделены</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index27.html" class="card" data-complexity="4" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/63.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/110.png">
+                        <img class="cardimage" src="../images/feed/desktop/31.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Слайдер</div>
+                </a>
+                <a href="../articles/index28.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/64.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/111.png">
+                        <img class="cardimage" src="../images/feed/desktop/32.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Табы</div>
+                </a>
+                <a href="../articles/index29.html" class="card" data-complexity="4" data-popularity="10">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/65.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/112.png">
+                        <img class="cardimage" src="../images/feed/desktop/33.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Модальные окна</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

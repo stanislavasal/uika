@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/142.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/185.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/228.png">
+            <img class="cover" src="../images/articles/covers/desktop/142.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -51,7 +56,12 @@
                     можно увидеть, например, в диджейских пультах.
                 </p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/350.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/667.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/984.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/350.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p>Трек служит направляющей для ползунка и визуально отображает текущее состояние. Важно учитывать,
                         что ползунок должен быть достаточно крупным для удобного касания и контрастировать с треком,
@@ -60,7 +70,12 @@
                     </p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/351.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/668.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/985.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/351.png" />
+                    </picture>
                     <p>Анатомия с подписями</p>
                     <p>Рядом с переключателем обычно размещается поясняющий текст, который описывает контролируемую
                         функцию. Анимация движения ползунка должна быть плавной, но быстрой, создавая ощущение
@@ -74,8 +89,18 @@
                     задача.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/352.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/353.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/669.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/986.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/352.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/670.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/987.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/353.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>В исходном состоянии переключатель показывает текущий статус функции через положение ползунка
@@ -87,8 +112,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/354.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/355.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/671.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/988.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/354.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/672.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/989.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/355.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>В момент переключения происходит плавная анимация движения ползунка и изменение цвета трека.</p>
@@ -103,7 +138,7 @@
             <div class="checklist heading-m" id="checklist">
                 <span class="checklist-item">Ползунок имеет достаточную область касания</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Анимация переключения плавная и занимает 150-200 миллисекунд</span>
+                <span class="checklist-item">Анимация переключения плавная и занимает 150-200 миллисекунд</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Текст однозначно описывает управляемую функцию</span>
                 <span class="checkbox">□</span>
@@ -116,18 +151,33 @@
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index2.html" class="card" data-complexity="1" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/39.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/86.png">
+                        <img class="cardimage" src="../images/feed/desktop/7.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Ссылка</div>
+                </a>
+                <a href="../articles/index3.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/40.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/87.png">
+                        <img class="cardimage" src="../images/feed/desktop/8.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Иконки</div>
+                </a>
+                <a href="../articles/index4.html" class="card" data-complexity="1" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/41.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/88.png">
+                        <img class="cardimage" src="../images/feed/desktop/9.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Курсор</div>
+                </a>
             </div>
         </div>
     </div>
@@ -138,12 +188,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/132.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/175.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/218.png">
+            <img class="cover" src="../images/articles/covers/desktop/132.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -49,7 +54,12 @@
                     когда точное время выполнения операции неизвестно. Данный элемент создан для того, чтобы удержать
                     внимание пользователя в моменты ожидания и дать ему понять, что его запрос обрабатывается.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/289.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/606.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/923.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/289.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p> В основе индикатора лежит повторяющийся анимированный элемент — это может быть вращающееся
                         кольцо, пульсирующие точки или другие геометрические фигуры. Размер индикатора соответствует
@@ -57,7 +67,12 @@
                         загрузки).</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/290.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/607.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/924.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/290.png" />
+                    </picture>
                     <p>Анатомия с сопроводительным текстом</p>
                     <p>Индикатор может дополняться текстом, который объяснит процесс.</p>
                 </div>
@@ -68,8 +83,18 @@
                     изменять свое поведение в зависимости от контекста или действия пользователя.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/291.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/292.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/608.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/925.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/291.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/609.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/926.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/292.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>Стандартное состояние характеризуется равномерным, непрерывным движением. Анимация делается
@@ -80,8 +105,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/293.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/294.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/610.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/927.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/293.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/611.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/928.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/294.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>Когда наступает активная фаза загрузки, анимация может стать более заметной. При длительном
@@ -96,15 +131,15 @@
         <div class="contentpart">
             <div class="heading-m">Чек-лист</div>
             <div class="checklist heading-m" id="checklist">
-                <span class="checklist-item">Анимация плавная и не вызывает дискомфорта</span>
+                <span class="checklist-item">Анимация плавная и не вызывает дискомфорта</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Скорость вращения/движения оптимальна</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Размер соответствует контексту использования</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Сопроводительный текст информативен и успокаивает</span>
+                <span class="checklist-item">Сопроводительный текст информативен и успокаивает</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Анимация не создает большой нагрузки на процессор</span>
+                <span class="checklist-item">Анимация не создает большой нагрузки на процессор</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">При длительной загрузке добавляется дополнительная информация</span>
                 <span class="checkbox">□</span>
@@ -113,18 +148,33 @@
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index10.html" class="card" data-complexity="2" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/47.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/94.png">
+                        <img class="cardimage" src="../images/feed/desktop/15.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Выпадающий список</div>
+                </a>
+                <a href="../articles/index11.html" class="card" data-complexity="2" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/48.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/95.png">
+                        <img class="cardimage" src="../images/feed/desktop/16.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Поле поиска</div>
+                </a>
+                <a href="../articles/index14.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/49.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/96.png">
+                        <img class="cardimage" src="../images/feed/desktop/17.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Теги</div>
+                </a>
             </div>
         </div>
     </div>
@@ -135,12 +185,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

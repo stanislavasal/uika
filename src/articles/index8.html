@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/134.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/177.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/220.png">
+            <img class="cover" src="../images/articles/covers/desktop/134.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -49,14 +54,24 @@
                     проектировании как простых компонентов, например поля поиска, так и очень сложных, таких, как
                     многоступенчатая форма.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/301.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/618.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/935.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/301.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p> Данный элемент представляет собой контейнер с четкими визуальными границами, которые достигаются
                         с помощью обводки или отличающегося фона. Метка всегда остается видимой, даже когда пользователь
                         вводит текст. Внутринние отступы должны обеспечивать комфортное чтение и редактирование.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/302.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/619.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/936.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/302.png" />
+                    </picture>
                     <p>Анатомия с дополнительными элементами</p>
                     <p>При необходимости поле можно дополнить вспомогательными элементами, например: счетчиком символов,
                         кнопкой очистки или индикатором валидации. Чаще всего данные элементы размещаются справа или
@@ -71,8 +86,18 @@
                     помочь ему понять текущее состояние.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/303.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/304.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/620.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/937.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/303.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/621.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/938.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/304.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>В исходном состоянии поле готово к вводу. Границы и метка имеют нейтральный цвет, не создающий
@@ -84,8 +109,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/305.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/306.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/622.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/939.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/305.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/623.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/940.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/306.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>При нажатии на поле ввода границы области стоит сделать более заметными, например, с помощью
@@ -99,37 +134,53 @@
         <div class="contentpart">
             <div class="heading-m">Чек-лист</div>
             <div class="checklist heading-m" id="checklist">
-                <span class="checklist-item">Метка поля всегда видима и однозначно описывает его назначение</span>
+                <span class="checklist-item">Метка поля всегда видима и однозначно описывает его назначение</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Размер поля соответствует ожидаемой длине вводимого текста</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Внутренние отступы обеспечивают комфортное чтение и редактирование</span>
+                <span class="checklist-item">Внутренние отступы обеспечивают комфортное чтение и редактирование</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Состояние валидации четко отображается и сопровождается понятным сообщением</span>
+                <span class="checklist-item">Состояние валидации четко отображается и сопровождается понятным
+                    сообщением</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Подсказка (placeholder) дополняет, но не заменяет метку</span>
+                <span class="checklist-item">Подсказка (placeholder) дополняет, но не заменяет метку</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Все состояния поля имеют достаточный контраст с фоном</span>
+                <span class="checklist-item">Все состояния поля имеют достаточный контраст с фоном</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Вспомогательный текст и счетчики не мешают основному процессу ввода</span>
+                <span class="checklist-item">Вспомогательный текст и счетчики не мешают основному процессу ввода</span>
                 <span class="checkbox">□</span>
             </div>
         </div>
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index6.html" class="card" data-complexity="2" data-popularity="20">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/43.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/90.png">
+                        <img class="cardimage" src="../images/feed/desktop/11.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Индикатор загрузки</div>
+                </a>
+                <a href="../articles/index7.html" class="card" data-complexity="2" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/44.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/91.png">
+                        <img class="cardimage" src="../images/feed/desktop/12.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Поле выбора файла</div>
+                </a>
+                <a href="../articles/index2.html" class="card" data-complexity="1" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/39.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/86.png">
+                        <img class="cardimage" src="../images/feed/desktop/7.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Ссылка</div>
+                </a>
             </div>
         </div>
     </div>
@@ -140,12 +191,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

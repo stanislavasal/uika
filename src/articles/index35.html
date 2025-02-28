@@ -1,2 +1,252 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Футер</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/204.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/247.png">
+            <img class="cover" src="../images/articles/covers/desktop/161.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Футер</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Футер — это элемент интерфейса, которым должна завершаться любая страница сайта. Он объединяет в себе
+                    навигацию, контактную информацию, юридические данные, полезные ссылки и т. д. Футер является
+                    полноценным навигационным центром, особенно это заметно на одностраничных сайтах, и нужен для того,
+                    чтобы пользователь мог быстро найти важную информацию и ссылки.
+                    <br><br>
+                    Несмотря на значимость футера для навигации, его дизайн должен быть визуально второстепенным
+                    по отношению к основному контенту. Это достигается за счет сдержанной цветовой схемы, меньшего
+                    размера шрифта и четкой структуры с понятной иерархией элементов.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/815.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1132.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/498.png" />
+                    </picture>
+                    <p>Структурная сетка</p>
+                    <p>Чаще всего футер имеет модульную структуру и делится на блоки, которые могут включать
+                        навигационные колонки, контактную информацию, форму подписки, ссылки на социальные сети и нижнюю
+                        строку с юридической информацией. Между этими блоками необходимо поддерживать четкие интервалы,
+                        а ширина колонки должна быть определена по модульной сетке.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/816.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1133.png">
+                        <img class="article-image-s" src="../images/articles/images/desktop/499.png" />
+                    </picture>
+                    <p>Распределение пространства</p>
+                    <p>Основу футера составляют навигационные блоки, обычно занимающие 60-70% пространства. Каждая
+                        колонка имеет заголовок и список ссылок, сгруппированных по смыслу. Контактный блок обычно
+                        занимает 20-25% и может включать физический адрес, телефон и форму для подписки.</p>
+                    <p>Система отступов</p>
+                    <p>На начальных этапах обучения веб-дизайну можно использовать следующую систему: отступы между
+                        колонками — 40-60px, между группами ссылок — 24-32px, между отдельными ссылками — 8-16px,
+                        вертикальные отступы футера от основного контента составят 80-120px сверху и 40-60px снизу.
+                        Однако, данная система может адекватно видоизменяться.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/817.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1134.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/500.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/818.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1135.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/501.png" />
+                        </picture>
+                    </div>
+                    <p>Базовые состояния</p>
+                    <p>Как вам уже известно, каждый интерактивный элемент имеет четыре состояния: обычное, при
+                        наведении, при фокусе и при нажатии. Основными элементами футера являются текстовые ссылки,
+                        которые могут подчеркиваться или менять цвет при наведении, кнопки, обычно меняющие фон, и поля
+                        ввода, получающие заметную обводку. Более подробная информация описана в главах, посвященных
+                        этим компонентам.</p>
+                    <p>Взаимодействие с формой</p>
+                    <p>Форма подписки на рассылку включает валидацию email-адреса, контекстные подсказки и сообщения
+                        об ошибках. Успешная подписка сопровождается анимированным подтверждением.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/819.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1136.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/502.png" />
+                    </picture>
+                    <p>Мобильные взаимодействия</p>
+                    <p>На мобильных устройствах футер должен перестроиться либо в аккордеон, либо просто стать
+                        вертикальным. Если вы отдали предпочтение аккордеону, следите за тем, чтобы анимация раскрытия
+                        происходила примерно за 300-400ms с плавным изменением высоты и прозрачности содержимого.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/820.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1137.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/503.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/821.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1138.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/504.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>Если говорить об адаптиве для мобильного устройства подробнее, можно добавить, что стоит
+                        перестроить кнопки в один столбец, приоритет отдать контактной информации и разделам навигации,
+                        а второстепенные ссылки сгруппировать в раскрывающиеся блоки или переместить в нижнюю часть
+                        футера.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах в основном используется двухколоночный макет. Навигационные блоки группируются
+                        попарно, а контактная информация и социальные сети образуют отдельный блок внизу.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/822.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1139.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/505.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На широких экранах раскрывается полная структура футера. При большой ширине появляется
+                        возможность добавления дополнительного контента: карты проезда, галереи социальных сетей или
+                        расширенные контактные данные.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Структура футера логична и понятна пользователям</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Все навигационные блоки имеют четкую визуальную иерархию</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ссылки ведут на правильные страницы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контактная информация актуальна и правильно отформатирована</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форма подписки имеет корректную валидацию и обратную связь</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Социальные иконки узнаваемы и имеют правильные цвета</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Все интерактивные элементы имеют состояния наведения и фокуса</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и не отвлекают от контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Футер адаптируется под все размеры экранов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы между элементами сбалансированы на всех разрешениях</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Социальные иконки имеют достаточный размер для тапа</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Пропорции блоков сохраняются на разных устройствах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Пиктограммы и иконки масштабируются без искажений</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index40.html" class="card" data-complexity="5" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/76.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/123.png">
+                        <img class="cardimage" src="../images/feed/desktop/44.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Лента контента</div>
+                </a>
+                <a href="../articles/index41.html" class="card" data-complexity="5" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/77.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/124.png">
+                        <img class="cardimage" src="../images/feed/desktop/45.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Комментарии</div>
+                </a>
+                <a href="../articles/index42.html" class="card" data-complexity="5" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/78.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/125.png">
+                        <img class="cardimage" src="../images/feed/desktop/46.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Система аутентификации</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>

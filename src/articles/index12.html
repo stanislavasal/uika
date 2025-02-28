@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -33,7 +33,12 @@
         </div>
     </div>
     <div class="content">
-        <img class="cover" src="../images/articles/covers/desktop/138.png" />
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/181.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/224.png">
+            <img class="cover" src="../images/articles/covers/desktop/138.png">
+        </picture>
         <div class="breadcrumbs">
             <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
             <div class="heading-xxs">→</div>
@@ -50,7 +55,12 @@
                     использовать для отображения состояния загрузки файла, заполнения формы или этапа в многошаговом
                     процессе.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/338.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/655.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/972.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/338.png" />
+                    </picture>
                     <p>Базовая анатомия </p>
                     <p>Основа индикатора — это трек, который показывает полную длину процесса. Внутри трека движется
                         заполнение, отражающее текущий прогресс. Пропорции и размеры должны обеспечивать чёткую
@@ -58,7 +68,12 @@
                     </p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/339.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/656.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/973.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/339.png" />
+                    </picture>
                     <p>Анатомия с дополнительными элементами</p>
                     <p>Элемент может дополняться поясняющим текстом, описывающим текущий этап или оставшееся время. При
                         необходимости добавляются метки ключевых этапов или промежуточные деления. Для более сложных
@@ -71,8 +86,18 @@
                     обеспечивая постоянную обратную связь.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/340.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/341.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/657.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/974.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/340.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/658.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/975.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/341.png" />
+                        </picture>
                     </div>
                     <p>Default</p>
                     <p>В начальном состоянии индикатор показывает нулевой или начальный прогресс. Трек должен быть
@@ -83,8 +108,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/342.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/343.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/659.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/976.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/342.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/660.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/977.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/343.png" />
+                        </picture>
                     </div>
                     <p>Active</p>
                     <p>В процессе заполнения движение должно быть плавным, без резких скачков, а при длительных
@@ -99,21 +134,21 @@
         <div class="contentpart">
             <div class="heading-m">Чек-лист</div>
             <div class="checklist heading-m" id="checklist">
-                <span class="checklist-item">Заполнение движется плавно и предсказуемо</span>
+                <span class="checklist-item">Заполнение движется плавно и предсказуемо</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Процент выполнения отображается чётко и понятно</span>
+                <span class="checklist-item">Процент выполнения отображается чётко и понятно</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Цветовой контраст достаточен для отслеживания прогресса</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Предусмотрено состояние неопределённого прогресса</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Анимации не вызывают визуального дискомфорта</span>
+                <span class="checklist-item">Анимации не вызывают визуального дискомфорта</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">При длительных операциях есть оценка оставшегося времени</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Промежуточные этапы (если есть) чётко обозначены</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Текстовые подписи информативны и лаконичны</span>
+                <span class="checklist-item">Текстовые подписи информативны и лаконичны</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Состояние ошибки или паузы визуально различимо</span>
                 <span class="checkbox">□</span>
@@ -122,18 +157,33 @@
         <div class="contentpart">
             <div class="heading-m">Вам может быть интересно</div>
             <div class="new_elements">
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
-                <div class="card">
-                    <img class="cardimage" />
-                    <div class="heading-xs"></div>
-                </div>
+                <a href="../articles/index10.html" class="card" data-complexity="2" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/47.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/94.png">
+                        <img class="cardimage" src="../images/feed/desktop/15.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Выпадающий список</div>
+                </a>
+                <a href="../articles/index11.html" class="card" data-complexity="2" data-popularity="80">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/48.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/95.png">
+                        <img class="cardimage" src="../images/feed/desktop/16.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Поле поиска</div>
+                </a>
+                <a href="../articles/index14.html" class="card" data-complexity="1" data-popularity="70">
+                    <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/49.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/96.png">
+                        <img class="cardimage" src="../images/feed/desktop/17.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Теги</div>
+                </a>
             </div>
         </div>
     </div>
@@ -144,12 +194,13 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
 </body>
 
 </html>

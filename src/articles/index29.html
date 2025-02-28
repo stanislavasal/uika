@@ -1,2 +1,260 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Модальные окна</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/198.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/241.png">
+            <img class="cover" src="../images/articles/covers/desktop/155.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Модальные окна</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Модальное окно — интерфейсный элемент, появляющийся поверх основного контента. Он содержит в себе
+                    информацию, которая требует внимания пользователя, поэтому временно блокирует взаимодействие
+                    с остальной частью интерфейса, фокус для выполнения задачи или принятие решения.
+                    <br><br>
+                    Модальные окна применяются для действий, требующих подтверждения, детального просмотра контента или
+                    заполнения форм без перехода на новую страницу. Этот паттерн эффективен для концентрации внимания
+                    пользователя, однако, его необходимо применять с осторожностью, чтобы не нарушить интуитивное
+                    взаимодействие.
+                </p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/765.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1082.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/448.png" />
+                    </picture>
+                    <p>Основная структура</p>
+                    <p>Ключевыми элементами модального окна являются: сам контейнер окна, заголовок, область контента,
+                        панель действий и оверлей, который нужен для того, чтобы визуально отделить окно от остального
+                        интерфейса.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/766.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1083.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/449.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/767.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1084.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/450.png" />
+                        </picture>
+                    </div>
+                    <p>Варианты компоновки</p>
+                    <p>Модальные окна могут принимать различные формы в зависимости от назначения: компактное окно для
+                        подтверждения, расширенная форма с прокруткой или полноэкранный режим для просмотра. Заголовок
+                        должен всегда оставаться видимым, а кнопки действий располагаться в нижней части окна.
+                    </p>
+                    <p>Дополнительные элементы</p>
+                    <p>К базовой структуре могут быть добавлены дополнительные элементы, например: кнопка закрытия
+                        в правом верхнем углу, иконки, индикаторы прогресса или вкладки для организации контента.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <p>Правильно спроектированное модальное окно требует динамической реакции на действия пользователя,
+                    обеспечивая плавный переход между состояниями.</p>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/768.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1085.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/451.png" />
+                    </picture>
+                    <p>Появление и исчезновение</p>
+                    <p>При появлении окно плавно, но быстро увеличивается с точки центра экрана одновременно
+                        с появлением оверлея. Закрытие происходит в обратном порядке. Анимация помогает пользователю
+                        понять изменение контекста интерфейса.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/769.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1086.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/452.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/770.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1087.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/453.png" />
+                        </picture>
+                    </div>
+                    <p>Управление фокусом</p>
+                    <p>После открытия фокус автоматически перемещается на первый интерактивный элемент внутри окна.</p>
+                    <p>Обработка переполнения</p>
+                    <p>Если контента слишком много, можно добавить прокрутку, но только в основной области, в то время
+                        как заголовок и кнопки действий следует оставить фиксированными. Длинные заголовки нужно
+                        сократить с помощью многоточия, это поможет сохранить компактность интерфейса.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <p>Модальные окна должны адаптироваться под различные размеры экрана, сохраняя функциональность
+                    и удобство использования.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/771.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1088.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/454.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/772.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1089.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/455.png" />
+                        </picture>
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных устройствах окно занимает почти всю высоту экрана, оставляя небольшие отступы сверху
+                        и снизу. Ширина ограничена отступами по бокам. Кнопки действий увеличиваются для удобства
+                        касания.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах окно принимает более компактную форму с фиксированной шириной. В данном случае
+                        становится возможной горизонтальная компоновка элементов в области контента. Размер текста
+                        и отступов оптимизируется для более комфортного чтения.</p>
+                </div>
+                <div class="articlepart">
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/773.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1090.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/456.png" />
+                    </picture>
+                    <p>Десктопная версия</p>
+                    <p>На больших экранах окно ограничено максимальной шириной, центрируется и может иметь более сложную
+                        структуру. Следует добавить ховер-эффекты, которые уже были рассмотрены в нашем учебнике.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Окно четко выделяется на фоне основного интерфейса</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Заголовок ясно описывает назначение окна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопки действий понятно обозначены</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Оверлей правильно блокирует основной контент</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и ненавязчивые</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Прокрутка контента удобна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Закрытие доступно всеми возможными способами</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Текст читабелен на всех устройствах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интерактивные элементы имеют достаточный размер</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Визуальная иерархия элементов понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цветовые акценты расставлены логично</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Обработка ошибок предусмотрена</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <a href="../articles/index24.html" class="card" data-complexity="3" data-popularity="60">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/feed/tablet/60.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/107.png">
+                        <img class="cardimage" src="../images/feed/desktop/28.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Сайдбар</div>
+                </a>
+                <a href="../articles/index25.html" class="card" data-complexity="3" data-popularity="40">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/feed/tablet/61.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/108.png">
+                        <img class="cardimage" src="../images/feed/desktop/29.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Степпер</div>
+                </a>
+                <a href="../articles/index26.html" class="card" data-complexity="3" data-popularity="20">
+                    <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/feed/tablet/62.png">
+                        <source media="(max-width: 743px)" srcset="../images/feed/mobile/109.png">
+                        <img class="cardimage" src="../images/feed/desktop/30.png">
+                    </picture>
+                    <div class="heading-xs" style="color: black;">Аккордеон</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/breadcrumbs.js"></script>
+</body>
+
+</html>
