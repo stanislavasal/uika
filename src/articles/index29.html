@@ -59,75 +59,111 @@
                     взаимодействие.
                 </p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/448.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/765.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1082.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/448.png" />
+                    </picture>
                     <p>Основная структура</p>
                     <p>Ключевыми элементами модального окна являются: сам контейнер окна, заголовок, область контента,
-                        панель действий и оверлей, который нужен для того, чтобы визуально отделить окно от остального
+                        панель действий и оверлей, который нужен для того, чтобы визуально отделить окно от остального
                         интерфейса.
                     </p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/449.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/450.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/766.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1083.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/449.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/767.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1084.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/450.png" />
+                        </picture>
                     </div>
                     <p>Варианты компоновки</p>
-                    <p>Модальные окна могут принимать различные формы в зависимости от назначения: компактное окно для
-                        подтверждения, расширенная форма с прокруткой или полноэкранный режим для просмотра. Заголовок
-                        должен всегда оставаться видимым, а кнопки действий располагаться в нижней части окна.
+                    <p>Модальные окна могут принимать различные формы в зависимости от назначения: компактное окно для
+                        подтверждения, расширенная форма с прокруткой или полноэкранный режим для просмотра. Заголовок
+                        должен всегда оставаться видимым, а кнопки действий располагаться в нижней части окна.
                     </p>
                     <p>Дополнительные элементы</p>
-                    <p>К базовой структуре могут быть добавлены дополнительные элементы, например: кнопка закрытия
-                        в правом верхнем углу, иконки, индикаторы прогресса или вкладки для организации контента.</p>
+                    <p>К базовой структуре могут быть добавлены дополнительные элементы, например: кнопка закрытия
+                        в правом верхнем углу, иконки, индикаторы прогресса или вкладки для организации контента.</p>
                 </div>
             </div>
             <div class="article">
                 <div class="heading-m">Состояния и поведение</div>
-                <p>Правильно спроектированное модальное окно требует динамической реакции на действия пользователя,
+                <p>Правильно спроектированное модальное окно требует динамической реакции на действия пользователя,
                     обеспечивая плавный переход между состояниями.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/451.png" />
-                    <p>Появление и исчезновение</p>
-                    <p>При появлении окно плавно, но быстро увеличивается с точки центра экрана одновременно
-                        с появлением оверлея. Закрытие происходит в обратном порядке. Анимация помогает пользователю
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/768.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1085.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/451.png" />
+                    </picture>
+                    <p>Появление и исчезновение</p>
+                    <p>При появлении окно плавно, но быстро увеличивается с точки центра экрана одновременно
+                        с появлением оверлея. Закрытие происходит в обратном порядке. Анимация помогает пользователю
                         понять изменение контекста интерфейса.</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/452.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/453.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/769.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1086.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/452.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/770.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1087.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/453.png" />
+                        </picture>
                     </div>
                     <p>Управление фокусом</p>
-                    <p>После открытия фокус автоматически перемещается на первый интерактивный элемент внутри окна.</p>
+                    <p>После открытия фокус автоматически перемещается на первый интерактивный элемент внутри окна.</p>
                     <p>Обработка переполнения</p>
-                    <p>Если контента слишком много, можно добавить прокрутку, но только в основной области, в то время
-                        как заголовок и кнопки действий следует оставить фиксированными. Длинные заголовки нужно
-                        сократить с помощью многоточия, это поможет сохранить компактность интерфейса.</p>
+                    <p>Если контента слишком много, можно добавить прокрутку, но только в основной области, в то время
+                        как заголовок и кнопки действий следует оставить фиксированными. Длинные заголовки нужно
+                        сократить с помощью многоточия, это поможет сохранить компактность интерфейса.</p>
                 </div>
             </div>
             <div class="article">
                 <div class="heading-m">Адаптивность</div>
                 <p>Модальные окна должны адаптироваться под различные размеры экрана, сохраняя функциональность
-                    и удобство использования.</p>
+                    и удобство использования.</p>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/454.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/455.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/771.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1088.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/454.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/772.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1089.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/455.png" />
+                        </picture>
                     </div>
                     <p>Мобильная версия</p>
-                    <p>На мобильных устройствах окно занимает почти всю высоту экрана, оставляя небольшие отступы сверху
-                        и снизу. Ширина ограничена отступами по бокам. Кнопки действий увеличиваются для удобства
+                    <p>На мобильных устройствах окно занимает почти всю высоту экрана, оставляя небольшие отступы сверху
+                        и снизу. Ширина ограничена отступами по бокам. Кнопки действий увеличиваются для удобства
                         касания.</p>
                     <p>Планшетная версия</p>
-                    <p>На планшетах окно принимает более компактную форму с фиксированной шириной. В данном случае
-                        становится возможной горизонтальная компоновка элементов в области контента. Размер текста
-                        и отступов оптимизируется для более комфортного чтения.</p>
+                    <p>На планшетах окно принимает более компактную форму с фиксированной шириной. В данном случае
+                        становится возможной горизонтальная компоновка элементов в области контента. Размер текста
+                        и отступов оптимизируется для более комфортного чтения.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/456.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/773.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1090.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/456.png" />
+                    </picture>
                     <p>Десктопная версия</p>
-                    <p>На больших экранах окно ограничено максимальной шириной, центрируется и может иметь более сложную
-                        структуру. Следует добавить ховер-эффекты, которые уже были рассмотрены в нашем учебнике.</p>
+                    <p>На больших экранах окно ограничено максимальной шириной, центрируется и может иметь более сложную
+                        структуру. Следует добавить ховер-эффекты, которые уже были рассмотрены в нашем учебнике.</p>
                 </div>
             </div>
         </div>

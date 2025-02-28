@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -62,7 +62,12 @@
                     Он должен работать эффективно на всех устройствах, сохраняя свою функциональность и удобство
                     использования при любых размерах экрана.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/489.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/806.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1123.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/489.png" />
+                    </picture>
                     <p>Базовая структура</p>
                     <p>Хедер состоит из трех основных частей: логотипа, основной навигации в центре и пользовательских
                         инструментов справа. Такое распределение помогает сформировать понятную ментальную модель
@@ -70,8 +75,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/490.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/491.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/807.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1124.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/490.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/808.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1125.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/491.png" />
+                        </picture>
                     </div>
                     <p>Компоненты хедера</p>
                     <p>При проектировании хедера, в отличие от футера, стоит пользоваться следующей схемой пропорций:
@@ -85,9 +100,14 @@
                 </div>
             </div>
             <div class="article">
-                <div class="heading-m">Состояния и поведение</div>
+                <div class="heading-m">Состояния и поведение</div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/492.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/809.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1126.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/492.png" />
+                    </picture>
                     <p>Фиксированное положение</p>
                     <p>Хедер может быть статичным и фиксированным при прокрутке страницы. В фиксированном хедере высота
                         обычно уменьшается в момент, когда мы начинаем скроллить страницу, сохраняя только важные
@@ -95,8 +115,18 @@
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/493.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/494.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/810.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1127.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/493.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/811.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1128.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/494.png" />
+                        </picture>
                     </div>
                     <p>Интерактивные состояния</p>
                     <p>Каждый элемент навигации имеет несколько состояний: стандартное, при наведении, активное и для
@@ -116,8 +146,18 @@
                 <div class="heading-m">Адаптивность</div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/495.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/496.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/812.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1129.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/495.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/813.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1130.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/496.png" />
+                        </picture>
                     </div>
                     <p>Мобильная версия</p>
                     <p>Зачастую на мобильных устройствах хедер сворачивается в «бургер», в шапке остаются только самые
@@ -130,7 +170,12 @@
                         ширину и высоту, чтобы мы могли облегчить пользователю более очевидную навигацию по сайту.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/497.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/814.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1131.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/497.png" />
+                    </picture>
                     <p>Десктопная версия</p>
                     <p>На больших экранах хедер раскрывается полностью, показывая еще больше элементов навигации. При
                         этом важно сохранять баланс между информативностью и визуальной чистотой интерфейса.
@@ -142,31 +187,31 @@
         <div class="contentpart">
             <div class="heading-m">Чек-лист</div>
             <div class="checklist heading-m" id="checklist">
-                <span class="checklist-item">Логотип является ссылкой на главную страницу</span>
+                <span class="checklist-item">Логотип является ссылкой на главную страницу</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Структура основной навигации ясна и понятна</span>
+                <span class="checklist-item">Структура основной навигации ясна и понятна</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Текущий раздел сайта четко обозначен</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Все интерактивные элементы имеют состояния наведения</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Поиск доступен и легко заметен</span>
+                <span class="checklist-item">Поиск доступен и легко заметен</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Фиксация хедера при прокрутке происходит плавно</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Выпадающие меню открываются</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Мобильное меню легко открывается и закрывается</span>
+                <span class="checklist-item">Мобильное меню легко открывается и закрывается</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Все элементы управления имеют достаточно большую область касания</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Анимации плавные и не отвлекают от контента</span>
+                <span class="checklist-item">Анимации плавные и не отвлекают от контента</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Контраст между текстом и фоном соответствует стандартам</span>
+                <span class="checklist-item">Контраст между текстом и фоном соответствует стандартам</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Адаптивный дизайн не нарушает функциональность</span>
+                <span class="checklist-item">Адаптивный дизайн не нарушает функциональность</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Хедер правильно масштабируется на всех разрешениях экрана</span>
+                <span class="checklist-item">Хедер правильно масштабируется на всех разрешениях экрана</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Логотип сохраняет качество при изменении масштаба</span>
                 <span class="checkbox">□</span>
@@ -197,7 +242,7 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>

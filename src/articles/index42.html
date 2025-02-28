@@ -57,67 +57,101 @@
                     страницы. Ее дизайн должен быть простым и понятным, ведь это зачастую первая точка взаимодействия
                     пользователя с интерфейсом.</p>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/556.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/873.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1190.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/556.png" />
+                    </picture>
                     <p>Структура страниц</p>
-                    <p>Основу системы составляют три ключевые функции, обычно располагающиеся на разных страницах: вход,
-                        регистрация и восстановление доступа. Эти страницы обязательно должны быть связаны перекрестными
-                        ссылками и иметь схожую компоновку, чтобы не вызывать лишних вопросов.</p>
+                    <p>Основу системы составляют три ключевые функции, обычно располагающиеся на разных страницах: вход,
+                        регистрация и восстановление доступа. Эти страницы обязательно должны быть связаны перекрестными
+                        ссылками и иметь схожую компоновку, чтобы не вызывать лишних вопросов.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-s" src="../images/articles/images/desktop/557.png" />
+                    <div class="articleimages">
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/874.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1191.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/557.png" />
+                        </picture>
+                    </div>
                     <p>Компоненты страницы</p>
-                    <p>Основными компонентами страниц являются заголовки, формы и дополнительные действия. Для
-                        правильного управления вниманием пользователя лучше всего расположить форму в центре экрана,
-                        а навигационные элементы разместить под ними.</p>
+                    <p>Основными компонентами страниц являются заголовки, формы и дополнительные действия. Для
+                        правильного управления вниманием пользователя лучше всего расположить форму в центре экрана,
+                        а навигационные элементы разместить под ними.</p>
                     <p>Варианты интеграции</p>
                     <p>Данная система может быть реализована тремя способами: как отдельная страница, как модальное окно
-                        или как встроенная форма. Выбор зависит от контекста использования и частоты обращения к функции
+                        или как встроенная форма. Выбор зависит от контекста использования и частоты обращения к функции
                         входа.</p>
                 </div>
             </div>
             <div class="article">
-                <div class="heading-m">Состояния и взаимодействия</div>
+                <div class="heading-m">Состояния и взаимодействия</div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/558.png" />
-                    <p>Валидация на лету</p>
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/875.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1192.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/558.png" />
+                    </picture>
+                    <p>Валидация на лету</p>
                     <p>При вводе данных поля изменяют состояние, пользователю нужно увидеть индикаторы заполнения,
-                        подсказки по формату и сообщения об ошибках. Валидация происходит плавно, без резких изменений
-                        в интерфейсе.</p>
+                        подсказки по формату и сообщения об ошибках. Валидация происходит плавно, без резких изменений
+                        в интерфейсе.</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/559.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/560.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/876.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1193.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/559.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/877.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1194.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/560.png" />
+                        </picture>
                     </div>
                     <p>Переходы между формами</p>
-                    <p>Переключение между формами входа и регистрации стоит сопровождать ненавязчивой анимацией. Кроме
+                    <p>Переключение между формами входа и регистрации стоит сопровождать ненавязчивой анимацией. Кроме
                         того, важным является сохранение контекста. Например, если пользователь начал регистрацию через
-                        почту, при возвращении к форме выбранный способ должен сохраниться.</p>
+                        почту, при возвращении к форме выбранный способ должен сохраниться.</p>
                     <p>Индикация процессов</p>
-                    <p>Во время проверки данных компонент должен показать процесс загрузки, а именно, визуально
-                        заблокировать кнопки и добавить значок загрузки. После успешного входа произойдет переход
-                        на основной сайт или в личный кабинет.</p>
+                    <p>Во время проверки данных компонент должен показать процесс загрузки, а именно, визуально
+                        заблокировать кнопки и добавить значок загрузки. После успешного входа произойдет переход
+                        на основной сайт или в личный кабинет.</p>
                 </div>
             </div>
             <div class="article">
                 <div class="heading-m">Адаптивность</div>
                 <div class="articlepart">
                     <div class="articleimages">
-                        <img class="article-image-s" src="../images/articles/images/desktop/561.png" />
-                        <img class="article-image-s" src="../images/articles/images/desktop/562.png" />
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/878.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1195.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/561.png" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/879.png">
+                            <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1196.png">
+                            <img class="article-image-s" src="../images/articles/images/desktop/562.png" />
+                        </picture>
                     </div>
                     <p>Мобильная версия</p>
-                    <p>На узких экранах формы должны занимать всю ширину экрана с минимальными отступами, поля
-                        увеличиваются для удобства заполнения, а модальные окна заменяются на полноэкранные формы.</p>
+                    <p>На узких экранах формы должны занимать всю ширину экрана с минимальными отступами, поля
+                        увеличиваются для удобства заполнения, а модальные окна заменяются на полноэкранные формы.</p>
                     <p>Планшетная версия</p>
-                    <p>На планшетах формы имеют фиксированную ширину и центрируются, можно добавить дополнительную
-                        информацию по бокам. Модальные окна сохраняют компактный размер.</p>
+                    <p>На планшетах формы имеют фиксированную ширину и центрируются, можно добавить дополнительную
+                        информацию по бокам. Модальные окна сохраняют компактный размер.</p>
                 </div>
                 <div class="articlepart">
-                    <img class="article-image-l" src="../images/articles/images/desktop/563.png" />
+                    <picture>
+                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/880.png">
+                        <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1197.png">
+                        <img class="article-image-l" src="../images/articles/images/desktop/563.png" />
+                    </picture>
                     <p>Десктопная версия</p>
-                    <p>На десктопах систему следует дополнить боковыми панелями с информацией или промо-материалами.
-                        Формы остаются компактными, но могут иметь более сложную компоновку с многоколоночным
+                    <p>На десктопах систему следует дополнить боковыми панелями с информацией или промо-материалами.
+                        Формы остаются компактными, но могут иметь более сложную компоновку с многоколоночным
                         размещением полей.</p>
                 </div>
             </div>
