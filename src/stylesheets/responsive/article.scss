@@ -68,10 +68,15 @@
     }
 
     .checklist {
-        display: flex;
         width: 100%;
         padding: 4vw;
         border: 1px solid black;
         border-radius: 7px;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
     }
 }
