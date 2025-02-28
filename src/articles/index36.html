@@ -20,7 +20,7 @@
 <body>
     <div class="header">
         <div class="header_text_wrapper">
-            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
             <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
             <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
         </div>
@@ -49,82 +49,88 @@
         <div class="content-center">
             <div class="article">
                 <div class="heading-m">Анатомия</div>
-                <p>Формы с несколькими шагами позволяют разбить сложный процесс заполнения данных на последовательные
-                    этапы, что значительно снижает когнитивную нагрузку на пользователя и помогает ему сосредоточиться
-                    на одной задаче в каждый момент времени.
+                <p>Формы с несколькими шагами позволяют разбить сложный процесс заполнения данных на последовательные
+                    этапы, что значительно снижает когнитивную нагрузку на пользователя и помогает ему сосредоточиться
+                    на одной задаче в каждый момент времени.
                     <br><br>
-                    Проектирование пошаговой формы требует особого внимания к навигации между этапами и сохранению
-                    контекста. Пользователь должен всегда понимать, на каком шаге он находится, сколько шагов осталось
-                    впереди и иметь возможность вернуться назад без потери введенных данных. При этом каждый шаг должен
+                    Проектирование пошаговой формы требует особого внимания к навигации между этапами и сохранению
+                    контекста. Пользователь должен всегда понимать, на каком шаге он находится, сколько шагов осталось
+                    впереди и иметь возможность вернуться назад без потери введенных данных. При этом каждый шаг должен
                     восприниматься как завершенный логический блок.
                     <br><br>
-                    Особое внимание стоит уделить предотвращению ошибок и четкой валидации данных на каждом этапе.
-                    Система должна своевременно информировать о проблемах и подсказывать пути их решения,
-                    но не блокировать возможность временно пропустить необязательные поля с возможностью вернуться к ним
-                    позже (или не возвращаться).</p>
+                    Особое внимание стоит уделить предотвращению ошибок и четкой валидации данных на каждом этапе.
+                    Система должна своевременно информировать о проблемах и подсказывать пути их решения,
+                    но не блокировать возможность временно пропустить необязательные поля с возможностью вернуться к ним
+                    позже (или не возвращаться).
+                </p>
                 <div class="articlepart">
                     <picture>
-                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/823.png">
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/823.png">
                         <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1140.png">
                         <img class="article-image-l" src="../images/articles/images/desktop/506.png" />
                     </picture>
                     <p>Базовая структура</p>
-                    <p>Обычно форма включает три основных уровня: индикатор прогресса в верхней части, основное
-                        содержимое в центре и навигационные кнопки внизу. Пропорции зависят от сложности шага — простые
-                        формы могут занимать 30-40% высоты экрана, в то время как шаги с большим количеством полей могут
-                        растягиваться на всю доступную высоту.</p>
+                    <p>Обычно форма включает три основных уровня: индикатор прогресса в верхней части, основное
+                        содержимое в центре и навигационные кнопки внизу. Пропорции зависят от сложности шага — простые
+                        формы могут занимать 30-40% высоты экрана, в то время как шаги с большим количеством полей могут
+                        растягиваться на всю доступную высоту.</p>
                 </div>
                 <div class="articlepart">
                     <div class="articleimages">
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/824.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/824.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1141.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/507.png" />
                         </picture>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/825.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/825.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1142.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/508.png" />
                         </picture>
                     </div>
                     <p>Компоненты навигации</p>
                     <p>Индикатор прогресса может быть представлен точками, линией или нумерованными шагами, однако
-                        в очень больших формах точки лучше не использовать, ведь важно четко различать пройденные,
-                        текущий и будущие этапы. Навигационные кнопки «Назад» и «Вперед» должны быть заметными
-                        и располагаться в предсказуемых местах.</p>
+                        в очень больших формах точки лучше не использовать, ведь важно четко различать пройденные,
+                        текущий и будущие этапы. Навигационные кнопки «Назад» и «Вперед» должны быть заметными
+                        и располагаться в предсказуемых местах.</p>
                     <p>Организация контента</p>
-                    <p>Каждый шаг должен включать заголовок, поясняющий текст и группы полей ввода. Поля должны быть
-                        логически сгруппированы и выровнены по сетке. Обязательные поля нужно визуально выделить,
-                        однако, старайтесь не переусердствовать, чтобы не сделать их агрессивными.</p>
+                    <p>Каждый шаг должен включать заголовок, поясняющий текст и группы полей ввода. Поля должны быть
+                        логически сгруппированы и выровнены по сетке. Обязательные поля нужно визуально выделить,
+                        однако, старайтесь не переусердствовать, чтобы не сделать их агрессивными.</p>
                 </div>
             </div>
             <div class="article">
-                <div class="heading-m">Состояния и поведение</div>
+                <div class="heading-m">Состояния и поведение</div>
                 <div class="articlepart">
                     <div class="articleimages">
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/826.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/826.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1143.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/509.png" />
                         </picture>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/827.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/827.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1144.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/510.png" />
                         </picture>
                     </div>
                     <p>Переходы между шагами</p>
                     <p>Смена шагов должна сопровождаться плавной анимацией, демонстрирующей направление движения. Важно
-                        сохранить контекст, чтобы пользователь всегда понимал, куда он движется в процессе заполнения.
+                        сохранить контекст, чтобы пользователь всегда понимал, куда он движется в процессе заполнения.
                     </p>
-                    <p>Валидация и ошибки</p>
-                    <p>Проверка данных должна происходить в реальном времени, но не быть навязчивой. Ошибки следует
-                        обозначать рядом с проблемными полями, а общие проблемы выносить в заметную область наверху
+                    <p>Валидация и ошибки</p>
+                    <p>Проверка данных должна происходить в реальном времени, но не быть навязчивой. Ошибки следует
+                        обозначать рядом с проблемными полями, а общие проблемы выносить в заметную область наверху
                         формы.</p>
                     <p>Сохранение прогресса</p>
                     <p>Системе необходимо автоматически сохранять введенные данные при переходах между шагами, ведь
-                        пользователь должен иметь возможность прервать заполнение и вернуться позже, восстановив свой
-                        прогресс, иначе большое количество людей просто этого не сделают.</p>
+                        пользователь должен иметь возможность прервать заполнение и вернуться позже, восстановив свой
+                        прогресс, иначе большое количество людей просто этого не сделают.</p>
                 </div>
             </div>
             <div class="article">
@@ -132,33 +138,36 @@
                 <div class="articlepart">
                     <div class="articleimages">
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/828.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/828.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1145.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/511.png" />
                         </picture>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/829.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/articles/images/tablet/829.png">
                             <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1146.png">
                             <img class="article-image-s" src="../images/articles/images/desktop/512.png" />
                         </picture>
                     </div>
                     <p>Мобильная версия</p>
-                    <p>На мобильных устройствах каждый шаг занимает полный экран. Навигационные элементы фиксируются
-                        внизу экрана для удобного доступа, а индикатор прогресса может быть свернут в компактный вид.
+                    <p>На мобильных устройствах каждый шаг занимает полный экран. Навигационные элементы фиксируются
+                        внизу экрана для удобного доступа, а индикатор прогресса может быть свернут в компактный вид.
                     </p>
                     <p>Планшетная версия</p>
-                    <p>На средних экранах можно использовать двухколоночную компоновку для связанных полей. Появляется
-                        возможность показывать дополнительную информацию в боковой панели.</p>
+                    <p>На средних экранах можно использовать двухколоночную компоновку для связанных полей. Появляется
+                        возможность показывать дополнительную информацию в боковой панели.</p>
                 </div>
                 <div class="articlepart">
                     <picture>
-                        <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/articles/images/tablet/830.png">
+                        <source media="(min-width: 744px) and (max-width: 1024px)"
+                            srcset="../images/articles/images/tablet/830.png">
                         <source media="(max-width: 743px)" srcset="../images/articles/images/mobile/1147.png">
                         <img class="article-image-l" src="../images/articles/images/desktop/513.png" />
                     </picture>
                     <p>Десктопная версия</p>
-                    <p>Широкие экраны предоставляют возможность для создания сложных интерфейсных систем, в которые
-                        добавляются предпросмотр результатов, контекстная помощь и расширенные инструменты валидации.
+                    <p>Широкие экраны предоставляют возможность для создания сложных интерфейсных систем, в которые
+                        добавляются предпросмотр результатов, контекстная помощь и расширенные инструменты валидации.
                     </p>
                 </div>
             </div>
@@ -180,13 +189,13 @@
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Анимации поддерживают контекст</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Возврат к предыдущим шагам возможен</span>
+                <span class="checklist-item">Возврат к предыдущим шагам возможен</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Длинные формы имеют точки сохранения</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Подсказки появляются своевременно</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Кнопки действий заметны и понятны</span>
+                <span class="checklist-item">Кнопки действий заметны и понятны</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Цветовые акценты расставлены правильно</span>
                 <span class="checkbox">□</span>
@@ -196,7 +205,7 @@
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Фокус всегда понятен пользователю</span>
                 <span class="checkbox">□</span>
-                <span class="checklist-item">Адаптация не теряет функциональности</span>
+                <span class="checklist-item">Адаптация не теряет функциональности</span>
                 <span class="checkbox">□</span>
                 <span class="checklist-item">Дизайн соответствует контексту использования</span>
                 <span class="checkbox">□</span>
@@ -227,7 +236,7 @@
         <div class="footer_text_wrapper">
             <p><a id="footerlink" href="">Телеграм↗</a></p>
             <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
