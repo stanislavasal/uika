@@ -1,2 +1,195 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Комментарии</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/210.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/253.png">
+            <img class="cover" src="../images/articles/covers/desktop/167.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Комментарии</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Комментарии — это пространство для диалога между пользователями, где происходит обмен мнениями,
+                    обсуждение контента и активная дискуссия. Правильно спроектированный блок комментариев способствует
+                    созданию сообщества и повышению вовлеченности аудитории.
+                    <br><br>
+                    В отличие от других элементов интерфейса комментарии должны поддерживать сложную социальную
+                    динамику. Они включают не только базовый ввод текста, но и возможности ответа, оценки, модерации
+                    и структурированного обсуждения.
+                    <br><br>
+                    При проектировании комментариев важно найти баланс между функциональностью и простотой
+                    использования. Система должна поощрять диалог, но при этом оставаться доступной для новых
+                    пользователей.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/547.png" />
+                    <p>Структура комментария</p>
+                    <p>Основные элементы включают: аватар пользователя, имя автора, дату публикации, текст комментария
+                        и панель действий. Между блоками должны быть четкие визуальные разделители и правильные
+                        пропорции для удобства восприятия.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/548.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/549.png" />
+                    </div>
+                    <p>Уровни вложенности</p>
+                    <p>Каждый уровень вложенности можно выделить отступом или визуальной линией связи, при этом первый
+                        вариант менее предпочтителен, так как диалог между пользователями может иметь любую длину.
+                        Рекомендуется ограничить количество ответов в «ветке» тремя-четырьмя комментариями, а остальные
+                        сделать доступными по кнопке.</p>
+                    <p>Компоненты взаимодействия</p>
+                    <p>Форма ввода включает текстовое поле, кнопки форматирования и управления. Очень важно
+                        предусмотреть возможность предпросмотра комментария и прикрепления медиафайлов.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/550.png" />
+                    <p>Процесс публикации</p>
+                    <p>От написания до появления комментария система проходит несколько этапов: валидация, модерация,
+                        публикация. Каждый этап должен сопровождаться понятной индикацией состояния.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/551.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/552.png" />
+                    </div>
+                    <p>Социальные механики</p>
+                    <p>Комментарии поддерживают оценки, ответы и репосты. Действия пользователей должны отображаться
+                        мгновенно, создавая ощущение живого общения, а популярным комментариям следует добавить
+                        отдельное выделение или переместить их вверх.</p>
+                    <p>Модерация и управление</p>
+                    <p>Необходимо спроектировать систему комментариев так, чтобы существовала возможность удалять
+                        и редактировать их. Отдельный интерфейс стоит спроектировать для модераторов, которые должны
+                        иметь дополнительные возможности, такие как пометка, скрытие и бан. Важно помнить, что все
+                        действия должны быть обратимыми, и учитывать это при работе.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/553.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/554.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На смартфонах структура упрощается, но сохраняет возможность комфортного чтения и ответа. Чтобы
+                        сделать интерфейс более свободным, вложенные комментарии стоит раскрывать только по запросу, без
+                        превью из трех-четырех ответов.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах интерфейс сохраняет баланс между компактностью и функциональностью. Появляется
+                        больше пространства для инструментов форматирования и предпросмотра, самые важные из которых уже
+                        не нужно выносить «под» отдельные кнопки и можно сделать доступными изначально.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/555.png" />
+                    <p>Десктопная версия</p>
+                    <p>На десктопах раскрываются все возможности, например, расширенное форматирование, drag-and-drop
+                        файлов, удобная навигация по веткам обсуждения.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Структура вложенности не вызывает вопросов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Элементы управления заметны и доступны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форма ввода удобна для длинных текстов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форматирование текста легко применимо</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Оценки и реакции интуитивно понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Навигация по длинным обсуждениям удобна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Аватары и имена четко идентифицируют авторов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Редактирование не нарушает контекст</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Фильтрация и сортировка очевидны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Загрузка контента не прерывает чтение</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Дизайн поощряет конструктивный диалог</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интерфейс адаптируется под все устройства</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

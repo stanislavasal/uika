@@ -1,2 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Система подписки</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/207.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/250.png">
+            <img class="cover" src="../images/articles/covers/desktop/164.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Система подписки</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Система подписки — это интерфейс, который упрощает процесс выбора и оформления платного доступа
+                    к продукту или сервису. Для успешной работы очень важно ясно представить варианты подписок,
+                    их ключевые преимущества и ограничения, избегая перегрузки информацией. Акцентируйте внимание
+                    на самых главных функциях и выделяйте рекомендуемые планы для облегчения принятия решения.
+                    <br><br>
+                    Управление подпиской делается интуитивной: пользователь должен легко находить информацию о статусе,
+                    дате следующего платежа и возможностях изменения или отмены. Прозрачность процессов повышает
+                    доверие, а честный подход в дизайне исключает казусы, способные испортить впечатление от всего
+                    продукта.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/523.png" />
+                    <p>Структура страницы подписки</p>
+                    <p>Страница включает заголовок с самим предложением, блоки тарифных планов, сравнительную таблицу
+                        возможностей и часто задаваемые вопросы. Тарифные планы должны быть визуально акцентированы
+                        и определять общую композицию страницы.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/524.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/525.png" />
+                    </div>
+                    <p>Тарифный план</p>
+                    <p>Обычно каждый план содержит название, цену, период оплаты, список включенных функций и акценты
+                        на особых преимуществах. Корректная визуальная иерархия поможет быстро сравнивать планы
+                        и находить отличия.</p>
+                    <p>Процесс оформления</p>
+                    <p>Оформление нужно разделить на последовательные шаги: выбор плана, создание аккаунта или
+                        авторизация, ввод платежных данных и подтверждение. Каждый шаг должен быть максимально,
+                        но в пределах разумного, упрощен и содержать только необходимые элементы, чтобы пользователь
+                        не передумал в процессе.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/526.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/527.png" />
+                    </div>
+                    <p>Выбор периода</p>
+                    <p>Переключение между месячной и годовой оплатой сопровождается наглядной демонстрацией экономии.
+                        Изменения цен плавно анимируются, что помогает отследить разницу.</p>
+                    <p>Процесс изменения плана</p>
+                    <p>При смене тарифа система должна показать, как изменятся условия и стоимость, включая перерасчет
+                        за оставшийся период текущей подписки. Важные изменения необходимо подтвердить, чтобы избежать
+                        случайных ошибок и плохого пользовательского опыта.</p>
+                    <p>Управление подпиской</p>
+                    <p>В структуру личного кабинета следует включить доступ к истории платежей, настройкам автопродления
+                        и возможностям приостановки или отмены подписки, сопровождая каждое действие понятным
+                        и не перегружающим интерфейс предупреждением.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/528.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/529.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На смартфонах планы показываются последовательно, с возможностью горизонтальной прокрутки для
+                        сравнения. Таблица возможностей адаптируется для вертикального просмотра.</p>
+                    <p>Планшетная версия</p>
+                    <p>В планшетной версии допустимо усложнить сетку и располагать по два-три элемента рядом, при этом
+                        сохранив читаемость контента. Появляется простор для более детального сравнения функций, который
+                        мы очень рекомендуем задействовать.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/530.png" />
+                    <p>Десктопная версия</p>
+                    <p>Десктопная версия должна продемонстрировать наиболее расширенную информацию о планах, включая
+                        такие элементы, как подробное описание областей применения, отзывы клиентов (опционально)
+                        и развернутые описания преимуществ.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Ценностное предложение четко сформулировано</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Различия между планами очевидны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Рекомендуемый план выделяется уместно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цены и условия абсолютно прозрачны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Периоды оплаты легко переключаются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Процесс оформления максимально прост</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ошибки понятно объясняются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Способы оплаты наглядно представлены</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Условия подписки доступны для изучения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Управление подпиской интуитивно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отмена подписки не скрыта</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ограничения планов понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Возможности масштабирования очевидны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Дизайн вызывает доверие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">FAQ отвечает на основные вопросы</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

@@ -1,2 +1,206 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Многошаговая форма</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/205.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/248.png">
+            <img class="cover" src="../images/articles/covers/desktop/162.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Многошаговая форма</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Формы с несколькими шагами позволяют разбить сложный процесс заполнения данных на последовательные
+                    этапы, что значительно снижает когнитивную нагрузку на пользователя и помогает ему сосредоточиться
+                    на одной задаче в каждый момент времени.
+                    <br><br>
+                    Проектирование пошаговой формы требует особого внимания к навигации между этапами и сохранению
+                    контекста. Пользователь должен всегда понимать, на каком шаге он находится, сколько шагов осталось
+                    впереди и иметь возможность вернуться назад без потери введенных данных. При этом каждый шаг должен
+                    восприниматься как завершенный логический блок.
+                    <br><br>
+                    Особое внимание стоит уделить предотвращению ошибок и четкой валидации данных на каждом этапе.
+                    Система должна своевременно информировать о проблемах и подсказывать пути их решения,
+                    но не блокировать возможность временно пропустить необязательные поля с возможностью вернуться к ним
+                    позже (или не возвращаться).</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/506.png" />
+                    <p>Базовая структура</p>
+                    <p>Обычно форма включает три основных уровня: индикатор прогресса в верхней части, основное
+                        содержимое в центре и навигационные кнопки внизу. Пропорции зависят от сложности шага — простые
+                        формы могут занимать 30-40% высоты экрана, в то время как шаги с большим количеством полей могут
+                        растягиваться на всю доступную высоту.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/507.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/508.png" />
+                    </div>
+                    <p>Компоненты навигации</p>
+                    <p>Индикатор прогресса может быть представлен точками, линией или нумерованными шагами, однако
+                        в очень больших формах точки лучше не использовать, ведь важно четко различать пройденные,
+                        текущий и будущие этапы. Навигационные кнопки «Назад» и «Вперед» должны быть заметными
+                        и располагаться в предсказуемых местах.</p>
+                    <p>Организация контента</p>
+                    <p>Каждый шаг должен включать заголовок, поясняющий текст и группы полей ввода. Поля должны быть
+                        логически сгруппированы и выровнены по сетке. Обязательные поля нужно визуально выделить,
+                        однако, старайтесь не переусердствовать, чтобы не сделать их агрессивными.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/509.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/510.png" />
+                    </div>
+                    <p>Переходы между шагами</p>
+                    <p>Смена шагов должна сопровождаться плавной анимацией, демонстрирующей направление движения. Важно
+                        сохранить контекст, чтобы пользователь всегда понимал, куда он движется в процессе заполнения.
+                    </p>
+                    <p>Валидация и ошибки</p>
+                    <p>Проверка данных должна происходить в реальном времени, но не быть навязчивой. Ошибки следует
+                        обозначать рядом с проблемными полями, а общие проблемы выносить в заметную область наверху
+                        формы.</p>
+                    <p>Сохранение прогресса</p>
+                    <p>Системе необходимо автоматически сохранять введенные данные при переходах между шагами, ведь
+                        пользователь должен иметь возможность прервать заполнение и вернуться позже, восстановив свой
+                        прогресс, иначе большое количество людей просто этого не сделают.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/511.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/512.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных устройствах каждый шаг занимает полный экран. Навигационные элементы фиксируются
+                        внизу экрана для удобного доступа, а индикатор прогресса может быть свернут в компактный вид.
+                    </p>
+                    <p>Планшетная версия</p>
+                    <p>На средних экранах можно использовать двухколоночную компоновку для связанных полей. Появляется
+                        возможность показывать дополнительную информацию в боковой панели.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/513.png" />
+                    <p>Десктопная версия</p>
+                    <p>Широкие экраны предоставляют возможность для создания сложных интерфейсных систем, в которые
+                        добавляются предпросмотр результатов, контекстная помощь и расширенные инструменты валидации.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Структура шагов логически обоснована</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Индикатор прогресса всегда виден</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Навигация интуитивно понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поля сгруппированы осмысленно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Обязательные поля четко обозначены</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ошибки объясняют пути решения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации поддерживают контекст</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Возврат к предыдущим шагам возможен</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Длинные формы имеют точки сохранения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Подсказки появляются своевременно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопки действий заметны и понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цветовые акценты расставлены правильно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Типографика поддерживает иерархию</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы создают визуальный ритм</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Фокус всегда понятен пользователю</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Адаптация не теряет функциональности</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Дизайн соответствует контексту использования</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

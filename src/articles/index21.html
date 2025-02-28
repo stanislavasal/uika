@@ -1,2 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Форма входа</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/190.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/233.png">
+            <img class="cover" src="../images/articles/covers/desktop/147.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Форма входа</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Форма входа — это набор полей, которые предназначены для аутентификации пользователя на веб-сайте
+                    (и не только!). Важно уделить должное внимание созданию удобной формы, так как часто это один
+                    из первых элементов, который пользователь видит, заходя на сайт.
+                    <br><br>
+                    Формы входа нужны для того, чтобы защитить персональные данные, их используют для доступа к личным
+                    кабинетам, почте и другим системам с ограниченным доступом. Стоит применять форму входа только там,
+                    где она действительно необходима.
+                </p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/380.png" />
+                    <p>Базовая анатомия </p>
+                    <p>Основными элементами такой формы являются поля для ввода логина и пароля, метки полей и кнопка
+                        входа. Все они должны быть объединены в один контейнер. Обычно, чтобы форму было удобно
+                        заполнять, поля для ввода размещают вертикально и оставляют между ними достаточное место, чтобы
+                        можно было вывести сообщение об ошибке.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/381.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/382.png" />
+                    </div>
+                    <p>Дополнительные элементы</p>
+                    <p>К основным элементам можно добавить чекбокс «Запомнить меня» и ссылку для восстановления пароля.
+                        Важно не забыть добавить ссылку на регистрацию, которая размещается ниже кнопки входа, чтобы
+                        ее было легко найти.
+                    </p>
+                    <p>Вариант с социальными сетями</p>
+                    <p>сли вы хотите добавить вход с помощью социальных сетей, следует добавить блок с альтернативным
+                        способом входа. Разделитель с текстом «или» даст понять пользователю равнозначность данных
+                        способов.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <p>Стоит учитывать, что форма входа должна постоянно взаимодействовать с пользователем, что достигается
+                    за счет изменения полей (по мере заполнения). Это поможет избежать ошибок.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/383.png" />
+                    <p>Состояния полей</p>
+                    <p>Поля могут иметь множество состояний, быть пустыми, заполненными, в фокусе или с ошибкой. Рядом
+                        или внутри пустого поля должна отображаться подсказка, которая во втором случае при клике будет
+                        подниматься вверх и уменьшаться в размере. Если данные были введены неправильно, стоит
+                        подсветить поле и вывести под ним сообщение с пояснениями об ошибке.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/384.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/385.png" />
+                    </div>
+                    <p>Процесс валидации</p>
+                    <p>При вводе данных поля проходят проверку. Для пароля может появляться индикатор надежности, а если
+                        данные некорректны, поле должно поменять свой внешний вид, демонстрируя то, что что-то пошло
+                        не так. Кнопка входа становится активной только после корректного заполнения всех полей.</p>
+                    <p>Анимация отправки</p>
+                    <p>При отправке кнопка превращается в индикатор загрузки, а поля становятся неактивными. Если все
+                        данные введены корректно, и вход успешен, форма исчезает, и выполняется перемещение на страницу
+                        личного кабинета. При ошибке входа форма слегка встряхивается, чтобы привлечь внимание
+                        к сообщению.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <p>Форма входа должна работать на любых устройствах, при этом изменяется не только размер элементов,
+                    но и характер взаимодействия с ними.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/386.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/387.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных устройствах форма обычно занимает практически всю ширину экрана, за минусом
+                        небольших отступов по бокам. Поля стоит сделать немного больше по высоте, ведь область нажатия
+                        пальца гораздо больше, чем у курсора. Вход через соцсети перемещается под основную форму.</p>
+                    <p>Планшетная версия</p>
+                    <p>В случае планшета лучше всего будет центрировать форму и добавить ей фиксированную высоту,
+                        а элементы можно сделать немного меньше, чем на мобильной версии. Социальные сети размещают
+                        в два ряда, чтобы сэкономить место.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/388.png" />
+                    <p>Десктопная версия</p>
+                    <p>На десктопах форма становится компактнее, а если экран достаточно широкий, блок с соцсетями можно
+                        разместить справа. Именно на десктопной версии необходимы эффекты при наведении, всплывающие
+                        подсказки и т. д.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Все поля формы объединены в единый блок</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопка входа выделена, как основное действие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Дополнительные действия менее заметны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Сообщения об ошибках видны, но не агрессивны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Состояния элементов понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Подсказки в полях читаемы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Иконки соцсетей имеют единый стиль</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Разделители и текст не отвлекают внимание</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форма хорошо работает на всех устройствах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Отступы сбалансированы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Тексты выровнены и понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Области касания достаточно большие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цветовые акценты расставлены правильно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и полезные</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Важные элементы выделены</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

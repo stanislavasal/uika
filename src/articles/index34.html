@@ -1,2 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Хедер</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/203.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/246.png">
+            <img class="cover" src="../images/articles/covers/desktop/160.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Хедер</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Хедер — ключевой элемент навигации, расположенный в верхней части страницы, который должен обеспечить
+                    быстрый доступ к основным разделам сайта. Это первое, что видит пользователь при заходе на сайт,
+                    и очень важно сразу произвести на него правильное впечатление.
+
+                    Хедер давно перестал быть просто панелью навигации. Сегодня это многофункциональный элемент
+                    интерфейса, который в зависимости от темы веб-сайта может включать поиск, корзину, профиль
+                    пользователя, уведомления и другие важные элементы. При этом он должен оставаться интуитивно
+                    понятным и не перегружать пользователя информацией.
+
+                    С развитием адаптивного дизайна хедер стал одним из самых сложных элементов для проектирования.
+                    Он должен работать эффективно на всех устройствах, сохраняя свою функциональность и удобство
+                    использования при любых размерах экрана.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/489.png" />
+                    <p>Базовая структура</p>
+                    <p>Хедер состоит из трех основных частей: логотипа, основной навигации в центре и пользовательских
+                        инструментов справа. Такое распределение помогает сформировать понятную ментальную модель
+                        и соответствует привычкам пользователей.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/490.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/491.png" />
+                    </div>
+                    <p>Компоненты хедера</p>
+                    <p>При проектировании хедера, в отличие от футера, стоит пользоваться следующей схемой пропорций:
+                        логотип (15-20% ширины), главное меню (50-60%) и остальные функции (20-25%). Высота хедера
+                        обычно варьируется от 60px до 80px на десктопах и немного уменьшается на мобильных устройствах.
+                    </p>
+                    <p>Вложенная навигация</p>
+                    <p>Если в меню присутствуют подменю, важно продумать их удобное раскрытие. Как уже упоминалось
+                        в других главах, выпадающие меню могут быть одноуровневыми или многоуровневыми, с анимацией
+                        появления, поддерживающей как клики, так и наведение.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/492.png" />
+                    <p>Фиксированное положение</p>
+                    <p>Хедер может быть статичным и фиксированным при прокрутке страницы. В фиксированном хедере высота
+                        обычно уменьшается в момент, когда мы начинаем скроллить страницу, сохраняя только важные
+                        элементы, однако, это не является обязательным правилом.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/493.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/494.png" />
+                    </div>
+                    <p>Интерактивные состояния</p>
+                    <p>Каждый элемент навигации имеет несколько состояний: стандартное, при наведении, активное и для
+                        текущей страницы. Переходы между состояниями плавно анимируются, с длительностью 200-300ms.
+                        Мы не упомянули только о состояниях для текущей страницы, так как они используются именно
+                        в хедере. Суть заключается в том, что нам необходимо напоминать пользователю, на какой странице
+                        мы находимся, поэтому, мы можем выделять текстовую ссылку или иконку в зависимости от того,
+                        на какой странице сайта находимся.</p>
+                    <p>Поисковое взаимодействие</p>
+                    <p>Поиск может быть представлен, как поле ввода или иконка, раскрывающая поле или отдельную
+                        страницу. Создавать поисковое поле в виде отдельной страницы следует только в тех случаях, когда
+                        это обоснованно, так как это сильно усложняет пользовательский опыт. При активации поиска
+                        основной контент затемняется, а пользователю предоставляются подсказки с автодополнением.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/495.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/496.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>Зачастую на мобильных устройствах хедер сворачивается в «бургер», в шапке остаются только самые
+                        важные ссылки, критические для навигации, а также наиболее полезные функции. Остальное меню
+                        может раскрываться на весь экран или выдвигаться сбоку.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах часто используется смешанный вариант: часть пунктов меню остается видимой, а менее
+                        важные скрываются в выпадающем списке, при этом приоритет отдается наиболее востребованным
+                        разделам. Бургерное меню на планшетах лучше не использовать, так как они имеют достаточные
+                        ширину и высоту, чтобы мы могли облегчить пользователю более очевидную навигацию по сайту.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/497.png" />
+                    <p>Десктопная версия</p>
+                    <p>На больших экранах хедер раскрывается полностью, показывая еще больше элементов навигации. При
+                        этом важно сохранять баланс между информативностью и визуальной чистотой интерфейса.
+                        Дополнительные элементы (промо-баннеры, расширенный поиск) стоит добавлять только если они
+                        действительно необходимы и не перегружают интерфейс.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Логотип является ссылкой на главную страницу</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Структура основной навигации ясна и понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Текущий раздел сайта четко обозначен</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Все интерактивные элементы имеют состояния наведения</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поиск доступен и легко заметен</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Фиксация хедера при прокрутке происходит плавно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Выпадающие меню открываются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Мобильное меню легко открывается и закрывается</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Все элементы управления имеют достаточно большую область касания</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные и не отвлекают от контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Контраст между текстом и фоном соответствует стандартам</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Адаптивный дизайн не нарушает функциональность</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Хедер правильно масштабируется на всех разрешениях экрана</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Логотип сохраняет качество при изменении масштаба</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

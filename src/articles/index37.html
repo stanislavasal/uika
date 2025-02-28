@@ -1,2 +1,207 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Корзина покупок</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/206.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/249.png">
+            <img class="cover" src="../images/articles/covers/desktop/163.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Корзина покупок</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Корзина покупок — важнейший элемент интерфейса, который сопровождает пользователя на финальных этапах
+                    принятия решения о покупке. Здесь происходит анализ выбранных товаров, корректировка заказа и
+                    переход к оформлению. Именно поэтому корзина должна не только отображать товары, но и помогать
+                    пользователю окончательно принять решение.
+                    <br><br>
+                    Проектирование корзины требует учета психологии покупателя. На этом этапе пользователь часто
+                    сомневается, сравнивает цены, оценивает общую стоимость и размышляет о целесообразности покупки.
+                    Задача интерфейса — предоставить всю необходимую информацию и стимулировать завершение покупки.
+                    <br><br>
+                    Удобство управления содержимым корзины играет ключевую роль. Возможность быстро изменить количество
+                    товаров, удалить позиции или отложить их на потом должна быть легко доступна. Кроме того, важно
+                    предусмотреть защиту от случайных действий и возможность отмены.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/514.png" />
+                    <p>Основная структура</p>
+                    <p>Корзина делится на три основные зоны: список товаров (60-70% пространства), информация о заказе
+                        (20-25%) и блок действий (10-15%). Такое распределение позволит сосредоточить внимание
+                        пользователя на содержимом, сохранив быстрый доступ к оформлению заказа.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/515.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/516.png" />
+                    </div>
+                    <p>Карточка товара</p>
+                    <p>Каждый товар в корзине должен быть представлен карточкой небольшого размера, содержащей
+                        изображение, название, ключевые характеристики, цену и элементы управления количеством. Следует
+                        следить за тем, чтобы был соблюден баланс между информативностью и компактностью, например,
+                        картинки не стоит делать слишком большими, так как их основной задачей является напоминание
+                        пользователю о том, что именно он добавил в корзину.</p>
+                    <p>Блок итогов</p>
+                    <p>Сводка заказа включает детальное объяснение того, из чего сложилась финальная стоимость,
+                        информацию о скидках и бонусах и расчет доставки. Данный блок можно зафиксировать при прокрутке
+                        для постоянного доступа к итоговой информации, если это не перегрузит интерфейс.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и взаимодействия</div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/517.png" />
+                    <p>Изменение количества</p>
+                    <p>Управление количеством может осуществляться через степпер или прямой ввод, при этом изменения
+                        должны быть напрямую связаны с итоговой суммой. При достижении лимитов (минимум/максимум)
+                        выводится соответствующее уведомление или подсказка.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/518.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/519.png" />
+                    </div>
+                    <p>Удаление и восстановление</p>
+                    <p>Удаление товара обязательно должно сопровождаться запросом подтверждения и, соответственно,
+                        возможностью отмены, чтобы пользователь не совершил это действие случайно. При проектировании
+                        следует учесть сохранение удаляемых товаров в избранном или в разделе отложенных товаров,
+                        которые можно каждый раз отображать под списком товаров в корзине при последующих заказах.
+                        Главное — не забудьте их визуально разделить.</p>
+                    <p>Применение промокода</p>
+                    <p>Поле ввода промокода должно быть заметно, но не отвлекать внимание от более важных элементов.
+                        Проверка кода должна содержать четкое определение результата и влиять на изменение стоимости
+                        заказа.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/520.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/521.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На смартфонах список товаров занимает основное пространство, а блок итогов сворачивается в
+                        компактную плашку внизу экрана. Карточки товаров упрощаются, сохраняя только ключевую
+                        информацию.</p>
+                    <p>Планшетная версия</p>
+                    <p>Средние экраны позволяют организовать двухколоночный лэйаут с зафиксированным блоком итогов
+                        справа. Появляется больше места для дополнительной информации о товарах и вариантах доставки.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/522.png" />
+                    <p>Десктопная версия</p>
+                    <p>Десктопная версия может включать расширенные функции: быстрый предпросмотр товаров, сравнение
+                        цен, рекомендации. При этом основной сценарий использования следует оставить простым и понятным.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Список товаров структурирован</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Изображения товаров информативны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Цены и скидки легко считываются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Управление количеством интуитивно понятно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Удаление защищено от ошибок</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Промокоды заметны и просты в применении</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Итоговая сумма всегда актуальна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопка оформления заказа выделяется</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Пустое состояние корзины информативно</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Возможность сохранить «на потом» очевидна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ограничения по количеству понятны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Информация о доставке своевременна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Таймеры акций, если они есть, заметны, но не давят</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Статус наличия товара актуален</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Процесс оформления очевиден</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

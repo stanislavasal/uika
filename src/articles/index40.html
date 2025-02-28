@@ -1,2 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Лента контента</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/209.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/252.png">
+            <img class="cover" src="../images/articles/covers/desktop/166.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Лента контента</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Лента контента (Фид)— это динамический список информации, который отображается в хронологическом или
+                    алгоритмическом порядке. В последнее время он стал основным элементом интерфейса социальных сетей,
+                    новостных сайтов и платформ для потребления контента. Задачей фида является эффективно отображать
+                    большой объем контента, помогая пользователю лучше ориентироваться в информационном потоке и быстро
+                    находить интересующие материалы.
+                    <br><br>
+                    Фиды нужно использовать на платформах с постоянно обновляющимся контентом, таких как социальные
+                    сети, новостные сайты или медиа-платформы. Важно, чтобы фид проектировался вместе с элементами,
+                    которые могут помочь быстро найти нужный контент, позволяя фильтровать, сортировать и быстро
+                    просматривать обновления без перегрузки.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/540.png" />
+                    <p>Базовая структура</p>
+                    <p>Фид состоит из контейнера, содержащего карточки, каждая из которых содержит контент (текст,
+                        изображение, видео и т. д.), метаданные (дата публикации, автор, количество лайков) и
+                        интерактивные элементы (кнопки лайков, комментариев и репостов). Карточки должны быть отделены
+                        друг от друга достаточно большими отступами, чтобы добиться четкого разделения.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/541.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/542.png" />
+                    </div>
+                    <p>Типы карточек</p>
+                    <p>Типы карточек могут варьироваться в зависимости от типа контента. Текстовые посты, изображения с
+                        подписью, видеоконтент или смешанные форматы — все они могут иметь разную структуру, но должны
+                        сохранять общий визуальный стиль и единый подход к взаимодействию.</p>
+                    <p>Элементы управления</p>
+                    <p>Над фидом стоит расположить элементы управления, такие как панель фильтрации и сортировки,
+                        которые позволят пользователю персонализировать поток контента, иначе данный компонент потеряет
+                        свой смысл. Внутри карточек можно найти кнопки действий (лайк, репост, комментарии).</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <p>Фид должен динамично реагировать на действия пользователя, обновляясь и меняя свое состояние в
+                    зависимости от прокрутки или других действий.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/543.png" />
+                    <p>Загрузка контента</p>
+                    <p>По мере скролла ленты или по запросу пользователя, новые элементы должны автоматически
+                        подгружаться, а появление нового контента сопровождаться плавной анимацией, которая сохранит
+                        контекст и не нарушит восприятие.</p>
+                    <p>Интерактивные состояния</p>
+                    <p>Карточки контента реагируют на действия пользователя: наведение и касание показывают
+                        дополнительные действия (например, лайк или репост). Конечно, данные элементы не обязательно
+                        показывать только по ховеру, но этот прием может помочь вам сократить визуальный шум. При
+                        взаимодействии с кнопками следует добавить обратную связь, чтобы помочь пользователю понять
+                        результаты его действий.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <p>Фид должен адаптироваться к разным размерам экрана и работать эффективно на мобильных устройствах,
+                    планшетах и десктопах.</p>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/544.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/545.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На мобильных устройствах карточки контента занимают всю ширину экрана, минимизируя отступы и
+                        увеличивая интерактивные элементы для удобства касания. Кстати, так как на мобильных устройствах
+                        не предусмотрен ховер, кнопки действий должны быть видны всегда. Для таких устройств
+                        вертикальный вариант прокрутки является основным и наиболее эффективным, горизонтальный
+                        использовать не стоит.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах фид может представлять собой сетку, состоящую из двух или трех колонок. Карточки
+                        могут стать более развернутыми и содержать дополнительную информацию, это улучшит восприятие
+                        контента.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/546.png" />
+                    <p>Десктопная версия</p>
+                    <p>На десктопных устройствах фид должен быть построен с помощью многоколоночной сетки, позволяющей
+                        представлять контент более компактно. Добавляются ховер-эффекты для интерактивных элементов, а
+                        также поддерживается клавиатурная навигация.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Карточки имеют четкую визуальную структуру и понятные границы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Интерактивные элементы легко доступны, особенно на мобильных
+                    устройствах</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Обновления фида не прерывают просмотр контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Медиаконтент корректно масштабируется и не выходит за пределы
+                    карточек</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поддерживается офлайн-режим или отложенная загрузка контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Фильтрация и сортировка интуитивны и удобны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Сетка и карточки адаптируются под размер экрана устройства</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Состояния элементов (например, лайк или комментарий) хорошо
+                    различимы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Анимации плавные, но не отвлекающие</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Метаданные карточек четко отображаются и легко читаются</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поддерживается бесконечная прокрутка для бесшовного просмотра
+                    контента</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

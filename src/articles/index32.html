@@ -1,2 +1,180 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Форма</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/201.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/244.png">
+            <img class="cover" src="../images/articles/covers/desktop/158.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Средние элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Форма</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Форма — это набор полей ввода, позволяющий пользователю передавать данные в систему. Это один
+                    из ключевых элементов интерфейса, обеспечивающий взаимодействие между пользователем и сервисом.
+                    Формы могут быть простыми, как поле поиска, или сложными, как заполнение налоговой декларации.
+
+                    Формы используются повсеместно: при регистрации, оформлении заказа, отправке сообщений, настройке
+                    параметров и в других сценариях. Однако, каждое дополнительное поле увеличивает когнитивную
+                    нагрузку, поэтому формы должны быть лаконичными и включать только необходимые поля.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/474.png" />
+                    <p>Базовая структура полей</p>
+                    <p>Основу любой формы составляет контейнер с группами полей ввода. Каждое поле включает метку,
+                        область ввода и место для подсказок или ошибок. Поля нужно группировать по смыслу и добавлять
+                        к группам заголовки. Кнопка отправки обычно расположена под полями и визуально завершает форму.
+                    </p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-s" src="../images/articles/images/desktop/475.png" />
+                    <p>Типы полей ввода</p>
+                    <p>Формы могут содержать различные типы полей: текстовые поля, выпадающие списки, переключатели,
+                        чекбоксы, слайдеры, загрузку файлов и т. д. Каждый тип предназначен для определенного вида
+                        данных, поэтому стоит внимательно подойти к их выбору.</p>
+                    <p>Иерархия и разметка</p>
+                    <p>В больших формах, о которых будет рассказано позже, поля должны организовывать визуальную
+                        иерархию, а разделители помогать структурировать информацию. Прогресс-бар продемонстрирует
+                        пользователю его положение в процессе заполнения. Это положительно влияет на то, будет ли форма
+                        заполнена.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/476.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/477.png" />
+                    </div>
+                    <p>Жизненный цикл формы</p>
+                    <p>Когда пользователь заполняет форму, он проходит несколько этапов: загрузка, само заполнение,
+                        валидация, отправка и получение ответа. На каждом этапе крайне важно предоставлять обратную
+                        связь, ведь никому не нравится совершать такие действия, поэтому не стоит делать процесс еще
+                        более раздражающим.</p>
+                    <p>Валидация</p>
+                    <p>Существует два вида проверки: синхронная и асинхронная. Синхронной проверке подвергается формат
+                        введенной электронной почты, а асинхронной — пароль. Кнопка отправки формы должна становиться
+                        активной столько после того, как все обязательные поля будут заполнены.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/478.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/479.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На телефонах форма должна занимать 100% ширины экрана. Поля становятся крупнее для удобства тапа,
+                        а сложные элементы управления (например, выбор даты) адаптируются под особенности мобильных
+                        устройств. Не забывайте учитывать виртуальную клавиатуру при расчете видимой области.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах форма может располагаться в одну или две колонки в зависимости от сложности.
+                        Появляется больше пространства для подсказок и дополнительной информации, но с этим важно
+                        не переусердствовать. Взаимодействие оптимизируется как для касания, так и для работы с внешней
+                        клавиатурой.</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/480.png" />
+                    <p>Десктопная версия</p>
+                    <p>На больших экранах форма может быть организована в несколько колонок. Появляются всплывающие
+                        подсказки при наведении, быстрая навигация с помощью клавиатуры, drag-and-drop для загрузки
+                        файлов. Однако, важно сохранять читаемость даже при сложной компоновке.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Все обязательные поля четко обозначены</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Группы полей логически организованы</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Метки полей понятны и информативны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Подсказки доступны там, где они нужны</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Ошибки показываются рядом с проблемным местом</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Все поля имеют подходящий тип ввода</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Кнопка отправки заметна и понятна</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Успешная отправка подтверждается визуально</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Форма корректно работает на всех устройствах</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

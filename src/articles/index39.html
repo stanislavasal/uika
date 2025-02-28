@@ -1,2 +1,191 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Учебник по созданию веб-интерфейсов" />
+    <meta name="keywords"
+        content="веб-дизайн, пользовательский интерфейс, UX/UI, графический дизайн, прототипирование, дизайн для мобильных устройств, цветовая палитра, типографика, дизайн взаимодействия, инструменты дизайна, ресурсы для дизайнеров, лучшие практики веб-дизайна" />
+    <meta name="author" content="Станислава Шестакова, Захар День" />
+    <title>Галерея изображений</title>
+    <meta property="og:title" content="Маленькие элементы" />
+    <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
+    <!-- <meta property="og:image" content="" /> -->
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:type" content="website" />
+    <analytics></analytics>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_text_wrapper">
+            <p><a id="headerlink" href="../additions/index.html">О нас</a></p>
+            <p id="textbook-menu"><a id="headerlink" href="../textbook/index.html" class="active">Учебник</a></p>
+            <p><a id="headerlink" href="../additions/index1.html">Полезные ресурсы</a></p>
+        </div>
+        <a href="../index.html">
+            <img class="header_logo" src="../images/header/logo.svg" />
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Введите запрос..." class="search-input" />
+            <img class="search-icon" src="../images/header/searchicon.svg" />
+        </div>
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(min-width: 744px) and (max-width: 1024px)"
+                srcset="../images/articles/covers/tablet/208.png">
+            <source media="(max-width: 743px)" srcset="../images/articles/covers/mobile/251.png">
+            <img class="cover" src="../images/articles/covers/desktop/165.png">
+        </picture>
+        <div class="breadcrumbs">
+            <div><a id="headerlink" class="heading-xxs" href="../index.html">Учебник</a></div>
+            <div class="heading-xxs">→</div>
+            <div><a id="headerlink" class="heading-xxs" href="../elements/index-medium.html">Большие элементы</a></div>
+            <div class="heading-xxs">→</div>
+            <div class="heading-xxs" style="text-decoration: underline; color: #FF4702;">Галерея изображений</div>
+        </div>
+        <div class="content-center">
+            <div class="article">
+                <div class="heading-m">Анатомия</div>
+                <p>Галерея изображений — это компонент интерфейса, который помогает упорядочить некоторую коллекцию
+                    визуального контента. Этот элемент необходим для того, чтобы организовать множество изображений
+                    в понятную систему, обеспечивая удобство просмотра и навигации.
+                    <br><br>
+                    Галереи находят применение везде, где нужно работать с большим количеством изображений:
+                    от фотобанков и портфолио до социальных сетей. При создании важно учитывать специфику контента
+                    и задачи пользователей, ведь мы можем не только спроектировать элемент, но и поработать над
+                    изображениями, если это необходимо.</p>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/531.png" />
+                    <p>Базовая структура</p>
+                    <p>Основа галереи — контейнер с сеткой изображений, ячейки которого могут содержать превью, краткую
+                        информацию и элементы управления. Сетка может быть как ровной, так и напоминающей шахматную
+                        доску. Над сеткой можно расположить панель фильтров и настроек, а под ней — бесконечную
+                        прокрутку.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/532.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/533.png" />
+                    </div>
+                    <p>Режимы отображения</p>
+                    <p>Галерея может переключаться между разными режимами: сетка, список, слайд-шоу, — и все они
+                        применимы для веб-интерфейсов. Если говорить подробнее, то в обычной сетке изображения
+                        представлены «плитками», список позволяет видеть детальную информацию о каждом элементе,
+                        а слайд-шоу разворачивает изображение на весь экран с добавлением элементов навигации.</p>
+                    <p>Компоненты управления</p>
+                    <p>При наведении на изображение могут появиться дополнительные опции, например, кнопка скачивания,
+                        шеринга или редактирования. Для групповых операций следует использовать панель инструментов или
+                        контекстное меню при выборе нескольких изображений.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Состояния и поведение</div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/534.png" />
+                    <p>Загрузка и отображение</p>
+                    <p>После открытия галереи сначала загружаются легкие превью в более низком разрешении, чтобы
+                        ускорить процесс. По мере прокрутки должны подгружаться новые изображения, а при открытии
+                        отдельного элемента загружаться его полная версия. Загрузку следует сопровождать индикаторами
+                        прогресса, если это необходимо, однако, лучше всего подбирать адекватный размер изображений.</p>
+                </div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/535.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/536.png" />
+                    </div>
+                    <p>Взаимодействие с изображениями</p>
+                    <p>Переходы между состояниями должны выполняться плавно. Клик открывает полноэкранный режим
+                        с затемненным фоном. Навигация чаще всего осуществляется с помощью свайпов или стрелок.</p>
+                    <p>Обработка специальных случаев</p>
+                    <p>Стоит учесть, что галерея должна справляться с разными сценариями, например, отсутствием
+                        изображений, ошибками загрузки или медленным интернет-соединением. Все это нужно помнить
+                        во время проектирования и подумать о том, что произойдет в интерфейсе в каждом из случаев.</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="heading-m">Адаптивность</div>
+                <div class="articlepart">
+                    <div class="articleimages">
+                        <img class="article-image-s" src="../images/articles/images/desktop/537.png" />
+                        <img class="article-image-s" src="../images/articles/images/desktop/538.png" />
+                    </div>
+                    <p>Мобильная версия</p>
+                    <p>На телефонах галерея адаптируется для тач-интерфейсов, превью увеличиваются для удобства касания,
+                        добавляются жесты свайпа и зума. Элементы управления перемещаются в нижнюю часть экрана, чтобы
+                        быть доступными для большого пальца.</p>
+                    <p>Планшетная версия</p>
+                    <p>На планшетах галерея использует большее пространство, поэтому сетка расширяется за счет
+                        дополнительных колонок. В данном случае можно добавить двухпанельный режим (с превью слева
+                        и увеличенным изображением справа).</p>
+                </div>
+                <div class="articlepart">
+                    <img class="article-image-l" src="../images/articles/images/desktop/539.png" />
+                    <p>Десктопная версия</p>
+                    <p>В десктопной версии можно использовать все подходящие ситуации возможности, такие как продвинутые
+                        инструменты сортировки и фильтрации, а также открытие нескольких изображений в отдельных
+                        вкладках.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Чек-лист</div>
+            <div class="checklist heading-m" id="checklist">
+                <span class="checklist-item">Интуитивно понятная навигация и управление</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Адаптивный дизайн для разных экранов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Оптимальная плотность элементов</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Удобные элементы управления</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Приятные эффекты при наведении и взаимодействии</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Возможность фильтрации и сортировки контента</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Обработка ошибок и пустых состояний</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Учет контекста и целей пользователя</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Простота и легкость в восприятии интерфейса</span>
+                <span class="checkbox">□</span>
+                <span class="checklist-item">Поддержка высокого разрешения и четкой цветопередачи</span>
+                <span class="checkbox">□</span>
+            </div>
+        </div>
+        <div class="contentpart">
+            <div class="heading-m">Вам может быть интересно</div>
+            <div class="new_elements">
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+                <div class="card">
+                    <img class="cardimage" />
+                    <div class="heading-xs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="../index.html">
+            <img class="footer_logo" src="../images/footer/logo.svg" />
+        </a>
+        <div class="footer_text_wrapper">
+            <p><a id="footerlink" href="">Телеграм↗</a></p>
+            <p><a id="footerlink" href="">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+        </div>
+    </div>
+    <script src="../javascript/checkbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>
