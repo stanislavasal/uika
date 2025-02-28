@@ -46,6 +46,11 @@ searchInput.addEventListener('input', async function (event) {
 
         mainContent.style.display = 'none';
         searchResults.style.display = 'flex';
+        searchResults.style.flexDirection = 'column';
+        
+        const footerHeight = document.querySelector('footer')?.offsetHeight || 100;
+        searchResults.style.minHeight = `calc(100vh - ${footerHeight}px)`;
+        
         if (cover) {
             cover.style.display = 'none';
         }
@@ -63,19 +68,31 @@ searchInput.addEventListener('input', async function (event) {
         searchCardsContainer.style.display = 'grid';
         searchCardsContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
         searchCardsContainer.style.gap = '20px';
-
         searchCardsContainer.style.minWidth = '100%';
 
+        const searchTitle = searchResults.querySelector('.heading-m');
+
         if (filteredCards.length === 0) {
+            if (searchTitle) {
+                searchTitle.style.textAlign = 'center';
+                searchTitle.style.width = '100%';
+                searchTitle.style.margin = '20px 0';
+            }
+            
             const noResultsMessage = document.createElement('div');
             noResultsMessage.className = 'no-results-message';
             noResultsMessage.textContent = 'По вашему запросу ничего не найдено';
             noResultsMessage.style.gridColumn = '1 / span 3';
             noResultsMessage.style.textAlign = 'center';
-            noResultsMessage.style.padding = '50px 0';
             noResultsMessage.style.width = '100%';
             searchCardsContainer.appendChild(noResultsMessage);
         } else {
+            if (searchTitle) {
+                searchTitle.style.textAlign = '';
+                searchTitle.style.width = '';
+                searchTitle.style.margin = '';
+            }
+            
             filteredCards.forEach(card => {
                 const cardClone = card.cloneNode(true);
                 cardClone.style.width = '100%';
