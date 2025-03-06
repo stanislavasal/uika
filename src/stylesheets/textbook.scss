@@ -17,6 +17,7 @@
     padding-right: 1vw;
     cursor: pointer;
     transition: background-color 0.15s ease;
+    user-select: none;
 }
 
 .filter:hover {
