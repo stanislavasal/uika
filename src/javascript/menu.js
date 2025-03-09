@@ -66,15 +66,15 @@ for (const category in menuStructure) {
     
     if (category === 'Маленькие элементы') {
         categoryText.addEventListener('click', function() {
-            window.location.href = 'elements/index-small.html'; 
+            window.location.href = '../elements/index-small.html'; 
         });
     } else if (category === 'Средние элементы') {
         categoryText.addEventListener('click', function() {
-            window.location.href = 'elements/index-medium.html'; 
+            window.location.href = '../elements/index-medium.html'; 
         });
     } else if (category === 'Большие элементы') {
         categoryText.addEventListener('click', function() {
-            window.location.href = 'elements/index-large.html'; 
+            window.location.href = '../elements/index-large.html'; 
         });
     }
     
