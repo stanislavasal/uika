@@ -60,10 +60,10 @@ function createMenuContent() {
     mainLinks.className = 'burger-main-links';
     
     const mainNavLinks = [
-        { text: 'Главная', href: 'index.html' },
-        { text: 'О нас', href: 'additions/index.html' },
-        { text: 'Учебник', href: 'textbook/index.html' },
-        { text: 'Полезные ресурсы', href: 'additions/index1.html' }
+        { text: 'Главная', href: '../index.html' },
+        { text: 'О нас', href: '../additions/index.html' },
+        { text: 'Учебник', href: '../textbook/index.html' },
+        { text: 'Полезные ресурсы', href: '../additions/index1.html' }
     ];
     
     mainNavLinks.forEach(link => {
@@ -93,11 +93,11 @@ function createMenuContent() {
         categoryTitle.addEventListener('click', function() {
             let url = '';
             if (category === 'Маленькие элементы') {
-                url = 'elements/index-small.html';
+                url = '../elements/index-small.html';
             } else if (category === 'Средние элементы') {
-                url = 'elements/index-medium.html';
+                url = '../elements/index-medium.html';
             } else if (category === 'Большие элементы') {
-                url = 'elements/index-large.html';
+                url = '../elements/index-large.html';
             }
             window.location.href = url;
         });
