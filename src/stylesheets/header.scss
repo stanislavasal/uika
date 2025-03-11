@@ -75,3 +75,92 @@
     color: #FF4702;
     text-decoration: underline;
 }
+
+.header-mobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    padding: 5.1vw;
+}
+
+.mobile-logo{
+    width: 30vw;
+    height: 20vw;
+}
+
+.mobile-menu{
+    width: 20vw;
+    height: 20vw;
+}
+
+/* Burger Menu Styles */
+#popup {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    z-index: 999;
+    padding: 20px;
+    padding-top: 30vw;
+}
+
+.burger-main-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-bottom: 4vw;
+}
+
+.burger-main-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.burger-menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.burger-category-container {
+    /* Add any specific styles if needed */
+}
+
+.burger-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-arrow {
+    margin-left: 2vw;
+    transition: transform 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.burger-submenu-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+}
+
+.burger-submenu-container a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 3vw;
+    margin-bottom: 4vw;
+}
+
+.burger-submenu-container a:last-child {
+    margin-bottom: 0;
+}

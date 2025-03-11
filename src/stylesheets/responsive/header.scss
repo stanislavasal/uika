@@ -33,6 +33,10 @@
         width: 2.18vw;
         height: 2.18vw;
     }
+
+    .header-mobile{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 743px) {
@@ -58,6 +62,10 @@
 
     .search-icon {
         display: none;
+    }
+
+    .header-mobile{
+        display: flex;
     }
 
     // #headerlink {
