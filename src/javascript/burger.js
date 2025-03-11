@@ -1,4 +1,5 @@
 const burgerIcon = document.getElementById('burger-icon');
+const burgerIconClosed = document.querySelector('.mobile-menu-с'); // Иконка закрытого меню
 const popup = document.getElementById('popup');
 
 const menuStructure = {
@@ -141,16 +142,48 @@ function createMenuContent() {
     popup.appendChild(menuContainer);
 }
 
+// Инициализация - скрываем иконку закрытого меню при загрузке страницы
+if (burgerIconClosed) {
+    burgerIconClosed.style.display = 'none';
+}
+
 burgerIcon.addEventListener('click', () => {
     if (popup.style.display === 'none' || popup.style.display === '') {
+        // Открываем меню
         createMenuContent();
         popup.style.display = 'block';
         document.body.style.overflow = 'hidden';
+        
+        // Переключаем иконки
+        if (burgerIconClosed) {
+            burgerIcon.style.display = 'none';
+            burgerIconClosed.style.display = 'flex';
+        }
     } else {
+        // Закрываем меню
         popup.style.display = 'none';
         document.body.style.overflow = '';
+        
+        // Переключаем иконки обратно
+        if (burgerIconClosed) {
+            burgerIcon.style.display = 'flex';
+            burgerIconClosed.style.display = 'none';
+        }
     }
 });
+
+// Добавляем обработчик клика для закрытой иконки
+if (burgerIconClosed) {
+    burgerIconClosed.addEventListener('click', () => {
+        // Закрываем меню
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+        
+        // Переключаем иконки обратно
+        burgerIcon.style.display = 'flex';
+        burgerIconClosed.style.display = 'none';
+    });
+}
 
 popup.addEventListener('wheel', function(e) {
     e.stopPropagation();
