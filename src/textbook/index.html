@@ -11,11 +11,31 @@
     <title>Учебник</title>
     <meta property="og:title" content="Учебник" />
     <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
-    <!-- <meta property="og:image" content="" /> -->
-      <meta property="og:url" content="http://uika.adc.ac" />
-  <link rel="icon" href="/src/images/favicon/favicon.svg" type="image/x-icon" />
+    <meta property="og:image" content="https://uika.adc.ac/images/meta.png" />
+    <meta property="og:url" content="http://uika.adc.ac" />
+    <link rel="icon" href="/src/images/favicon/favicon.svg" type="image/x-icon" />
     <meta property="og:type" content="website" />
-    <analytics></analytics>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(100268671, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/100268671" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -33,6 +53,14 @@
             <img class="search-icon" src="../images/header/searchicon.svg" />
         </div>
     </div>
+    <div class="header-mobile">
+        <a href="../index.html">
+            <img class="mobile-logo" src="../images/header/mobile-logo.svg">
+        </a>
+            <img class="mobile-menu" src="../images/header/burger.svg" id="burger-icon">
+    <img class="mobile-menu-с" src="../images/header/burgerc.svg" id="burger-icon">
+    </div>
+    <div id="popup" class="popup" style="display: none;"></div>
     <div class="content">
         <div id="searchResults" style="display: none;">
             <div class="heading-m">Результаты поиска</div>
@@ -60,7 +88,8 @@
                     <a href="../articles/index1.html" class="card" data-complexity="1" data-popularity="100">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/38.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/38.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/85.png">
                             <img class="cardimage" src="../images/feed/desktop/6.png">
                         </picture>
@@ -69,7 +98,8 @@
                     <a href="../articles/index2.html" class="card" data-complexity="1" data-popularity="80">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/39.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/39.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/86.png">
                             <img class="cardimage" src="../images/feed/desktop/7.png">
                         </picture>
@@ -78,7 +108,8 @@
                     <a href="../articles/index3.html" class="card" data-complexity="1" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/40.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/40.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/87.png">
                             <img class="cardimage" src="../images/feed/desktop/8.png">
                         </picture>
@@ -87,7 +118,8 @@
                     <a href="../articles/index4.html" class="card" data-complexity="1" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/41.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/41.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/88.png">
                             <img class="cardimage" src="../images/feed/desktop/9.png">
                         </picture>
@@ -96,7 +128,8 @@
                     <a href="../articles/index5.html" class="card" data-complexity="2" data-popularity="40">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/42.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/42.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/89.png">
                             <img class="cardimage" src="../images/feed/desktop/10.png">
                         </picture>
@@ -105,7 +138,8 @@
                     <a href="../articles/index6.html" class="card" data-complexity="2" data-popularity="20">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/43.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/43.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/90.png">
                             <img class="cardimage" src="../images/feed/desktop/11.png">
                         </picture>
@@ -114,7 +148,8 @@
                     <a href="../articles/index7.html" class="card" data-complexity="2" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/44.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/44.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/91.png">
                             <img class="cardimage" src="../images/feed/desktop/12.png">
                         </picture>
@@ -123,7 +158,8 @@
                     <a href="../articles/index8.html" class="card" data-complexity="1" data-popularity="90">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/45.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/45.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/92.png">
                             <img class="cardimage" src="../images/feed/desktop/13.png">
                         </picture>
@@ -132,7 +168,8 @@
                     <a href="../articles/index9.html" class="card" data-complexity="2" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/46.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/46.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/93.png">
                             <img class="cardimage" src="../images/feed/desktop/14.png">
                         </picture>
@@ -141,7 +178,8 @@
                     <a href="../articles/index10.html" class="card" data-complexity="2" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/47.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/47.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/94.png">
                             <img class="cardimage" src="../images/feed/desktop/15.png">
                         </picture>
@@ -150,7 +188,8 @@
                     <a href="../articles/index11.html" class="card" data-complexity="2" data-popularity="80">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/48.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/48.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/95.png">
                             <img class="cardimage" src="../images/feed/desktop/16.png">
                         </picture>
@@ -159,7 +198,8 @@
                     <a href="../articles/index14.html" class="card" data-complexity="1" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/49.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/49.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/96.png">
                             <img class="cardimage" src="../images/feed/desktop/17.png">
                         </picture>
@@ -168,7 +208,8 @@
                     <a href="../articles/index13.html" class="card" data-complexity="2" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/50.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/50.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/97.png">
                             <img class="cardimage" src="../images/feed/desktop/18.png">
                         </picture>
@@ -177,7 +218,8 @@
                     <a href="../articles/index12.html" class="card" data-complexity="2" data-popularity="50">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/51.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/51.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/98.png">
                             <img class="cardimage" src="../images/feed/desktop/19.png">
                         </picture>
@@ -186,7 +228,8 @@
                     <a href="../articles/index15.html" class="card" data-complexity="2" data-popularity="40">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/52.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/52.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/99.png">
                             <img class="cardimage" src="../images/feed/desktop/20.png">
                         </picture>
@@ -195,7 +238,8 @@
                     <a href="../articles/index16.html" class="card" data-complexity="1" data-popularity="30">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/80.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/80.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/127.png">
                             <img class="cardimage" src="../images/feed/desktop/48.png">
                         </picture>
@@ -204,7 +248,8 @@
                     <a href="../articles/index17.html" class="card" data-complexity="2" data-popularity="10">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/53.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/53.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/100.png">
                             <img class="cardimage" src="../images/feed/desktop/21.png">
                         </picture>
@@ -213,7 +258,8 @@
                     <a href="../articles/index18.html" class="card" data-complexity="2" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/54.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/54.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/101.png">
                             <img class="cardimage" src="../images/feed/desktop/22.png">
                         </picture>
@@ -222,7 +268,8 @@
                     <a href="../articles/index19.html" class="card" data-complexity="2" data-popularity="50">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/55.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/55.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/102.png">
                             <img class="cardimage" src="../images/feed/desktop/23.png">
                         </picture>
@@ -231,7 +278,8 @@
                     <a href="../articles/index20.html" class="card" data-complexity="2" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">маленькие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/56.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/56.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/103.png">
                             <img class="cardimage" src="../images/feed/desktop/24.png">
                         </picture>
@@ -241,7 +289,8 @@
                     <a href="../articles/index21.html" class="card" data-complexity="3" data-popularity="80">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/57.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/57.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/104.png">
                             <img class="cardimage" src="../images/feed/desktop/25.png">
                         </picture>
@@ -250,7 +299,8 @@
                     <a href="../articles/index22.html" class="card" data-complexity="3" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/58.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/58.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/105.png">
                             <img class="cardimage" src="../images/feed/desktop/26.png">
                         </picture>
@@ -259,7 +309,8 @@
                     <a href="../articles/index23.html" class="card" data-complexity="3" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/59.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/59.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/106.png">
                             <img class="cardimage" src="../images/feed/desktop/27.png">
                         </picture>
@@ -268,7 +319,8 @@
                     <a href="../articles/index24.html" class="card" data-complexity="3" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/60.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/60.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/107.png">
                             <img class="cardimage" src="../images/feed/desktop/28.png">
                         </picture>
@@ -277,7 +329,8 @@
                     <a href="../articles/index25.html" class="card" data-complexity="3" data-popularity="40">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/61.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/61.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/108.png">
                             <img class="cardimage" src="../images/feed/desktop/29.png">
                         </picture>
@@ -286,7 +339,8 @@
                     <a href="../articles/index26.html" class="card" data-complexity="3" data-popularity="20">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/62.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/62.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/109.png">
                             <img class="cardimage" src="../images/feed/desktop/30.png">
                         </picture>
@@ -295,7 +349,8 @@
                     <a href="../articles/index27.html" class="card" data-complexity="4" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/63.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/63.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/110.png">
                             <img class="cardimage" src="../images/feed/desktop/31.png">
                         </picture>
@@ -304,7 +359,8 @@
                     <a href="../articles/index28.html" class="card" data-complexity="4" data-popularity="10">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/64.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/64.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/111.png">
                             <img class="cardimage" src="../images/feed/desktop/32.png">
                         </picture>
@@ -313,7 +369,8 @@
                     <a href="../articles/index29.html" class="card" data-complexity="4" data-popularity="10">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/65.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/65.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/112.png">
                             <img class="cardimage" src="../images/feed/desktop/33.png">
                         </picture>
@@ -322,7 +379,8 @@
                     <a href="../articles/index30.html" class="card" data-complexity="4" data-popularity="90">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/66.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/66.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/113.png">
                             <img class="cardimage" src="../images/feed/desktop/34.png">
                         </picture>
@@ -331,7 +389,8 @@
                     <a href="../articles/index31.html" class="card" data-complexity="4" data-popularity="30">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/67.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/67.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/114.png">
                             <img class="cardimage" src="../images/feed/desktop/35.png">
                         </picture>
@@ -340,7 +399,8 @@
                     <a href="../articles/index32.html" class="card" data-complexity="4" data-popularity="40">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/68.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/68.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/115.png">
                             <img class="cardimage" src="../images/feed/desktop/36.png">
                         </picture>
@@ -349,7 +409,8 @@
                     <a href="../articles/index33.html" class="card" data-complexity="4" data-popularity="20">
                         <div class="small-elements-tag-green" class="heading-xxs green">средние элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/69.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/69.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/116.png">
                             <img class="cardimage" src="../images/feed/desktop/37.png">
                         </picture>
@@ -359,7 +420,8 @@
                     <a href="../articles/index34.html" class="card" data-complexity="5" data-popularity="90">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/70.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/70.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/117.png">
                             <img class="cardimage" src="../images/feed/desktop/38.png">
                         </picture>
@@ -368,7 +430,8 @@
                     <a href="../articles/index35.html" class="card" data-complexity="5" data-popularity="90">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/71.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/71.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/118.png">
                             <img class="cardimage" src="../images/feed/desktop/39.png">
                         </picture>
@@ -377,7 +440,8 @@
                     <a href="../articles/index36.html" class="card" data-complexity="5" data-popularity="30">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/72.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/72.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/119.png">
                             <img class="cardimage" src="../images/feed/desktop/40.png">
                         </picture>
@@ -386,7 +450,8 @@
                     <a href="../articles/index37.html" class="card" data-complexity="5" data-popularity="40">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/73.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/73.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/120.png">
                             <img class="cardimage" src="../images/feed/desktop/41.png">
                         </picture>
@@ -395,7 +460,8 @@
                     <a href="../articles/index38.html" class="card" data-complexity="5" data-popularity="50">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/74.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/74.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/121.png">
                             <img class="cardimage" src="../images/feed/desktop/42.png">
                         </picture>
@@ -404,7 +470,8 @@
                     <a href="../articles/index39.html" class="card" data-complexity="5" data-popularity="80">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/75.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/75.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/122.png">
                             <img class="cardimage" src="../images/feed/desktop/43.png">
                         </picture>
@@ -413,7 +480,8 @@
                     <a href="../articles/index40.html" class="card" data-complexity="5" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/76.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/76.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/123.png">
                             <img class="cardimage" src="../images/feed/desktop/44.png">
                         </picture>
@@ -422,7 +490,8 @@
                     <a href="../articles/index41.html" class="card" data-complexity="5" data-popularity="60">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/77.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/77.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/124.png">
                             <img class="cardimage" src="../images/feed/desktop/45.png">
                         </picture>
@@ -431,7 +500,8 @@
                     <a href="../articles/index42.html" class="card" data-complexity="5" data-popularity="70">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/78.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/78.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/125.png">
                             <img class="cardimage" src="../images/feed/desktop/46.png">
                         </picture>
@@ -440,7 +510,8 @@
                     <a href="../articles/index43.html" class="card" data-complexity="5" data-popularity="10">
                         <div class="small-elements-tag-green" class="heading-xxs green">большие элементы</div>
                         <picture>
-                            <source media="(min-width: 744px) and (max-width: 1024px)" srcset="../images/feed/tablet/79.png">
+                            <source media="(min-width: 744px) and (max-width: 1024px)"
+                                srcset="../images/feed/tablet/79.png">
                             <source media="(max-width: 743px)" srcset="../images/feed/mobile/126.png">
                             <img class="cardimage" src="../images/feed/desktop/47.png">
                         </picture>
@@ -456,14 +527,18 @@
             <img class="footer_logo" src="../images/footer/logo.svg" />
         </a>
         <div class="footer_text_wrapper">
-            <p><a id="footerlink" href="">Телеграм↗</a></p>
-            <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="https://t.me/uikastudyguide" target="_blank"
+                    rel="noopener noreferrer">Телеграм↗</a></p>
+            <p><a id="footerlink" href="https://www.instagram.com/uika.studyguide?igsh=N2dyeGx5NnFoYzZl&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="mailto:uikastudyguide@gmail.com" target="_blank"
+                    rel="noopener noreferrer">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/filterloadmore.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
+    <script src="../javascript/burger.js"></script>
 </body>
 
 </html>

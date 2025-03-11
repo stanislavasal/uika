@@ -11,11 +11,27 @@
     <title>Табы</title>
     <meta property="og:title" content="Маленькие элементы" />
     <meta property="og:description" content="Учебник по созданию веб-интерфейсов" />
-    <!-- <meta property="og:image" content="" /> -->
+    <meta property="og:image" content="https://uika.adc.ac/images/meta.png" />
       <meta property="og:url" content="http://uika.adc.ac" />
   <link rel="icon" href="/src/images/favicon/favicon.svg" type="image/x-icon" />
     <meta property="og:type" content="website" />
-    <analytics></analytics>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(100268671, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/100268671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -33,6 +49,14 @@
             <img class="search-icon" src="../images/header/searchicon.svg" />
         </div>
     </div>
+    <div class="header-mobile">
+        <a href="../index.html">
+            <img class="mobile-logo" src="../images/header/mobile-logo.svg">
+        </a>
+            <img class="mobile-menu" src="../images/header/burger.svg" id="burger-icon">
+    <img class="mobile-menu-с" src="../images/header/burgerc.svg" id="burger-icon">
+    </div>
+    <div id="popup" class="popup" style="display: none;"></div>
     <div class="content">
         <picture>
             <source media="(min-width: 744px) and (max-width: 1024px)"
@@ -222,15 +246,19 @@
             <img class="footer_logo" src="../images/footer/logo.svg" />
         </a>
         <div class="footer_text_wrapper">
-            <p><a id="footerlink" href="">Телеграм↗</a></p>
-            <p><a id="footerlink" href="">Соц сеть↗</a></p>
-            <p><a id="footerlink" href="">Связаться с нами↗</a></p>
+            <p><a id="footerlink" href="https://t.me/uikastudyguide" target="_blank"
+                    rel="noopener noreferrer">Телеграм↗</a></p>
+            <p><a id="footerlink" href="https://www.instagram.com/uika.studyguide?igsh=N2dyeGx5NnFoYzZl&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer">Соц сеть↗</a></p>
+            <p><a id="footerlink" href="mailto:uikastudyguide@gmail.com" target="_blank"
+                    rel="noopener noreferrer">Связаться с нами↗</a></p>
         </div>
     </div>
     <script src="../javascript/checkbox.js"></script>
     <script src="../javascript/search.js"></script>
     <script src="../javascript/menu.js"></script>
     <script src="../javascript/breadcrumbs.js"></script>
+    <script src="../javascript/burger.js"></script>
 </body>
 
 </html>
